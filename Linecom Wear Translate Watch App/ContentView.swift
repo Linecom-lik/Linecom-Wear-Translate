@@ -46,7 +46,7 @@ struct ContentView: View {
                         //if !slang.isEmpty{
                          //   translatedText="WARN:请输入内容"
                         //}
-                        requesting=true
+                        requesting = true
                         let clipedkey=appid+slang+"1355702100"+apikey
                         let signtrue=clipedkey.md5c()
                         let all="q=\(slang)&from=\(sourcelang)&to=\(targetlang)&appid=\(appid)&salt=1355702100&sign=\(signtrue)"
@@ -72,7 +72,7 @@ struct ContentView: View {
                             }
                         }
                     }, label: {
-                        if requesting==true{
+                        if requesting {
                             HStack{
                                 Text("正在请求")
                                 ProgressView()
