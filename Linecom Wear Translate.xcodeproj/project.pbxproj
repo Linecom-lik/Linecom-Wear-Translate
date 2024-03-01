@@ -1,0 +1,698 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		03428C572B9219580025849C /* Linecom Wear Translate Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 03428C562B9219580025849C /* Linecom Wear Translate Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		03428C5C2B9219580025849C /* Linecom_Wear_TranslateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03428C5B2B9219580025849C /* Linecom_Wear_TranslateApp.swift */; };
+		03428C5E2B9219580025849C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03428C5D2B9219580025849C /* ContentView.swift */; };
+		03428C602B9219590025849C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03428C5F2B9219590025849C /* Assets.xcassets */; };
+		03428C632B9219590025849C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03428C622B9219590025849C /* Preview Assets.xcassets */; };
+		03428C6D2B9219590025849C /* Linecom_Wear_Translate_Watch_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03428C6C2B9219590025849C /* Linecom_Wear_Translate_Watch_AppTests.swift */; };
+		03428C772B9219590025849C /* Linecom_Wear_Translate_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03428C762B9219590025849C /* Linecom_Wear_Translate_Watch_AppUITests.swift */; };
+		03428C792B9219590025849C /* Linecom_Wear_Translate_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03428C782B9219590025849C /* Linecom_Wear_Translate_Watch_AppUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		03428C582B9219580025849C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03428C4A2B9219580025849C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03428C552B9219580025849C;
+			remoteInfo = "Linecom Wear Translate Watch App";
+		};
+		03428C692B9219590025849C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03428C4A2B9219580025849C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03428C552B9219580025849C;
+			remoteInfo = "Linecom Wear Translate Watch App";
+		};
+		03428C732B9219590025849C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03428C4A2B9219580025849C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03428C552B9219580025849C;
+			remoteInfo = "Linecom Wear Translate Watch App";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		03428C7F2B9219590025849C /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				03428C572B9219580025849C /* Linecom Wear Translate Watch App.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		03428C502B9219580025849C /* Linecom Wear Translate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Linecom Wear Translate.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		03428C562B9219580025849C /* Linecom Wear Translate Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Linecom Wear Translate Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		03428C5B2B9219580025849C /* Linecom_Wear_TranslateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Linecom_Wear_TranslateApp.swift; sourceTree = "<group>"; };
+		03428C5D2B9219580025849C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		03428C5F2B9219590025849C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		03428C622B9219590025849C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		03428C682B9219590025849C /* Linecom Wear Translate Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Linecom Wear Translate Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		03428C6C2B9219590025849C /* Linecom_Wear_Translate_Watch_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Linecom_Wear_Translate_Watch_AppTests.swift; sourceTree = "<group>"; };
+		03428C722B9219590025849C /* Linecom Wear Translate Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Linecom Wear Translate Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		03428C762B9219590025849C /* Linecom_Wear_Translate_Watch_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Linecom_Wear_Translate_Watch_AppUITests.swift; sourceTree = "<group>"; };
+		03428C782B9219590025849C /* Linecom_Wear_Translate_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Linecom_Wear_Translate_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		03428C532B9219580025849C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03428C652B9219590025849C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03428C6F2B9219590025849C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03428C492B9219580025849C = {
+			isa = PBXGroup;
+			children = (
+				03428C5A2B9219580025849C /* Linecom Wear Translate Watch App */,
+				03428C6B2B9219590025849C /* Linecom Wear Translate Watch AppTests */,
+				03428C752B9219590025849C /* Linecom Wear Translate Watch AppUITests */,
+				03428C512B9219580025849C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		03428C512B9219580025849C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				03428C502B9219580025849C /* Linecom Wear Translate.app */,
+				03428C562B9219580025849C /* Linecom Wear Translate Watch App.app */,
+				03428C682B9219590025849C /* Linecom Wear Translate Watch AppTests.xctest */,
+				03428C722B9219590025849C /* Linecom Wear Translate Watch AppUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		03428C5A2B9219580025849C /* Linecom Wear Translate Watch App */ = {
+			isa = PBXGroup;
+			children = (
+				03428C5B2B9219580025849C /* Linecom_Wear_TranslateApp.swift */,
+				03428C5D2B9219580025849C /* ContentView.swift */,
+				03428C5F2B9219590025849C /* Assets.xcassets */,
+				03428C612B9219590025849C /* Preview Content */,
+			);
+			path = "Linecom Wear Translate Watch App";
+			sourceTree = "<group>";
+		};
+		03428C612B9219590025849C /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				03428C622B9219590025849C /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		03428C6B2B9219590025849C /* Linecom Wear Translate Watch AppTests */ = {
+			isa = PBXGroup;
+			children = (
+				03428C6C2B9219590025849C /* Linecom_Wear_Translate_Watch_AppTests.swift */,
+			);
+			path = "Linecom Wear Translate Watch AppTests";
+			sourceTree = "<group>";
+		};
+		03428C752B9219590025849C /* Linecom Wear Translate Watch AppUITests */ = {
+			isa = PBXGroup;
+			children = (
+				03428C762B9219590025849C /* Linecom_Wear_Translate_Watch_AppUITests.swift */,
+				03428C782B9219590025849C /* Linecom_Wear_Translate_Watch_AppUITestsLaunchTests.swift */,
+			);
+			path = "Linecom Wear Translate Watch AppUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		03428C4F2B9219580025849C /* Linecom Wear Translate */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03428C802B9219590025849C /* Build configuration list for PBXNativeTarget "Linecom Wear Translate" */;
+			buildPhases = (
+				03428C4E2B9219580025849C /* Resources */,
+				03428C7F2B9219590025849C /* Embed Watch Content */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03428C592B9219580025849C /* PBXTargetDependency */,
+			);
+			name = "Linecom Wear Translate";
+			productName = "Linecom Wear Translate";
+			productReference = 03428C502B9219580025849C /* Linecom Wear Translate.app */;
+			productType = "com.apple.product-type.application.watchapp2-container";
+		};
+		03428C552B9219580025849C /* Linecom Wear Translate Watch App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03428C7C2B9219590025849C /* Build configuration list for PBXNativeTarget "Linecom Wear Translate Watch App" */;
+			buildPhases = (
+				03428C522B9219580025849C /* Sources */,
+				03428C532B9219580025849C /* Frameworks */,
+				03428C542B9219580025849C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Linecom Wear Translate Watch App";
+			productName = "Linecom Wear Translate Watch App";
+			productReference = 03428C562B9219580025849C /* Linecom Wear Translate Watch App.app */;
+			productType = "com.apple.product-type.application";
+		};
+		03428C672B9219590025849C /* Linecom Wear Translate Watch AppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03428C832B9219590025849C /* Build configuration list for PBXNativeTarget "Linecom Wear Translate Watch AppTests" */;
+			buildPhases = (
+				03428C642B9219590025849C /* Sources */,
+				03428C652B9219590025849C /* Frameworks */,
+				03428C662B9219590025849C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03428C6A2B9219590025849C /* PBXTargetDependency */,
+			);
+			name = "Linecom Wear Translate Watch AppTests";
+			productName = "Linecom Wear Translate Watch AppTests";
+			productReference = 03428C682B9219590025849C /* Linecom Wear Translate Watch AppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		03428C712B9219590025849C /* Linecom Wear Translate Watch AppUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 03428C862B9219590025849C /* Build configuration list for PBXNativeTarget "Linecom Wear Translate Watch AppUITests" */;
+			buildPhases = (
+				03428C6E2B9219590025849C /* Sources */,
+				03428C6F2B9219590025849C /* Frameworks */,
+				03428C702B9219590025849C /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03428C742B9219590025849C /* PBXTargetDependency */,
+			);
+			name = "Linecom Wear Translate Watch AppUITests";
+			productName = "Linecom Wear Translate Watch AppUITests";
+			productReference = 03428C722B9219590025849C /* Linecom Wear Translate Watch AppUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		03428C4A2B9219580025849C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					03428C4F2B9219580025849C = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					03428C552B9219580025849C = {
+						CreatedOnToolsVersion = 15.2;
+					};
+					03428C672B9219590025849C = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 03428C552B9219580025849C;
+					};
+					03428C712B9219590025849C = {
+						CreatedOnToolsVersion = 15.2;
+						TestTargetID = 03428C552B9219580025849C;
+					};
+				};
+			};
+			buildConfigurationList = 03428C4D2B9219580025849C /* Build configuration list for PBXProject "Linecom Wear Translate" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 03428C492B9219580025849C;
+			productRefGroup = 03428C512B9219580025849C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				03428C4F2B9219580025849C /* Linecom Wear Translate */,
+				03428C552B9219580025849C /* Linecom Wear Translate Watch App */,
+				03428C672B9219590025849C /* Linecom Wear Translate Watch AppTests */,
+				03428C712B9219590025849C /* Linecom Wear Translate Watch AppUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		03428C4E2B9219580025849C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03428C542B9219580025849C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03428C632B9219590025849C /* Preview Assets.xcassets in Resources */,
+				03428C602B9219590025849C /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03428C662B9219590025849C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03428C702B9219590025849C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		03428C522B9219580025849C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03428C5E2B9219580025849C /* ContentView.swift in Sources */,
+				03428C5C2B9219580025849C /* Linecom_Wear_TranslateApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03428C642B9219590025849C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03428C6D2B9219590025849C /* Linecom_Wear_Translate_Watch_AppTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		03428C6E2B9219590025849C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				03428C792B9219590025849C /* Linecom_Wear_Translate_Watch_AppUITestsLaunchTests.swift in Sources */,
+				03428C772B9219590025849C /* Linecom_Wear_Translate_Watch_AppUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		03428C592B9219580025849C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03428C552B9219580025849C /* Linecom Wear Translate Watch App */;
+			targetProxy = 03428C582B9219580025849C /* PBXContainerItemProxy */;
+		};
+		03428C6A2B9219590025849C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03428C552B9219580025849C /* Linecom Wear Translate Watch App */;
+			targetProxy = 03428C692B9219590025849C /* PBXContainerItemProxy */;
+		};
+		03428C742B9219590025849C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03428C552B9219580025849C /* Linecom Wear Translate Watch App */;
+			targetProxy = 03428C732B9219590025849C /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		03428C7A2B9219590025849C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		03428C7B2B9219590025849C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		03428C7D2B9219590025849C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Linecom Wear Translate Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = B38QUJMY47;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Linecom Wear Translate";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "net-cn.linecom.Linecom-Wear-Translate.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Debug;
+		};
+		03428C7E2B9219590025849C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Linecom Wear Translate Watch App/Preview Content\"";
+				DEVELOPMENT_TEAM = B38QUJMY47;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Linecom Wear Translate";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_WKWatchOnly = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "net-cn.linecom.Linecom-Wear-Translate.watchkitapp";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Release;
+		};
+		03428C812B9219590025849C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B38QUJMY47;
+				INFOPLIST_KEY_CFBundleDisplayName = "Linecom Wear Translate";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "net-cn.linecom.Linecom-Wear-Translate";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		03428C822B9219590025849C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B38QUJMY47;
+				INFOPLIST_KEY_CFBundleDisplayName = "Linecom Wear Translate";
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "net-cn.linecom.Linecom-Wear-Translate";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		03428C842B9219590025849C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B38QUJMY47;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "net-cn.linecom.Linecom-Wear-Translate-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Linecom Wear Translate Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Linecom Wear Translate Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Debug;
+		};
+		03428C852B9219590025849C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B38QUJMY47;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "net-cn.linecom.Linecom-Wear-Translate-Watch-AppTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Linecom Wear Translate Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Linecom Wear Translate Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Release;
+		};
+		03428C872B9219590025849C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B38QUJMY47;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "net-cn.linecom.Linecom-Wear-Translate-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "Linecom Wear Translate Watch App";
+				WATCHOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Debug;
+		};
+		03428C882B9219590025849C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B38QUJMY47;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "net-cn.linecom.Linecom-Wear-Translate-Watch-AppUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				TEST_TARGET_NAME = "Linecom Wear Translate Watch App";
+				VALIDATE_PRODUCT = YES;
+				WATCHOS_DEPLOYMENT_TARGET = 10.2;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		03428C4D2B9219580025849C /* Build configuration list for PBXProject "Linecom Wear Translate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03428C7A2B9219590025849C /* Debug */,
+				03428C7B2B9219590025849C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03428C7C2B9219590025849C /* Build configuration list for PBXNativeTarget "Linecom Wear Translate Watch App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03428C7D2B9219590025849C /* Debug */,
+				03428C7E2B9219590025849C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03428C802B9219590025849C /* Build configuration list for PBXNativeTarget "Linecom Wear Translate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03428C812B9219590025849C /* Debug */,
+				03428C822B9219590025849C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03428C832B9219590025849C /* Build configuration list for PBXNativeTarget "Linecom Wear Translate Watch AppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03428C842B9219590025849C /* Debug */,
+				03428C852B9219590025849C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		03428C862B9219590025849C /* Build configuration list for PBXNativeTarget "Linecom Wear Translate Watch AppUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03428C872B9219590025849C /* Debug */,
+				03428C882B9219590025849C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 03428C4A2B9219580025849C /* Project object */;
+}
