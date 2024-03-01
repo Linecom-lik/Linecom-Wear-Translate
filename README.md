@@ -1,2 +1,2 @@
 # Linecom-Wear-Translate
-Translate App on Apple Watch
+A Simple Translate App on Apple Watch.
