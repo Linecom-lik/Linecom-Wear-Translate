@@ -43,9 +43,6 @@ struct ContentView: View {
                 Section {
                     Button(action: {
                         // ...
-                        //if !slang.isEmpty{
-                         //   translatedText="WARN:请输入内容"
-                        //}
                         requesting = true
                         let clipedkey=appid+slang+"1355702100"+apikey
                         let signtrue=clipedkey.md5c()
@@ -70,7 +67,7 @@ struct ContentView: View {
                                     dislang="日语"
                                 }
                             }
-                        }
+                    }
                     }, label: {
                         if requesting {
                             HStack{
