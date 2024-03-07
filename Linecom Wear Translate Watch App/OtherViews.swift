@@ -19,9 +19,14 @@ struct AboutView: View {
 struct AppAbout: View{
     var body: some View{
         VStack{
-            Text("Linecom Wear Translate").padding()
+            HStack{
+                Image("abouticon").resizable().scaledToFit()
+                Text("Linecom Wear Translate").padding()
+            }
             Text("Developed by Linecom").padding()
-            Text("License under MIT.")
+            Text("License under MIT.").font(.custom("", size: 12))
+            Text("浙ICP备00000000号-0A").font(.custom("", size: 11))
+            Text("*备案审核进行中，暂时作为PlaceHolder").font(.custom("", size: 6))
         }
     }
 }

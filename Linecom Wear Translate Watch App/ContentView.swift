@@ -136,9 +136,9 @@ struct ContentView: View {
                 if !translatedText.isEmpty {
                     VStack{
                         Section {
-                        Text(sdata)
-                        Text("从\(dislang)翻译：")
-                            Text(translatedText)
+                        Text(sdata).frame(alignment: .center)
+                        Text("从\(dislang)翻译：").frame(alignment: .center)
+                            Text(translatedText).frame(alignment: .center)
                         }
                     }
                     .padding()
