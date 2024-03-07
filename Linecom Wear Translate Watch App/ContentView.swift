@@ -145,7 +145,8 @@ struct ContentView: View {
                     VStack{
                         Section{
                             Button(action:{translatedText=""
-                                        slang=""},label:{
+                                slang=""
+                            dislang=""},label:{
                                             HStack{
                                                 Image(systemName: "restart")
                                                 Text("重置")
