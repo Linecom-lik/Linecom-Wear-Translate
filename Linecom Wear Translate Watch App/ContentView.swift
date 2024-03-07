@@ -19,6 +19,7 @@ struct ContentView: View {
     @AppStorage("CustomKey") var custkey=""
     @AppStorage("ApiKeyStatus") var custkeyenable=false
     @State var dislang=""
+    @State var sdata=""
     @State var requesting=false
     @AppStorage("LastSource") var sourcelang="auto"
     @AppStorage("LastTarget") var targetlang="en"
@@ -67,6 +68,7 @@ struct ContentView: View {
                                 }else{
                                     let receiveddata=respond["trans_result"][0]["dst"].string ?? "WARN: 翻译返回错误"
                                     requesting=false
+                                    sdata=respond["trans_result"][0]["src"].string ?? ""
                                     translatedText=receiveddata
                                     let currentlang=respond["from"].string
                                     if currentlang=="en"{
@@ -94,6 +96,7 @@ struct ContentView: View {
                                 }else{
                                     let receiveddata=respond["trans_result"][0]["dst"].string ?? "WARN: 翻译返回错误"
                                     requesting=false
+                                    sdata=respond["trans_result"][0]["src"].string ?? ""
                                     translatedText=receiveddata
                                     let currentlang=respond["from"].string
                                     if currentlang=="en"{
@@ -132,9 +135,9 @@ struct ContentView: View {
                 }
                 if !translatedText.isEmpty {
                     VStack{
-                        
-                        Text("从\(dislang)翻译：")
                         Section {
+                        Text(sdata)
+                        Text("从\(dislang)翻译：")
                             Text(translatedText)
                         }
                     }
@@ -152,7 +155,7 @@ struct ContentView: View {
                     }
                 }
                 Section {
-                    NavigationLink(destination:{SettingsView()},label:{HStack{Image(systemName: "gear")
+                    NavigationLink(destination:{SettingsView().navigationTitle("设置")},label:{HStack{Image(systemName: "gear")
                         Text("设置")}})
                     NavigationLink(destination:{AboutView().navigationTitle("关于LWT")},label:{HStack{Image(systemName: "info.circle")
                         Text("关于")
