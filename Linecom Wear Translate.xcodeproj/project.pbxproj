@@ -18,7 +18,7 @@
 		036F3C8C2B9232060080194C /* DarockKit in Frameworks */ = {isa = PBXBuildFile; productRef = 036F3C8B2B9232060080194C /* DarockKit */; };
 		036F3C8E2B92342B0080194C /* md5c.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036F3C8D2B92342B0080194C /* md5c.swift */; };
 		036F3C902B9243FD0080194C /* OtherViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036F3C8F2B9243FD0080194C /* OtherViews.swift */; };
-		03E37C3C2B9A00A300BF3F1D /* info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03E37C3B2B9A00A300BF3F1D /* info.plist */; };
+		03E37C3C2B9A00A300BF3F1D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03E37C3B2B9A00A300BF3F1D /* Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,7 +73,7 @@
 		03428C782B9219590025849C /* Linecom_Wear_Translate_Watch_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Linecom_Wear_Translate_Watch_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		036F3C8D2B92342B0080194C /* md5c.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = md5c.swift; sourceTree = "<group>"; };
 		036F3C8F2B9243FD0080194C /* OtherViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherViews.swift; sourceTree = "<group>"; };
-		03E37C3B2B9A00A300BF3F1D /* info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = info.plist; sourceTree = "<group>"; };
+		03E37C3B2B9A00A300BF3F1D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,7 +105,7 @@
 		03428C492B9219580025849C = {
 			isa = PBXGroup;
 			children = (
-				03E37C3B2B9A00A300BF3F1D /* info.plist */,
+				03E37C3B2B9A00A300BF3F1D /* Info.plist */,
 				03428C5A2B9219580025849C /* Linecom Wear Translate Watch App */,
 				03428C6B2B9219590025849C /* Linecom Wear Translate Watch AppTests */,
 				03428C752B9219590025849C /* Linecom Wear Translate Watch AppUITests */,
@@ -293,7 +293,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03E37C3C2B9A00A300BF3F1D /* info.plist in Resources */,
+				03E37C3C2B9A00A300BF3F1D /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
