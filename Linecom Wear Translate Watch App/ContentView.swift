@@ -118,14 +118,17 @@ struct ContentView: View {
                     }, label: {
                         if requesting {
                             HStack{
+                                Spacer()
                                 Text("正在请求")
                                 ProgressView()
-                               
+                                Spacer()
                             }
                         } else{
                             HStack{
+                                Spacer()
                                 Image(systemName: "globe")
                                 Text("翻译")
+                                Spacer()
                             }
                         }
                         
@@ -136,9 +139,15 @@ struct ContentView: View {
                 if !translatedText.isEmpty {
                     VStack{
                         Section {
-                        Text(sdata).frame(alignment: .center)
-                        Text("从\(dislang)翻译：").frame(alignment: .center)
-                            Text(translatedText).frame(alignment: .center)
+                            HStack{
+                                Spacer();Text(sdata).frame(alignment: .center);Spacer()
+                            }
+                            HStack{
+                                Spacer();Text("从\(dislang)翻译：").frame(alignment: .center);Spacer()
+                            }
+                            HStack{
+                                Spacer();Text(translatedText).frame(alignment: .center);Spacer()
+                            }
                         }
                     }
                     .padding()
@@ -148,18 +157,20 @@ struct ContentView: View {
                                 slang=""
                             dislang=""},label:{
                                             HStack{
+                                                Spacer()
                                                 Image(systemName: "restart")
                                                 Text("重置")
+                                                Spacer()
                                             }
                                                       })
                         }
                     }
                 }
                 Section {
-                    NavigationLink(destination:{SettingsView().navigationTitle("设置")},label:{HStack{Image(systemName: "gear")
-                        Text("设置")}})
-                    NavigationLink(destination:{AboutView().navigationTitle("关于LWT")},label:{HStack{Image(systemName: "info.circle")
-                        Text("关于")
+                    NavigationLink(destination:{SettingsView().navigationTitle("设置")},label:{HStack{Spacer();Image(systemName: "gear")
+                        Text("设置");Spacer()}})
+                    NavigationLink(destination:{AboutView().navigationTitle("关于LWT")},label:{HStack{Spacer();Image(systemName: "info.circle")
+                        Text("关于");Spacer()
                     }})
                 }
 
