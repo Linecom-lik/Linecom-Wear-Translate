@@ -54,13 +54,14 @@ struct OSPView: View{
 struct SettingsView: View{
     @AppStorage("RememberLast") var lastenable=true
     var body: some View{
-        List{
             NavigationStack{
                 Section{
                     NavigationLink(destination:{apiconfigView().navigationTitle("配置密钥")},label:{Text("配置API密钥")})
-                }//footer:{
-                  //  Text("您可以配置自己的百度翻译API密钥，以在我们的API密钥额度用尽时转换为您自己的API。")
-               // }
+                    
+                }
+                Section{
+                    NavigationLink(destination:{SupportView().navigationTitle("联系我们")},label:{Text("联系与反馈")})
+                }
             }
             //搁置
             //Section{
@@ -68,7 +69,6 @@ struct SettingsView: View{
             //}footer:{
             //       Text("打开此选项，LWT将会记住您上次所用的语言。")
             //    }
-        }
     }
 }
 struct apiconfigView: View{
@@ -91,6 +91,16 @@ struct apiconfigView: View{
                     TextField("密钥",text: $custkey)
                 }
             }
+        }
+    }
+}
+struct SupportView: View{
+    var body: some View{
+        List{
+            Text("请通过邮件联系我们：")
+            Text("linecom@linecom.net.cn").font(.custom("", size: 15))
+            Text("若您遇到了问题，请发送支持工单：")
+            Text("support@linecom.net.cn").font(.custom("", size: 15))
         }
     }
 }

@@ -608,7 +608,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Linecom Wear Translate Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Linecom Wear Translate Watch App";
-				WATCHOS_DEPLOYMENT_TARGET = 8.6;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -630,7 +630,7 @@
 				TARGETED_DEVICE_FAMILY = 4;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Linecom Wear Translate Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Linecom Wear Translate Watch App";
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 8.6;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
