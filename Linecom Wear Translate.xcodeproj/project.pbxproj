@@ -16,6 +16,7 @@
 		03428C772B9219590025849C /* Linecom_Wear_Translate_Watch_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03428C762B9219590025849C /* Linecom_Wear_Translate_Watch_AppUITests.swift */; };
 		03428C792B9219590025849C /* Linecom_Wear_Translate_Watch_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03428C782B9219590025849C /* Linecom_Wear_Translate_Watch_AppUITestsLaunchTests.swift */; };
 		0357A6682B9C1708006458F1 /* Linecom-Wear-Translate-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0357A6672B9C1708006458F1 /* Linecom-Wear-Translate-Info.plist */; };
+		0357A6692B9C1774006458F1 /* Linecom-Wear-Translate-Watch-App-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 03E37C422B9A112C00BF3F1D /* Linecom-Wear-Translate-Watch-App-Info.plist */; };
 		036F3C8C2B9232060080194C /* DarockKit in Frameworks */ = {isa = PBXBuildFile; productRef = 036F3C8B2B9232060080194C /* DarockKit */; };
 		036F3C8E2B92342B0080194C /* md5c.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036F3C8D2B92342B0080194C /* md5c.swift */; };
 		036F3C902B9243FD0080194C /* OtherViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036F3C8F2B9243FD0080194C /* OtherViews.swift */; };
@@ -304,6 +305,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				03428C632B9219590025849C /* Preview Assets.xcassets in Resources */,
+				0357A6692B9C1774006458F1 /* Linecom-Wear-Translate-Watch-App-Info.plist in Resources */,
 				03428C602B9219590025849C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
