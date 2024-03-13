@@ -1,0 +1,42 @@
+{
+  "originHash" : "ad7fbd6f4d7b1f458775c710d86f301ee46d9fb7e87a8c6ab1f5c778e15c65b4",
+  "pins" : [
+    {
+      "identity" : "alamofire",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Alamofire/Alamofire",
+      "state" : {
+        "revision" : "3dc6a42c7727c49bf26508e29b0a0b35f9c7e1ad",
+        "version" : "5.8.1"
+      }
+    },
+    {
+      "identity" : "darockkit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Darock-Studio/DarockKit",
+      "state" : {
+        "branch" : "main",
+        "revision" : "b4d26e8c8c37572708f2aa13eb6377c55f18dabc"
+      }
+    },
+    {
+      "identity" : "swiftdate",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/malcommac/SwiftDate",
+      "state" : {
+        "revision" : "5d943224c3bb173e6ecf27295611615eba90c80e",
+        "version" : "7.0.0"
+      }
+    },
+    {
+      "identity" : "swiftyjson",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SwiftyJSON/SwiftyJSON",
+      "state" : {
+        "revision" : "2b6054efa051565954e1d2b9da831680026cd768",
+        "version" : "4.3.0"
+      }
+    }
+  ],
+  "version" : 3
+}
