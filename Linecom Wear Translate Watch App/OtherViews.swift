@@ -25,8 +25,8 @@ struct AppAbout: View{
             }
             Text("Developed by Linecom").padding()
             Text("License under MIT.").font(.custom("", size: 12))
-            Text("浙ICP备00000000号-0A").font(.custom("", size: 11))
-            Text("*备案审核进行中，暂时作为PlaceHolder").font(.custom("", size: 6))
+            Text("浙ICP备2024071295号-3A").font(.custom("", size: 11))
+            //Text("*备案审核进行中，暂时作为PlaceHolder").font(.custom("", size: 6))
         }
     }
 }
