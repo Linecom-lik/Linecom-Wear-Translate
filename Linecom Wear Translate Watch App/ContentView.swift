@@ -39,6 +39,10 @@ struct ContentView: View {
                         Text("繁体中文").tag("cht")
                         Text("英语").tag("en")
                         Text("日语").tag("jp")
+                        Text("韩语").tag("kor")
+                        Text("法语").tag("fra")
+                        Text("德语").tag("de")
+                        Text("俄语").tag("ru")
                         
                     }
                     Picker("目标语言",selection: $targetlang) {
@@ -46,6 +50,10 @@ struct ContentView: View {
                         Text("繁体中文").tag("cht")
                         Text("英语").tag("en")
                         Text("日语").tag("jp")
+                        Text("韩语").tag("kor")
+                        Text("法语").tag("fra")
+                        Text("德语").tag("de")
+                        Text("俄语").tag("ru")
                     }
                 }
                 Section {
@@ -79,6 +87,14 @@ struct ContentView: View {
                                         dislang="繁体中文"
                                     } else if currentlang=="jp" {
                                         dislang="日语"
+                                    } else if currentlang=="kor"{
+                                        dislang="韩语"
+                                    } else if currentlang=="fra"{
+                                        dislang="法语"
+                                    } else if currentlang=="de"{
+                                        dislang="德语"
+                                    } else if currentlang=="ru"{
+                                        dislang="俄语"
                                     }
                                     
                                 }
@@ -107,6 +123,14 @@ struct ContentView: View {
                                         dislang="繁体中文"
                                     } else if currentlang=="jp" {
                                         dislang="日语"
+                                    } else if currentlang=="kor"{
+                                        dislang="韩语"
+                                    } else if currentlang=="fra"{
+                                        dislang="法语"
+                                    } else if currentlang=="de"{
+                                        dislang="德语"
+                                    } else if currentlang=="ru"{
+                                        dislang="俄语"
                                     }
                                     
                                 }

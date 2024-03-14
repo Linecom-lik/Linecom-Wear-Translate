@@ -20,10 +20,15 @@ struct AppAbout: View{
     var body: some View{
         VStack{
             HStack{
-                Image("abouticon").resizable().scaledToFit()
-                Text("Linecom Wear Translate").padding()
+                Image("abouticon").resizable().scaledToFit().mask{Circle()}
+                VStack{
+                    Text("澪空软件\n腕表翻译").padding()
+                    Text("1.0.1")
+                }
             }
+            
             Text("Developed by Linecom").padding()
+            
             Text("License under MIT.").font(.custom("", size: 12))
             Text("浙ICP备2024071295号-3A").font(.custom("", size: 11))
             //Text("*备案审核进行中，暂时作为PlaceHolder").font(.custom("", size: 6))
@@ -35,7 +40,11 @@ struct CerditView: View{
         List{
             Section{
                     HStack{
-                        Image("MEMZAvatar").resizable().scaledToFit().frame(width:43,height:43)
+                        Image("MEMZAvatar")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width:43,height:43)
+                            .mask{Circle()}
                         Text("WindowsMEMZ\n提供代码指导。")
                     }
             }
