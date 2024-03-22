@@ -23,7 +23,7 @@ struct AppAbout: View{
                 Image("abouticon").resizable().scaledToFit().mask{Circle()}
                 VStack{
                     Text("澪空软件\n腕表翻译").padding()
-                    Text("1.0.1")
+                    Text("1.0.2")
                 }
             }
             
