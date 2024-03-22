@@ -11,7 +11,7 @@ struct AboutView: View {
     var body: some View {
         TabView{
             AppAbout()
-            CerditView().navigationTitle("致谢")
+            //CerditView().navigationTitle("致谢")
             OSPView().navigationTitle("开源许可")
         }
     }
