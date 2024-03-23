@@ -11,7 +11,7 @@ struct AboutView: View {
     var body: some View {
         TabView{
             AppAbout()
-            //CerditView().navigationTitle("致谢")
+            CerditView().navigationTitle("开发团队")
             OSPView().navigationTitle("开源许可")
         }
     }
@@ -40,12 +40,20 @@ struct CerditView: View{
         List{
             Section{
                     HStack{
+                        Image("LINEAvatar")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width:43,height:43)
+                            .mask{Circle()}
+                        Text("澪空\n澪空软件技术\n开发者&责任人")
+                    }
+                    HStack{
                         Image("MEMZAvatar")
                             .resizable()
                             .scaledToFit()
                             .frame(width:43,height:43)
                             .mask{Circle()}
-                        Text("WindowsMEMZ\n提供代码指导。")
+                        Text("WindowsMEMZ\n暗礁工作室\n合作开发者")
                     }
             }
         }
@@ -57,27 +65,27 @@ struct OSPView: View{
             Text("SwiftyJSON\nLicense under MIT")
             Text("Alamofire\nLicense under MIT")
             Text("SFSymbol\nLicense under MIT")
+            Text("Darockkit\nLicense under none")
         }
     }
 }
 struct SettingsView: View{
     @AppStorage("RememberLast") var lastenable=true
     var body: some View{
-            NavigationStack{
+        List{
+            
                 Section{
-                    NavigationLink(destination:{apiconfigView().navigationTitle("配置密钥")},label:{Text("配置API密钥")})
-                    
+                    NavigationLink(destination:{apiconfigView().navigationTitle("配置密钥")},label:{Image(systemName: "key.fill");Text("配置API密钥")})
+                    NavigationLink(destination:{SupportView().navigationTitle("联系我们")},label:{Image(systemName: "envelope.open.fill");Text("联系与反馈")})
                 }
-                Section{
-                    NavigationLink(destination:{SupportView().navigationTitle("联系我们")},label:{Text("联系与反馈")})
-                }
-            }
+            
             //搁置
             //Section{
             //    Toggle("记录上次语言",isOn: $lastenable)
             //}footer:{
             //       Text("打开此选项，LWT将会记住您上次所用的语言。")
             //    }
+        }
     }
 }
 struct apiconfigView: View{

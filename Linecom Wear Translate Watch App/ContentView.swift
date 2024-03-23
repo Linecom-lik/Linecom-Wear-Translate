@@ -55,11 +55,7 @@ struct ContentView: View {
                         Text("德语").tag("de")
                         Text("俄语").tag("ru")
                     }
-                }
-                Section {
                     TextField("键入源语言",text: $slang)
-                }
-                Section {
                     Button(action: {
                         // ...
                         requesting = true
