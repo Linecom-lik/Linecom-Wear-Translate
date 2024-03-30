@@ -23,7 +23,7 @@ struct AppAbout: View{
                 Image("abouticon").resizable().scaledToFit().mask{Circle()}
                 VStack{
                     Text("澪空软件\n腕表翻译").padding()
-                    Text("1.0.2")
+                    Text("1.0.3")
                 }
             }
             
@@ -39,6 +39,7 @@ struct CerditView: View{
     var body: some View{
         List{
             Section{
+                NavigationLink(destination: {LineAboutView()},label:{
                     HStack{
                         Image("LINEAvatar")
                             .resizable()
@@ -47,6 +48,8 @@ struct CerditView: View{
                             .mask{Circle()}
                         Text("澪空\n澪空软件技术\n开发者&责任人")
                     }
+                })
+                NavigationLink(destination: {MEMZAboutView()},label:{
                     HStack{
                         Image("MEMZAvatar")
                             .resizable()
@@ -55,6 +58,8 @@ struct CerditView: View{
                             .mask{Circle()}
                         Text("WindowsMEMZ\n暗礁工作室\n合作开发者")
                     }
+                })
+                   
             }
         }
     }
@@ -121,6 +126,132 @@ struct SupportView: View{
         }
     }
 }
+struct LineAboutView: View{
+    var body: some View{
+        if #available(watchOS 10.0, *) {
+            TabView{
+                LineInfoView()
+                LineContactView()
+            }
+            .tabViewStyle(.verticalPage)
+        } else {
+            // Fallback on earlier versions
+            ScrollView{
+                LineInfoView()
+                LineContactView()
+            }
+            
+        }
+        
+    }
+    struct LineInfoView: View{
+        var body: some View{
+            VStack{
+                HStack{
+                    Spacer()
+                    Image("LINEAvatar")
+                        .resizable()
+                        .scaledToFit()
+                        .mask{Circle()}
+                    .frame(width:100, height:100)
+                    Spacer()
+                }
+                Text("澪空Linecom")
+                    .font(.title3)
+                Text("From 浙江 宁波")
+                    .font(.caption)
+            }
+        }
+    }
+    struct LineContactView: View{
+        var body: some View{
+            List{
+                VStack{
+                    HStack{
+                        Image(systemName: "paperplane")
+                        Text("澪空软件技术")
+                    }
+                    HStack{
+                        Image(systemName: "info.circle")
+                        Text("负责人")
+                    }
+                    HStack{
+                        Image(systemName: "apple.terminal")
+                        Text("程序开发")
+                    }
+                    HStack{
+                        Image(systemName: "envelope")
+                        Text("linecom@linecom.net.cn").font(.custom("cust", size: 13))
+                    }
+                }
+            }
+        }
+    }
+    
+}
+struct MEMZAboutView: View{
+    var body: some View{
+        if #available(watchOS 10.0, *) {
+            TabView{
+                MEMZInfoView()
+                MEMZContactView()
+            }
+            .tabViewStyle(.verticalPage)
+        } else {
+            // Fallback on earlier versions
+            ScrollView{
+                MEMZInfoView()
+                MEMZContactView()
+            }
+        }
+        
+    }
+    struct MEMZInfoView: View{
+        var body: some View{
+            VStack{
+                HStack{
+                    Spacer()
+                    Image("MEMZAvatar")
+                        .resizable()
+                        .scaledToFit()
+                        .mask{Circle()}
+                    .frame(width:100, height:100)
+                    Spacer()
+                }
+                Text("WindowsMEMZ")
+                    .font(.title3)
+                Text("From 四川 德阳")
+                    .font(.caption)
+            }
+        }
+    }
+    struct MEMZContactView: View{
+        var body: some View{
+            List{
+                VStack{
+                    HStack{
+                        Image(systemName: "paperplane")
+                        Text("Darock")
+                    }
+                    HStack{
+                        Image(systemName: "info.circle")
+                        Text("首席执行官")
+                    }
+                    HStack{
+                        Image(systemName: "apple.terminal")
+                        Text("技术支持")
+                    }
+                    HStack{
+                        Image(systemName: "envelope")
+                        Text("memz@darock.top").font(.custom("cust", size: 13))
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
 
 #Preview {
     AboutView()
