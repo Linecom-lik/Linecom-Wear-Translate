@@ -28,6 +28,7 @@ struct AppAbout: View{
             }
             
             Text("Developed by Linecom").padding()
+
             
             Text("License under MIT.").font(.custom("", size: 12))
             Text("浙ICP备2024071295号-3A").font(.custom("", size: 11))

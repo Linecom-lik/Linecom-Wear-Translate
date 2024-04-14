@@ -1,23 +1,58 @@
 {
   "sourceLanguage" : "zh-Hans",
   "strings" : {
-    "1.0.3" : {
+    "1.0.4" : {
 
     },
     "Alamofire\nLicense under MIT" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Alamofire\nLicense under MIT"
+          }
+        }
+      }
     },
     "APPID" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "APPID"
+          }
+        }
+      }
     },
     "Darock" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Darock"
+          }
+        }
+      }
     },
     "Darockkit\nLicense under none" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Darockkit\nLicense under none"
+          }
+        }
+      }
     },
     "Developed by Linecom" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Developed by Linecom"
+          }
+        }
+      }
     },
     "From 四川 德阳" : {
       "localizations" : {
@@ -30,13 +65,34 @@
       }
     },
     "From 浙江 宁波" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "From Ningbo Zhejiang"
+          }
+        }
+      }
     },
     "License under MIT." : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "License under MIT."
+          }
+        }
+      }
     },
     "linecom@linecom.net.cn" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "linecom@linecom.net.cn"
+          }
+        }
+      }
     },
     "LWT翻译" : {
       "localizations" : {
@@ -49,19 +105,54 @@
       }
     },
     "memz@darock.top" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "memz@darock.top"
+          }
+        }
+      }
     },
     "SFSymbol\nLicense under MIT" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SFSymbol\nLicense under MIT"
+          }
+        }
+      }
     },
     "support@linecom.net.cn" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "support@linecom.net.cn"
+          }
+        }
+      }
     },
     "SwiftyJSON\nLicense under MIT" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "SwiftyJSON\nLicense under MIT"
+          }
+        }
+      }
     },
     "WindowsMEMZ" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "WindowsMEMZ"
+          }
+        }
+      }
     },
     "WindowsMEMZ\n暗礁工作室\n合作开发者" : {
       "localizations" : {

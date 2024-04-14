@@ -67,10 +67,10 @@ struct ContentView: View {
                         let allurl="https://fanyi-api.baidu.com/api/trans/vip/translate?\(all)"
                             DarockKit.Network.shared.requestJSON(allurl.urlEncoded()){ respond, succeed in
                                 if !succeed{
-                                    translatedText="WARN: 翻译请求失败"
+                                    translatedText="FATAL:\n翻译请求失败"
                                     requesting=false
                                 }else{
-                                    let receiveddata=respond["trans_result"][0]["dst"].string ?? "WARN: 翻译返回错误"
+                                    let receiveddata=respond["trans_result"][0]["dst"].string ?? "FATAL:\n翻译返回错误"
                                     requesting=false
                                     sdata=respond["trans_result"][0]["src"].string ?? ""
                                     translatedText=receiveddata
@@ -103,10 +103,10 @@ struct ContentView: View {
                             let custallurl="https://fanyi-api.baidu.com/api/trans/vip/translate?\(custall)"
                             DarockKit.Network.shared.requestJSON(custallurl.urlEncoded()){ respond, succeed in
                                 if !succeed{
-                                    translatedText="WARN: 翻译请求失败"
+                                    translatedText="FALAT:\n翻译请求失败"
                                     requesting=false
                                 }else{
-                                    let receiveddata=respond["trans_result"][0]["dst"].string ?? "WARN: 翻译返回错误"
+                                    let receiveddata=respond["trans_result"][0]["dst"].string ?? "FATAL:\n翻译返回错误"
                                     requesting=false
                                     sdata=respond["trans_result"][0]["src"].string ?? ""
                                     translatedText=receiveddata
@@ -157,19 +157,21 @@ struct ContentView: View {
                     
                 }
                 if !translatedText.isEmpty {
-                    VStack{
                         Section {
-                            HStack{
-                                Spacer();Text(sdata).frame(alignment: .center);Spacer()
+                            if !slang.isEmpty{
+                                HStack{
+                                    Spacer();Text(sdata).frame(alignment: .center);Spacer()
+                                }
                             }
-                            HStack{
-                                Spacer();Text("从\(dislang)翻译：").frame(alignment: .center);Spacer()
+                            if !dislang.isEmpty{
+                                HStack{
+                                    Text("从\(dislang)翻译：").frame(alignment: .center)
+                                }
                             }
                             HStack{
                                 Spacer();Text(translatedText).frame(alignment: .center);Spacer()
                             }
                         }
-                    }
                     .padding()
                     VStack{
                         Section{
