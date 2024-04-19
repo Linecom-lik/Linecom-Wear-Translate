@@ -165,7 +165,7 @@ struct ContentView: View {
                             }
                             if !dislang.isEmpty{
                                 HStack{
-                                    Text("从\(dislang)翻译：").frame(alignment: .center)
+                                    Text("从\(dislang)翻译：").bold().frame(alignment: .center)
                                 }
                             }
                             HStack{
