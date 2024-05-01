@@ -42,7 +42,7 @@ struct AppAbout: View{
             Text("Developed by Linecom").padding()
 
             VStack{
-                Text("License under Apache License 2.0.").font(.custom("", size: 12)).sheet(isPresented: $LicensePersent, content: {
+                Text("Licensed under Apache License 2.0.").font(.custom("", size: 12)).sheet(isPresented: $LicensePersent, content: {
                     LicenseView()
                 }).onTapGesture {
                     LicensePersent=true
@@ -94,16 +94,16 @@ struct OSPView: View{
                 }
                 session.prefersEphemeralWebBrowserSession = true
                 session.start()
-            }, label:{Text("SwiftyJSON\nLicense under MIT")})
+            }, label:{Text("SwiftyJSON\nLicensed under MIT")})
             Button(action: {
                 let session = ASWebAuthenticationSession(url: URL(string: "https://github.com/Alamofire/Alamofire")!, callbackURLScheme: "mlhd") { _, _ in
                     return
                 }
                 session.prefersEphemeralWebBrowserSession = true
                 session.start()
-            }, label:{Text("Alamofire\nLicense under MIT")})
-            Text("SFSymbol\nLicense under MIT")
-            Text("Darockkit\nLicense under none")
+            }, label:{Text("Alamofire\nLicensed under MIT")})
+            Text("SFSymbol\nLicensed under MIT")
+            Text("Darockkit\nLicensed under none")
         }
     }
 }
