@@ -12,6 +12,7 @@
       }
     },
     "1.0.6" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -20,6 +21,9 @@
           }
         }
       }
+    },
+    "1.0.7" : {
+
     },
     "Alamofire\nLicense under MIT" : {
       "extractionState" : "stale",
@@ -287,6 +291,9 @@
         }
       }
     },
+    "为Apple Watch SE和Apple Watch Series6及以前的设备提供英文与拼音的全键盘输入。\nPowered by Cepheus" : {
+
+    },
     "从%@翻译：" : {
       "localizations" : {
         "en" : {
@@ -337,6 +344,9 @@
         }
       }
     },
+    "启用兼容性输入" : {
+
+    },
     "如您开启调试模式，即表明您愿意接受开启调试模式带来的不稳定性" : {
 
     },
@@ -349,6 +359,9 @@
           }
         }
       }
+    },
+    "实验性功能" : {
+
     },
     "密钥" : {
       "localizations" : {
@@ -429,6 +442,9 @@
           }
         }
       }
+    },
+    "此时暂无实验性功能可供测试" : {
+
     },
     "法语" : {
       "localizations" : {
