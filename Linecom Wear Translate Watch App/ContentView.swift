@@ -23,7 +23,9 @@ struct ContentView: View {
     @State var requesting=false
     @AppStorage("LastSource") var sourcelang="auto"
     @AppStorage("LastTarget") var targetlang="en"
-    
+    @State var errcode=0
+    @State var errinfo=""
+    @AppStorage("debugmode") var debugenable=false
     var body: some View {
         //搁置
         //if !lastenable{
@@ -32,6 +34,15 @@ struct ContentView: View {
         //}
         NavigationStack {
             List {
+                if debugenable{
+                    Section{
+                        HStack{
+                            Spacer()
+                            Text("Debug enabled")
+                            Spacer()
+                        }
+                    }
+                }
                 Section {
                     Picker("源语言",selection: $sourcelang) {
                         Text("自动").tag("auto")
@@ -43,9 +54,15 @@ struct ContentView: View {
                         Text("法语").tag("fra")
                         Text("德语").tag("de")
                         Text("俄语").tag("ru")
+                        Text("西班牙语").tag("spa")
+                        Text("波兰语").tag("bl")
                         
                     }
                     Picker("目标语言",selection: $targetlang) {
+                        //debug selection!
+                        if debugenable{
+                            Text("自动").tag("auto")
+                        }
                         Text("简体中文").tag("zh")
                         Text("繁体中文").tag("cht")
                         Text("英语").tag("en")
@@ -54,12 +71,17 @@ struct ContentView: View {
                         Text("法语").tag("fra")
                         Text("德语").tag("de")
                         Text("俄语").tag("ru")
+                        Text("西班牙语").tag("spa")
+                        Text("波兰语").tag("bl")
                     }
                     TextField("键入源语言",text: $slang)
                     Button(action: {
                         // ...
                         requesting = true
-                        if !custkeyenable{
+                        if slang.isEmpty && !debugenable{
+                            translatedText="请输入文本"
+                            requesting=false
+                        }else if !custkeyenable{
                         let clipedkey=appid+slang+"1355702100"+apikey
                         let signtrue=clipedkey.md5c()
                         let all="q=\(slang)&from=\(sourcelang)&to=\(targetlang)&appid=\(appid)&salt=1355702100&sign=\(signtrue)"
@@ -71,6 +93,10 @@ struct ContentView: View {
                                     requesting=false
                                 }else{
                                     let receiveddata=respond["trans_result"][0]["dst"].string ?? "FATAL:\n翻译返回错误"
+                                    if receiveddata=="FATAL:\n翻译返回错误"{
+                                        errcode=respond["error_code"].int ?? 0
+                                        errinfo=respond["error_msg"].string!
+                                    }
                                     requesting=false
                                     sdata=respond["trans_result"][0]["src"].string ?? ""
                                     translatedText=receiveddata
@@ -91,6 +117,10 @@ struct ContentView: View {
                                         dislang="德语"
                                     } else if currentlang=="ru"{
                                         dislang="俄语"
+                                    } else if currentlang=="spa"{
+                                        dislang="西班牙语"
+                                    } else if currentlang=="bl"{
+                                        dislang="波兰语"
                                     }
                                     
                                 }
@@ -107,6 +137,10 @@ struct ContentView: View {
                                     requesting=false
                                 }else{
                                     let receiveddata=respond["trans_result"][0]["dst"].string ?? "FATAL:\n翻译返回错误"
+                                    if receiveddata=="FATAL:\n翻译返回错误"{
+                                        errcode=respond["error_code"].int!
+                                        errinfo=respond["error_msg"].string!
+                                    }
                                     requesting=false
                                     sdata=respond["trans_result"][0]["src"].string ?? ""
                                     translatedText=receiveddata
@@ -127,7 +161,12 @@ struct ContentView: View {
                                         dislang="德语"
                                     } else if currentlang=="ru"{
                                         dislang="俄语"
+                                    } else if currentlang=="spa"{
+                                        dislang="西班牙语"
+                                    } else if currentlang=="bl"{
+                                        dislang="波兰语"
                                     }
+                                    
                                     
                                 }
                             }
@@ -173,6 +212,15 @@ struct ContentView: View {
                             }
                         }
                     .padding()
+                    if !errinfo.isEmpty{
+                        Section(content: {
+                            Text("错误代码：\(errcode)")
+                            Text("错误详细信息：")
+                            Text(errinfo)
+                        },footer:{
+                            Text("如有疑问，请反馈开发者")
+                        })
+                    }
                     VStack{
                         Section{
                             Button(action:{translatedText=""

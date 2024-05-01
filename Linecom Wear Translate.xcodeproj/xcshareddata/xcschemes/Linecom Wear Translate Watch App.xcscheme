@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scheme
+   LastUpgradeVersion = "1530"
+   version = "1.7">
+   <BuildAction
+      parallelizeBuildables = "YES"
+      buildImplicitDependencies = "YES"
+      buildArchitectures = "Automatic">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "03428C552B9219580025849C"
+               BuildableName = "&#x6faa;&#x7a7a;&#x8f6f;&#x4ef6;&#x8155;&#x8868;&#x7ffb;&#x8bd1;.app"
+               BlueprintName = "Linecom Wear Translate Watch App"
+               ReferencedContainer = "container:Linecom Wear Translate.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "03428C4F2B9219580025849C"
+               BuildableName = "Linecom Wear Translate.app"
+               BlueprintName = "Linecom Wear Translate"
+               ReferencedContainer = "container:Linecom Wear Translate.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
+   </BuildAction>
+   <TestAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      shouldAutocreateTestPlan = "YES">
+      <Testables>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "03428C672B9219590025849C"
+               BuildableName = "Linecom Wear Translate Watch AppTests.xctest"
+               BlueprintName = "Linecom Wear Translate Watch AppTests"
+               ReferencedContainer = "container:Linecom Wear Translate.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO"
+            parallelizable = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "03428C712B9219590025849C"
+               BuildableName = "Linecom Wear Translate Watch AppUITests.xctest"
+               BlueprintName = "Linecom Wear Translate Watch AppUITests"
+               ReferencedContainer = "container:Linecom Wear Translate.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+      </Testables>
+   </TestAction>
+   <LaunchAction
+      buildConfiguration = "Debug"
+      selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
+      selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
+      launchStyle = "0"
+      useCustomWorkingDirectory = "NO"
+      ignoresPersistentStateOnLaunch = "NO"
+      debugDocumentVersioning = "YES"
+      debugServiceExtension = "internal"
+      allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "03428C552B9219580025849C"
+            BuildableName = "&#x6faa;&#x7a7a;&#x8f6f;&#x4ef6;&#x8155;&#x8868;&#x7ffb;&#x8bd1;.app"
+            BlueprintName = "Linecom Wear Translate Watch App"
+            ReferencedContainer = "container:Linecom Wear Translate.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </LaunchAction>
+   <ProfileAction
+      buildConfiguration = "Release"
+      shouldUseLaunchSchemeArgsEnv = "YES"
+      savedToolIdentifier = ""
+      useCustomWorkingDirectory = "NO"
+      debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "03428C552B9219580025849C"
+            BuildableName = "&#x6faa;&#x7a7a;&#x8f6f;&#x4ef6;&#x8155;&#x8868;&#x7ffb;&#x8bd1;.app"
+            BlueprintName = "Linecom Wear Translate Watch App"
+            ReferencedContainer = "container:Linecom Wear Translate.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
+   </ProfileAction>
+   <AnalyzeAction
+      buildConfiguration = "Debug">
+   </AnalyzeAction>
+   <ArchiveAction
+      buildConfiguration = "Release"
+      revealArchiveInOrganizer = "YES">
+   </ArchiveAction>
+</Scheme>
