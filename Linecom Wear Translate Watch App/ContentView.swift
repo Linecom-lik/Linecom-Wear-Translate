@@ -77,6 +77,8 @@ struct ContentView: View {
                     TextField("键入源语言",text: $slang)
                     Button(action: {
                         // ...
+                        errcode=0
+                        errinfo=""
                         requesting = true
                         if slang.isEmpty && !debugenable{
                             translatedText="请输入文本"
@@ -94,7 +96,7 @@ struct ContentView: View {
                                 }else{
                                     let receiveddata=respond["trans_result"][0]["dst"].string ?? "FATAL:\n翻译返回错误"
                                     if receiveddata=="FATAL:\n翻译返回错误"{
-                                        errcode=respond["error_code"].int ?? 0
+                                        errcode=respond["error_code"].int ?? -1
                                         errinfo=respond["error_msg"].string!
                                     }
                                     requesting=false
@@ -138,7 +140,7 @@ struct ContentView: View {
                                 }else{
                                     let receiveddata=respond["trans_result"][0]["dst"].string ?? "FATAL:\n翻译返回错误"
                                     if receiveddata=="FATAL:\n翻译返回错误"{
-                                        errcode=respond["error_code"].int!
+                                        errcode=respond["error_code"].int ?? -1
                                         errinfo=respond["error_msg"].string!
                                     }
                                     requesting=false
@@ -225,7 +227,10 @@ struct ContentView: View {
                         Section{
                             Button(action:{translatedText=""
                                 slang=""
-                            dislang=""},label:{
+                                dislang=""
+                                errcode=0
+                                errinfo=""
+                            },label:{
                                             HStack{
                                                 Spacer()
                                                 Image(systemName: "restart")

@@ -30,7 +30,7 @@ struct AppAbout: View{
                 VStack{
                     Text("澪空软件")
                     Text("腕表翻译")
-                    Text("1.0.6").onTapGesture(count: 10, perform: {
+                    Text("1.0.7").onTapGesture(count: 10, perform: {
                         debug=true
                         debugmodepst=true
                     }).sheet(isPresented: $debugmodepst, content: {
@@ -128,6 +128,7 @@ struct SettingsView: View{
             if debugdisplay{
                 Section(content:{
                     Toggle("调试模式",isOn: $debugmode)
+                    NavigationLink(destination: {ExperimentView().navigationTitle("实验性功能")}, label: {Text("实验性功能")})
                     Button(action:{
                         debugdisplay=false
                         debugmode=false
