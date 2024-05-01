@@ -23,7 +23,14 @@
       }
     },
     "1.0.7" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1.0.7"
+          }
+        }
+      }
     },
     "Alamofire\nLicense under MIT" : {
       "extractionState" : "stale",
