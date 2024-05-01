@@ -18,8 +18,10 @@ struct AboutView: View {
     }
 }
 struct AppAbout: View{
+    @AppStorage("debugselect") var debug=false
     @State var ICPPersent=false
     @State var LicensePersent=false
+    @State var debugmodepst=false
     var body: some View{
         VStack{
             HStack{
@@ -28,7 +30,12 @@ struct AppAbout: View{
                 VStack{
                     Text("澪空软件")
                     Text("腕表翻译")
-                    Text("1.0.5")//.font(.custom("ccccc", size: 10))
+                    Text("1.0.6").onTapGesture(count: 10, perform: {
+                        debug=true
+                        debugmodepst=true
+                    }).sheet(isPresented: $debugmodepst, content: {
+                        Text("调试选项已启用")
+                    })//.font(.custom("ccccc", size: 10))
                 }.padding()
             }
             
@@ -101,14 +108,16 @@ struct OSPView: View{
     }
 }
 struct SettingsView: View{
+    @AppStorage("debugselect") var debugdisplay=false
     @AppStorage("RememberLast") var lastenable=true
+    @AppStorage("debugmode") var debugmode=false
     var body: some View{
         List{
             
-                Section{
-                    NavigationLink(destination:{apiconfigView().navigationTitle("配置密钥")},label:{Image(systemName: "key.fill");Text("配置API密钥")})
-                    NavigationLink(destination:{SupportView().navigationTitle("联系我们")},label:{Image(systemName: "envelope.open.fill");Text("联系与反馈")})
-                }
+            Section{
+                NavigationLink(destination:{apiconfigView().navigationTitle("配置密钥")},label:{Image(systemName: "key.fill");Text("配置API密钥")})
+                NavigationLink(destination:{SupportView().navigationTitle("联系我们")},label:{Image(systemName: "envelope.open.fill");Text("联系与反馈")})
+            }
             
             //搁置
             //Section{
@@ -116,6 +125,19 @@ struct SettingsView: View{
             //}footer:{
             //       Text("打开此选项，LWT将会记住您上次所用的语言。")
             //    }
+            if debugdisplay{
+                Section(content:{
+                    Toggle("调试模式",isOn: $debugmode)
+                    Button(action:{
+                        debugdisplay=false
+                        debugmode=false
+                    },label: {
+                        Text("隐藏调试选项")
+                    })
+                },footer:{
+                    Text("如您开启调试模式，即表明您愿意接受开启调试模式带来的不稳定性")
+                })
+            }
         }
     }
 }
