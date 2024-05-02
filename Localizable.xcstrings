@@ -23,6 +23,7 @@
       }
     },
     "1.0.7" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -31,6 +32,9 @@
           }
         }
       }
+    },
+    "1.0.10" : {
+
     },
     "Alamofire\nLicense under MIT" : {
       "extractionState" : "stale",
