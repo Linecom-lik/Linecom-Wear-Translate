@@ -26,6 +26,7 @@ struct ContentView: View {
     @State var errcode=0
     @State var errinfo=""
     @AppStorage("debugmode") var debugenable=false
+    @AppStorage("Offlinetrans") var offlineenable=false
     var body: some View {
         //搁置
         //if !lastenable{
@@ -242,6 +243,14 @@ struct ContentView: View {
                     }
                 }
                 Section {
+                    if offlineenable{
+                        NavigationLink(destination: {OfflineTranslateView()}, label: {
+                            HStack{
+                                Image(systemName: "network.slash")
+                                Text("离线翻译")
+                            }
+                        })
+                    }
                     NavigationLink(destination:{SettingsView().navigationTitle("设置")},label:{HStack{Spacer();Image(systemName: "gear")
                         Text("设置");Spacer()}})
                     NavigationLink(destination:{AboutView().navigationTitle("关于LWT")},label:{HStack{Spacer();Image(systemName: "info.circle")
