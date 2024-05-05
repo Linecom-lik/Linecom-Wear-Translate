@@ -9,5 +9,7 @@ A Simple Translate App on Apple Watch.
 [![App Store](./README_resources/App_Store.svg)](https://apps.apple.com/cn/app/澪空软件腕表翻译/id6478855138)
 # Build
 Just clone this repository and open with Xcode.
+# Contributing
+We're thank you to make contribution to this repository. Every pull requests will automatically run a Xcode Cloud status check after a commit. Feel free to request reviews.
 # License
 This software is licensed under Apache License-2.0: [LICENSE](./LICENSE)
