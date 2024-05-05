@@ -53,8 +53,14 @@ struct DarockFeedbackView: View {
         @State var contentInput = ""
         @State var feedbackType = 0
         @State var isSending = false
+        @State var userInput=""
         var body: some View {
             List {
+                Section{
+                    TextField("昵称",text: $userInput)
+                } footer: {
+                    Text("如何称呼您")
+                }
                 Section {
                     TextField("标题", text: $titleInput)
                 } footer: {
@@ -71,11 +77,11 @@ struct DarockFeedbackView: View {
                 }
                 Section {
                     Button(action: {
-                        if titleInput == "" {
+                        if titleInput == "" && userInput == "" {
                             #if os(watchOS) || os(visionOS)
-                            tipWithText("标题不能为空", symbol: "xmark.circle.fill")
+                            tipWithText("缺少必填信息", symbol: "xmark.circle.fill")
                             #else
-                            AlertKitAPI.present(title: "标题不能为空", icon: .error, style: .iOS17AppleMusic, haptic: .error)
+                            AlertKitAPI.present(title: "缺少必填信息", icon: .error, style: .iOS17AppleMusic, haptic: .error)
                             #endif
                             return
                         }
@@ -90,11 +96,10 @@ struct DarockFeedbackView: View {
                         State：0
                         Type：\(feedbackType)
                         Content：\(contentInput)
-                        Version：v\(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String) Build \(Bundle.main.infoDictionary?["CFBundleVersion"] as! String)
+                        Version：LWT \(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String) Build \(Bundle.main.infoDictionary?["CFBundleVersion"] as! String)
                         Time：\(Date.now.timeIntervalSince1970)
-                        Sender: User
-                        BanID：\(banId)
-                        BanUID：\(UserDefaults.standard.string(forKey: "DedeUserID") ?? "Empty")
+                        Sender: \(userInput)
+                        UDID：\(banId)
                         """
                         DarockKit.Network.shared.requestString("https://fapi.darock.top:65535/feedback/submit/anony/LWT/\(msgToSend.base64Encoded().replacingOccurrences(of: "/", with: "{slash}"))") { respStr, isSuccess in
                             if isSuccess {

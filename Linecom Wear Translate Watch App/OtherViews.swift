@@ -166,12 +166,37 @@ struct apiconfigView: View{
     }
 }
 struct SupportView: View{
+    @State var contactmethod="emaillinecom"
     var body: some View{
-        List{
-            Text("请通过邮件联系我们：")
-            Text("linecom@linecom.net.cn").font(.custom("", size: 15))
-            Text("若您遇到了问题，请发送支持工单：")
-            Text("support@linecom.net.cn").font(.custom("", size: 15))
+        NavigationStack{
+            List{
+                Section(content: {
+                    Picker("联系方式",selection: $contactmethod){
+                        Text("邮件").tag("emaillinecom")
+                        Text("反馈助理").tag("transferdarock")
+                    }
+                }, footer:{
+                    if contactmethod=="emaillinecom"{
+                        Text("发送邮件直接联系澪空软件（推荐）")
+                    } else if contactmethod=="transferdarock"{
+                        Text("通过“反馈助理”向Darock提交反馈，您的反馈将于24小时内发送到澪空软件")
+                    }
+                })
+                if contactmethod=="emaillinecom"{
+                    Section{
+                        Text("请通过邮件联系我们：")
+                        Text("linecom@linecom.net.cn").font(.custom("", size: 15))
+                        Text("若您遇到了问题，请发送支持工单：")
+                        Text("support@linecom.net.cn").font(.custom("", size: 15))
+                    }
+                } else if contactmethod=="transferdarock"{
+                    Section{
+                        NavigationLink(destination: {DarockFeedbackView()}, label: {
+                            Text("单击启动反馈助理")
+                        })
+                    }
+                }
+            }
         }
     }
 }
