@@ -30,7 +30,7 @@ struct AppAbout: View{
                 VStack{
                     Text("澪空软件")
                     Text("腕表翻译")
-                    Text("1.0.10").onTapGesture(count: 10, perform: {
+                    Text("1.0.11").onTapGesture(count: 10, perform: {
                         debug=true
                         debugmodepst=true
                     }).sheet(isPresented: $debugmodepst, content: {
