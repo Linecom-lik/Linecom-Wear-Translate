@@ -1,4 +1,6 @@
-# Linecom-Wear-Translate
+<img src="./Linecom Wear Translate Watch App/Assets.xcassets/abouticon.imageset/未标题-1.png" align="center" height="250" width="250" />
+
+# Linecom Wear Translate
 ![App Store](https://img.shields.io/badge/App_Store-05a3ec?style=flat-square&logo=app-store&logoColor=white)
 ![Swift](https://img.shields.io/badge/Swift-5.9-ef503d?style=flat-square)
 ![Platforms](https://img.shields.io/badge/Platforms-watchOS-004e9a?style=flat-square)
