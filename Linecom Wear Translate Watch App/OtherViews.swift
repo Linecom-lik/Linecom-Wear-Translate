@@ -30,7 +30,7 @@ struct AppAbout: View{
                 VStack{
                     Text("澪空软件")
                     Text("腕表翻译")
-                    Text("1.0.12").onTapGesture(count: 10, perform: {
+                    Text("1.0.15").onTapGesture(count: 10, perform: {
                         debug=true
                         debugmodepst=true
                     }).sheet(isPresented: $debugmodepst, content: {
@@ -80,6 +80,16 @@ struct CerditView: View{
                         Text("WindowsMEMZ\n暗礁工作室\n合作开发者")
                     }
                 })
+                NavigationLink(destination: {TM785AboutView()},label:{
+                    HStack{
+                        Image("TM785Avatar")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width:43,height:43)
+                            .mask{Circle()}
+                        Text("ThreeManager785\nSerene Garden\n框架开发者")
+                    }
+                })
                    
             }
         }
@@ -117,6 +127,8 @@ struct SettingsView: View{
             Section{
                 NavigationLink(destination:{apiconfigView().navigationTitle("配置密钥")},label:{Image(systemName: "key.fill");Text("配置API密钥")})
                 NavigationLink(destination:{SupportView().navigationTitle("联系我们")},label:{Image(systemName: "envelope.open.fill");Text("联系与反馈")})
+            } header: {
+                Text("通用")
             }
             
             //搁置
@@ -126,7 +138,7 @@ struct SettingsView: View{
             //       Text("打开此选项，LWT将会记住您上次所用的语言。")
             //    }
             if debugdisplay{
-                Section(content:{
+                Section{
                     Toggle("调试模式",isOn: $debugmode)
                     NavigationLink(destination: {ExperimentView().navigationTitle("实验性功能")}, label: {Text("实验性功能")})
                     Button(action:{
@@ -135,9 +147,11 @@ struct SettingsView: View{
                     },label: {
                         Text("隐藏调试选项")
                     })
-                },footer:{
-                    Text("如您开启调试模式，即表明您愿意接受开启调试模式带来的不稳定性")
-                })
+                } header: {
+                    Text("调试选项")
+                } footer: {
+                    Text("若您使用调试选项, 则您自愿接受调试功能所带来的风险")
+                }
             }
         }
     }
@@ -289,7 +303,7 @@ struct MEMZAboutView: View{
                         .resizable()
                         .scaledToFit()
                         .mask{Circle()}
-                    .frame(width:100, height:100)
+                        .frame(width:100, height:100)
                     Spacer()
                 }
                 Text("WindowsMEMZ")
@@ -323,8 +337,69 @@ struct MEMZAboutView: View{
             }
         }
     }
-    
 }
+struct TM785AboutView: View{
+    var body: some View{
+        if #available(watchOS 10.0, *) {
+            TabView{
+                TM785InfoView()
+                TM785ContactView()
+            }
+            .tabViewStyle(.verticalPage)
+        } else {
+            // Fallback on earlier versions
+            ScrollView{
+                TM785InfoView()
+                TM785ContactView()
+            }
+        }
+        
+    }
+    struct TM785InfoView: View{
+        var body: some View{
+            VStack{
+                HStack{
+                    Spacer()
+                    Image("TM785Avatar")
+                        .resizable()
+                        .scaledToFit()
+                        .mask{Circle()}
+                        .frame(width:100, height:100)
+                    Spacer()
+                }
+                Text("ThreeManager785")
+                    .font(.title3)
+                Text("From 天津 天津")
+                    .font(.caption)
+            }
+        }
+    }
+    struct TM785ContactView: View{
+        var body: some View{
+            List{
+                VStack{
+                    HStack{
+                        Image(systemName: "paperplane")
+                        Text("Serene Garden")
+                    }
+                    HStack{
+                        Image(systemName: "info.circle")
+                        Text("首席执行官")
+                    }
+                    HStack{
+                        Image(systemName: "apple.terminal")
+                        Text("框架开发")
+                    }
+                    HStack{
+                        Image(systemName: "envelope")
+                        Text("mallets02.plums@icloud.com").font(.custom("cust", size: 13))
+                    }
+                }
+            }
+        }
+    }
+}
+
 struct ICPView: View{
     var body: some View{
         List{
