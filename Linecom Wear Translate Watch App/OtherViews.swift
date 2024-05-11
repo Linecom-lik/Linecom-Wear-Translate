@@ -119,13 +119,16 @@ struct OSPView: View{
 }
 struct SettingsView: View{
     @AppStorage("debugselect") var debugdisplay=false
-    @AppStorage("RememberLast") var lastenable=true
+    @AppStorage("Provider") var provider="baidu"
     @AppStorage("debugmode") var debugmode=false
     var body: some View{
         List{
             
             Section{
-                NavigationLink(destination:{apiconfigView().navigationTitle("配置密钥")},label:{Image(systemName: "key.fill");Text("配置API密钥")})
+                Picker("翻译提供商", selection: $provider){
+                    Text("百度翻译").tag("baidu")
+                    Text("腾讯翻译").tag("texcent")
+                }
                 NavigationLink(destination:{SupportView().navigationTitle("联系我们")},label:{Image(systemName: "envelope.open.fill");Text("联系与反馈")})
             } header: {
                 Text("通用")
