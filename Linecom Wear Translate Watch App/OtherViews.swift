@@ -413,21 +413,68 @@ struct TM785AboutView: View{
 
 struct ICPView: View{
     var body: some View{
+        NavigationStack{
+            List{
+                NavigationLink(destination: {ICPInfoView()}, label: {
+                    Text("浙ICP备2024071295号-3A").font(.custom("cstom", size: 14))
+                })
+                Button(action: {
+                    let session = ASWebAuthenticationSession(url: URL(string: "https://beian.miit.gov.cn")!, callbackURLScheme: "mlhd") { _, _ in
+                        return
+                    }
+                    session.prefersEphemeralWebBrowserSession = true
+                    session.start()
+                }, label: {
+                    HStack{
+                        Image(systemName: "arrow.up.forward")
+                        Text("MIIT网站")
+                    }
+                })
+            }.navigationTitle("ICP备案")
+        }
+    }
+}
+struct ICPInfoView: View{
+    var body: some View{
         List{
-            Text("浙ICP备2024071295号-3A").font(.custom("cstom", size: 14))
-            Button(action: {
-                let session = ASWebAuthenticationSession(url: URL(string: "https://beian.miit.gov.cn")!, callbackURLScheme: "mlhd") { _, _ in
-                    return
-                }
-                session.prefersEphemeralWebBrowserSession = true
-                session.start()
-            }, label: {
-                HStack{
-                    Image(systemName: "arrow.up.forward")
-                    Text("MIIT网站")
-                }
-            })
-        }.navigationTitle("ICP备案")
+            Text("ICP备案主体信息")
+            Section{
+                Text("宁波高新区程信通讯器材经营部")
+            } header: {
+                Text("主办单位名称")
+            }
+            Section{
+                Text("浙ICP备2024071295号")
+            } header: {
+                Text("ICP备案/许可证号")
+            }
+            Section{
+                Text("企业")
+            } header: {
+                Text("主办单位性质")
+            }
+            Section{
+                Text("2024-03-12 08:44:27")
+            } header: {
+                Text("审核通过日期")
+            }
+            Text("ICP备案服务信息")
+            Section{
+                Text("澪空软件腕表翻译")
+            } header: {
+                Text("服务名称")
+            }
+            Section{
+                Text("浙ICP备2024071295号-3A")
+            } header: {
+                Text("ICP备案/许可证号")
+            }
+            Section{
+                Text("")
+            } header: {
+                Text("服务前置审批项")
+            }
+        }
     }
 }
 struct LicenseView: View{
