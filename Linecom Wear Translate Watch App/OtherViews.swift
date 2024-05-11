@@ -124,16 +124,31 @@ struct SettingsView: View{
     @AppStorage("debugmode") var debugmode=false
     @State var pname=""
     @State var price=""
+    @AppStorage("ExtraBuyed") var buyed=false
     var body: some View{
         List{
-            Section{
-                NavigationLink(destination: {BuyView()}, label: {Text("购买额外提供商")})
+            if !buyed{
+                Section{
+                    NavigationLink(destination: {BuyView()}, label: {Text("购买额外提供商")})
+                }
             }
             
             Section{
                 Picker("翻译提供商", selection: $provider){
-                    Text("百度翻译").tag("baidu")
-                    Text("腾讯翻译").tag("texcent")
+                    Section{
+                        Text("百度翻译").tag("baidu")
+                        Text("腾讯翻译").tag("tencent")
+                    } header: {
+                        Text("基本").bold()
+                    }
+                    if buyed{
+                        Section{
+                            Text("Google").tag("google")
+                            Text("Bing").tag("bing")
+                        } header: {
+                            Text("额外").bold()
+                        }
+                    }
                 }
                 NavigationLink(destination:{SupportView().navigationTitle("联系我们")},label:{Image(systemName: "envelope.open.fill");Text("联系与反馈")})
             } header: {
@@ -149,6 +164,9 @@ struct SettingsView: View{
             if debugdisplay{
                 Section{
                     Toggle("调试模式",isOn: $debugmode)
+                    Button("重设购买状态",action: {
+                        buyed=false
+                    })
                     NavigationLink(destination: {ExperimentView().navigationTitle("实验性功能")}, label: {Text("实验性功能")})
                     Button(action:{
                         debugdisplay=false
