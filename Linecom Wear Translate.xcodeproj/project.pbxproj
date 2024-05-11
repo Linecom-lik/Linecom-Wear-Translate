@@ -25,8 +25,6 @@
 		036F3C8C2B9232060080194C /* DarockKit in Frameworks */ = {isa = PBXBuildFile; productRef = 036F3C8B2B9232060080194C /* DarockKit */; };
 		036F3C8E2B92342B0080194C /* md5c.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036F3C8D2B92342B0080194C /* md5c.swift */; };
 		036F3C902B9243FD0080194C /* OtherViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036F3C8F2B9243FD0080194C /* OtherViews.swift */; };
-		037870272BE34C4600C99442 /* OfflineDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037870262BE34C4600C99442 /* OfflineDB.swift */; };
-		037870292BE34ECE00C99442 /* OfflineTranslateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 037870282BE34ECE00C99442 /* OfflineTranslateView.swift */; };
 		03D39BA82BAF342D0075EC3D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 03D39BA72BAF342D0075EC3D /* Localizable.xcstrings */; };
 		03D39BA92BAF34410075EC3D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 03D39BA72BAF342D0075EC3D /* Localizable.xcstrings */; };
 /* End PBXBuildFile section */
@@ -87,8 +85,6 @@
 		034B96072BB7CCD4005D757D /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		036F3C8D2B92342B0080194C /* md5c.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = md5c.swift; sourceTree = "<group>"; };
 		036F3C8F2B9243FD0080194C /* OtherViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherViews.swift; sourceTree = "<group>"; };
-		037870262BE34C4600C99442 /* OfflineDB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineDB.swift; sourceTree = "<group>"; };
-		037870282BE34ECE00C99442 /* OfflineTranslateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineTranslateView.swift; sourceTree = "<group>"; };
 		03D39BA72BAF342D0075EC3D /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,8 +149,6 @@
 				036F3C8F2B9243FD0080194C /* OtherViews.swift */,
 				03120FC62BE285DF008D0B76 /* ExperimentView.swift */,
 				03428C612B9219590025849C /* Preview Content */,
-				037870262BE34C4600C99442 /* OfflineDB.swift */,
-				037870282BE34ECE00C99442 /* OfflineTranslateView.swift */,
 				0333FBDC2BE7799A00D7AF33 /* DarockFeedbackView.swift */,
 				030F238F2BEFA17600E8D4FA /* BuyView.swift */,
 			);
@@ -360,11 +354,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				036F3C902B9243FD0080194C /* OtherViews.swift in Sources */,
-				037870292BE34ECE00C99442 /* OfflineTranslateView.swift in Sources */,
 				03428C5E2B9219580025849C /* ContentView.swift in Sources */,
 				036F3C8E2B92342B0080194C /* md5c.swift in Sources */,
 				030F23902BEFA17600E8D4FA /* BuyView.swift in Sources */,
-				037870272BE34C4600C99442 /* OfflineDB.swift in Sources */,
 				03428C5C2B9219580025849C /* Linecom_Wear_TranslateApp.swift in Sources */,
 				03120FC72BE285DF008D0B76 /* ExperimentView.swift in Sources */,
 				0333FBDD2BE7799A00D7AF33 /* DarockFeedbackView.swift in Sources */,
@@ -546,7 +538,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.15;
+				MARKETING_VERSION = 1.0.20;
 				PRODUCT_BUNDLE_IDENTIFIER = com.linecom.weartranslate.watchkitapp;
 				PRODUCT_NAME = "澪空软件腕表翻译";
 				SDKROOT = watchos;
@@ -576,7 +568,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.15;
+				MARKETING_VERSION = 1.0.20;
 				PRODUCT_BUNDLE_IDENTIFIER = com.linecom.weartranslate.watchkitapp;
 				PRODUCT_NAME = "澪空软件腕表翻译";
 				SDKROOT = watchos;
@@ -597,7 +589,7 @@
 				CURRENT_PROJECT_VERSION = 46;
 				DEVELOPMENT_TEAM = B38QUJMY47;
 				INFOPLIST_KEY_CFBundleDisplayName = "Linecom Wear Translate";
-				MARKETING_VERSION = 1.0.15;
+				MARKETING_VERSION = 1.0.20;
 				PRODUCT_BUNDLE_IDENTIFIER = com.linecom.weartranslate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -613,7 +605,7 @@
 				CURRENT_PROJECT_VERSION = 46;
 				DEVELOPMENT_TEAM = B38QUJMY47;
 				INFOPLIST_KEY_CFBundleDisplayName = "Linecom Wear Translate";
-				MARKETING_VERSION = 1.0.15;
+				MARKETING_VERSION = 1.0.20;
 				PRODUCT_BUNDLE_IDENTIFIER = com.linecom.weartranslate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
