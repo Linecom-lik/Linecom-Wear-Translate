@@ -31,7 +31,7 @@ struct AppAbout: View{
                 VStack{
                     Text("澪空软件")
                     Text("腕表翻译")
-                    Text("1.0.15").onTapGesture(count: 10, perform: {
+                    Text("1.0.20").onTapGesture(count: 10, perform: {
                         debug=true
                         debugmodepst=true
                     }).sheet(isPresented: $debugmodepst, content: {
@@ -124,6 +124,7 @@ struct SettingsView: View{
     @AppStorage("debugmode") var debugmode=false
     @State var pname=""
     @State var price=""
+    @AppStorage("CepheusEnable") var cepenable=false
     @AppStorage("ExtraBuyed") var buyed=false
     var body: some View{
         List{
@@ -150,6 +151,11 @@ struct SettingsView: View{
                         }
                     }
                 }
+                Section(content:{
+                    Toggle("启用兼容性输入",isOn: $cepenable)
+                },footer: {
+                    Text("为Apple Watch SE和Apple Watch Series6及以前的设备提供英文与拼音的全键盘输入。\nPowered by Cepheus")
+                })
                 NavigationLink(destination:{SupportView().navigationTitle("联系我们")},label:{Image(systemName: "envelope.open.fill");Text("联系与反馈")})
             } header: {
                 Text("通用")
