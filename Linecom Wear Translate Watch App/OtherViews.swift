@@ -7,6 +7,7 @@
 
 import SwiftUI
 import AuthenticationServices
+import SwiftyStoreKit
 
 struct AboutView: View {
     var body: some View {
@@ -121,8 +122,13 @@ struct SettingsView: View{
     @AppStorage("debugselect") var debugdisplay=false
     @AppStorage("Provider") var provider="baidu"
     @AppStorage("debugmode") var debugmode=false
+    @State var pname=""
+    @State var price=""
     var body: some View{
         List{
+            Section{
+                NavigationLink(destination: {BuyView()}, label: {Text("购买额外提供商")})
+            }
             
             Section{
                 Picker("翻译提供商", selection: $provider){

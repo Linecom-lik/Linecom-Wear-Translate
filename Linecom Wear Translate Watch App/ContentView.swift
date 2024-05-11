@@ -9,6 +9,7 @@ import SwiftUI
 import DarockKit
 import CommonCrypto
 import CepheusKeyboardKit
+import SwiftyStoreKit
 
 struct ContentView: View {
     @State var slang = ""
@@ -117,104 +118,10 @@ struct ContentView: View {
                         }
                         Button(action: {
                             // ...
-                            errcode=0
-                            errinfo=""
                             requesting = true
                             if slang.isEmpty && !debugenable{
                                 translatedText="请输入文本"
                                 requesting=false
-                            }else if !custkeyenable{
-                                let clipedkey=appid+slang+"1355702100"+apikey
-                                let signtrue=clipedkey.md5c()
-                                let all="q=\(slang)&from=\(sourcelang)&to=\(targetlang)&appid=\(appid)&salt=1355702100&sign=\(signtrue)"
-                                print(all)
-                                let allurl="https://fanyi-api.baidu.com/api/trans/vip/translate?\(all)"
-                                DarockKit.Network.shared.requestJSON(allurl.urlEncoded()){ respond, succeed in
-                                    if !succeed{
-                                        translatedText="FATAL:\n翻译请求失败"
-                                        requesting=false
-                                    }else{
-                                        let receiveddata=respond["trans_result"][0]["dst"].string ?? "FATAL:\n翻译返回错误"
-                                        if receiveddata=="FATAL:\n翻译返回错误"{
-                                            errcode=respond["error_code"].int ?? -1
-                                            errinfo=respond["error_msg"].string!
-                                        }
-                                        requesting=false
-                                        sdata=respond["trans_result"][0]["src"].string ?? ""
-                                        translatedText=receiveddata
-                                        let currentlang=respond["from"].string
-                                        if currentlang=="en"{
-                                            dislang="英语"
-                                        } else if currentlang=="zh"{
-                                            dislang="简体中文"
-                                        } else if currentlang=="cht"{
-                                            dislang="繁体中文"
-                                        } else if currentlang=="jp" {
-                                            dislang="日语"
-                                        } else if currentlang=="kor"{
-                                            dislang="韩语"
-                                        } else if currentlang=="fra"{
-                                            dislang="法语"
-                                        } else if currentlang=="de"{
-                                            dislang="德语"
-                                        } else if currentlang=="ru"{
-                                            dislang="俄语"
-                                        } else if currentlang=="spa"{
-                                            dislang="西班牙语"
-                                        } else if currentlang=="bl"{
-                                            dislang="波兰语"
-                                        }
-                                        
-                                    }
-                                }
-                            }else if !custid.isEmpty && !custkey.isEmpty{
-                                let clipedcustkey=custid+slang+"1355702100"+custkey
-                                let custsigntrue=clipedcustkey.md5c()
-                                let custall="q=\(slang)&from=\(sourcelang)&to=\(targetlang)&appid=\(custid)&salt=1355702100&sign=\(custsigntrue)"
-                                print(custall)
-                                let custallurl="https://fanyi-api.baidu.com/api/trans/vip/translate?\(custall)"
-                                DarockKit.Network.shared.requestJSON(custallurl.urlEncoded()){ respond, succeed in
-                                    if !succeed{
-                                        translatedText="FALAT:\n翻译请求失败"
-                                        requesting=false
-                                    }else{
-                                        let receiveddata=respond["trans_result"][0]["dst"].string ?? "FATAL:\n翻译返回错误"
-                                        if receiveddata=="FATAL:\n翻译返回错误"{
-                                            errcode=respond["error_code"].int ?? -1
-                                            errinfo=respond["error_msg"].string!
-                                        }
-                                        requesting=false
-                                        sdata=respond["trans_result"][0]["src"].string ?? ""
-                                        translatedText=receiveddata
-                                        let currentlang=respond["from"].string
-                                        if currentlang=="en"{
-                                            dislang="英语"
-                                        } else if currentlang=="zh"{
-                                            dislang="简体中文"
-                                        } else if currentlang=="cht"{
-                                            dislang="繁体中文"
-                                        } else if currentlang=="jp" {
-                                            dislang="日语"
-                                        } else if currentlang=="kor"{
-                                            dislang="韩语"
-                                        } else if currentlang=="fra"{
-                                            dislang="法语"
-                                        } else if currentlang=="de"{
-                                            dislang="德语"
-                                        } else if currentlang=="ru"{
-                                            dislang="俄语"
-                                        } else if currentlang=="spa"{
-                                            dislang="西班牙语"
-                                        } else if currentlang=="bl"{
-                                            dislang="波兰语"
-                                        }
-                                        
-                                        
-                                    }
-                                }
-                            } else{
-                                requesting=false
-                                translatedText="ERROR:请输入APPID与密钥"
                             }
                         }, label: {
                             if requesting {
@@ -254,15 +161,6 @@ struct ContentView: View {
                             }
                         }
                         .padding()
-                        if !errinfo.isEmpty{
-                            Section(content: {
-                                Text("错误代码：\(errcode)")
-                                Text("错误详细信息：")
-                                Text(errinfo)
-                            },footer:{
-                                Text("如有疑问，请反馈开发者")
-                            })
-                        }
                         VStack{
                             Section{
                                 Button(action:{translatedText=""
@@ -283,14 +181,6 @@ struct ContentView: View {
                     }
                 }
                 Section {
-                    if offlineenable{
-                        NavigationLink(destination: {OfflineTranslateView()}, label: {
-                            HStack{
-                                Image(systemName: "network.slash")
-                                Text("离线翻译")
-                            }
-                        })
-                    }
                     NavigationLink(destination:{SettingsView().navigationTitle("设置")},label:{HStack{Spacer();Image(systemName: "gear")
                         Text("设置");Spacer()}})
                     NavigationLink(destination:{AboutView().navigationTitle("关于LWT")},label:{HStack{Spacer();Image(systemName: "info.circle")
@@ -311,6 +201,20 @@ struct ContentView: View {
                         NetPing="ok"
                     }
                 }
+                SwiftyStoreKit.completeTransactions(atomically: true) { purchases in
+                        for purchase in purchases {
+                            switch purchase.transaction.transactionState {
+                            case .purchased, .restored:
+                                if purchase.needsFinishTransaction {
+                                    // Deliver content from server, then:
+                                    SwiftyStoreKit.finishTransaction(purchase.transaction)
+                                }
+                                // Unlock content
+                            case .failed, .purchasing, .deferred:
+                                break // do nothing
+                            }
+                        }
+                    }
             }
         }
     }

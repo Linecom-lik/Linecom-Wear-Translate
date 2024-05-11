@@ -1,0 +1,83 @@
+//
+//  BuyView.swift
+//  Linecom Wear Translate Watch App
+//
+//  Created by 澪空 on 2024/5/11.
+//
+
+import SwiftUI
+import SwiftyStoreKit
+
+struct BuyView: View {
+    @State var pname=""
+    @State var price=""
+    @AppStorage("ExtraBuyed") var  buyed=false
+    var body: some View {
+        List{
+            if buyed{
+                Section{
+                    Text("感谢您购买")
+                    Text("额外提供商现已可用")
+                }
+            } else if !buyed{
+                Button(action: {
+                    SwiftyStoreKit.purchaseProduct("com.linecom.weartranslate.extra_provider", quantity: 1, atomically: true) { result in
+                        switch result {
+                        case .success(let purchase):
+                            print("Purchase Success: \(purchase.productId)")
+                        case .error(let error):
+                            switch error.code {
+                            case .unknown: print("Unknown error. Please contact support")
+                            case .clientInvalid: print("Not allowed to make the payment")
+                            case .paymentCancelled: break
+                            case .paymentInvalid: print("The purchase identifier was invalid")
+                            case .paymentNotAllowed: print("The device is not allowed to make the payment")
+                            case .storeProductNotAvailable: print("The product is not available in the current storefront")
+                            case .cloudServicePermissionDenied: print("Access to cloud service information is not allowed")
+                            case .cloudServiceNetworkConnectionFailed: print("Could not connect to the network")
+                            case .cloudServiceRevoked: print("User has revoked permission to use this cloud service")
+                            default: print((error as NSError).localizedDescription)
+                            }
+                        case .deferred(purchase: let purchase):
+                            print("deferred")
+                        }
+                    }
+                }, label: {Text("购买")})
+            }
+        }
+        .onAppear(){
+            SwiftyStoreKit.retrieveProductsInfo(["com.linecom.weartranslate.extra_provider"]) { result in
+                let product = result.retrievedProducts.first
+                pname=product!.localizedDescription
+                let priceString = product?.localizedPrice!
+                price=priceString!
+                print("Product: \(product?.localizedDescription), price: \(priceString)")
+                }
+            let appleValidator = AppleReceiptValidator(service: .production, sharedSecret: "your-shared-secret")
+            SwiftyStoreKit.verifyReceipt(using: appleValidator) { result in
+                switch result {
+                case .success(let receipt):
+                    let productId = "com.linecom.weartranslate.extra_provider"
+                    // Verify the purchase of Consumable or NonConsumable
+                    let purchaseResult = SwiftyStoreKit.verifyPurchase(
+                        productId: productId,
+                        inReceipt: receipt)
+                        
+                    switch purchaseResult {
+                    case .purchased(let receiptItem):
+                        buyed=true
+                        print("\(productId) is purchased: \(receiptItem)")
+                    case .notPurchased:
+                        print("The user has never purchased \(productId)")
+                    }
+                case .error(let error):
+                    print("Receipt verification failed: \(error)")
+                }
+            }
+            }
+    }
+}
+
+#Preview {
+    BuyView()
+}
