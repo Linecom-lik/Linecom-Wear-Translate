@@ -151,15 +151,14 @@ struct SettingsView: View{
                         }
                     }
                 }
-                Section(content:{
+            }
+            Section(content:{
                     Toggle("启用兼容性输入",isOn: $cepenable)
-                },footer: {
+                },header: {
+                    Text("通用")},footer: {
                     Text("为Apple Watch SE和Apple Watch Series6及以前的设备提供英文与拼音的全键盘输入。\nPowered by Cepheus")
                 })
                 NavigationLink(destination:{SupportView().navigationTitle("联系我们")},label:{Image(systemName: "envelope.open.fill");Text("联系与反馈")})
-            } header: {
-                Text("通用")
-            }
             
             //搁置
             //Section{
