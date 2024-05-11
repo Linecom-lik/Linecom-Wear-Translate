@@ -1,5 +1,5 @@
 {
-  "originHash" : "92c307ca977290895060e83a269f0003f55b95922a497c1897c6b9b2b242aa0b",
+  "originHash" : "1fff650ac4f6657b02a7e6e713d1168e6ca0c765ddebd3243940d7d03214922d",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -16,7 +16,7 @@
       "location" : "https://github.com/Serene-Garden/Cepheus",
       "state" : {
         "branch" : "main",
-        "revision" : "d7b85ebaab66914ef9bca3659318743d24266e1c"
+        "revision" : "ab8f703c9fc2338530fe73c06c80eb6efd3343f4"
       }
     },
     {
@@ -44,6 +44,15 @@
       "state" : {
         "revision" : "2b6054efa051565954e1d2b9da831680026cd768",
         "version" : "4.3.0"
+      }
+    },
+    {
+      "identity" : "swiftystorekit",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/bizz84/SwiftyStoreKit",
+      "state" : {
+        "revision" : "9ce911639680113dac9b554d6243e406a9758ebe",
+        "version" : "0.16.4"
       }
     }
   ],

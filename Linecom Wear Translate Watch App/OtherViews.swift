@@ -7,6 +7,7 @@
 
 import SwiftUI
 import AuthenticationServices
+import SwiftyStoreKit
 
 struct AboutView: View {
     var body: some View {
@@ -30,7 +31,7 @@ struct AppAbout: View{
                 VStack{
                     Text("澪空软件")
                     Text("腕表翻译")
-                    Text("1.0.15").onTapGesture(count: 10, perform: {
+                    Text("1.0.20").onTapGesture(count: 10, perform: {
                         debug=true
                         debugmodepst=true
                     }).sheet(isPresented: $debugmodepst, content: {
@@ -119,13 +120,42 @@ struct OSPView: View{
 }
 struct SettingsView: View{
     @AppStorage("debugselect") var debugdisplay=false
-    @AppStorage("RememberLast") var lastenable=true
+    @AppStorage("Provider") var provider="baidu"
     @AppStorage("debugmode") var debugmode=false
+    @State var pname=""
+    @State var price=""
+    @AppStorage("CepheusEnable") var cepenable=false
+    @AppStorage("ExtraBuyed") var buyed=false
     var body: some View{
         List{
+            //if !buyed{
+            //    Section{
+            //        NavigationLink(destination: {BuyView()}, label: {Text("购买额外提供商")})
+            //    }
+            //}
             
             Section{
-                NavigationLink(destination:{apiconfigView().navigationTitle("配置密钥")},label:{Image(systemName: "key.fill");Text("配置API密钥")})
+                Picker("翻译提供商", selection: $provider){
+                    Section{
+                        Text("百度翻译").tag("baidu")
+                        Text("腾讯翻译").tag("tencent")
+                    } header: {
+                        Text("基本").bold()
+                    }
+                    if buyed{
+                        Section{
+                            Text("Google").tag("google")
+                            //Text("Bing").tag("bing")
+                        } header: {
+                            Text("额外").bold()
+                        }
+                    }
+                }
+                Section(content:{
+                    Toggle("启用兼容性输入",isOn: $cepenable)
+                },footer: {
+                    Text("为Apple Watch SE和Apple Watch Series6及以前的设备提供英文与拼音的全键盘输入。\nPowered by Cepheus")
+                })
                 NavigationLink(destination:{SupportView().navigationTitle("联系我们")},label:{Image(systemName: "envelope.open.fill");Text("联系与反馈")})
             } header: {
                 Text("通用")
@@ -140,6 +170,9 @@ struct SettingsView: View{
             if debugdisplay{
                 Section{
                     Toggle("调试模式",isOn: $debugmode)
+                    Button("重设购买状态",action: {
+                        buyed=false
+                    })
                     NavigationLink(destination: {ExperimentView().navigationTitle("实验性功能")}, label: {Text("实验性功能")})
                     Button(action:{
                         debugdisplay=false
@@ -156,29 +189,7 @@ struct SettingsView: View{
         }
     }
 }
-struct apiconfigView: View{
-    @AppStorage("ApiKeyStatus") var customkeyenable=false
-    @AppStorage("CustomAppid") var custid=""
-    @AppStorage("CustomKey") var custkey=""
-    var body: some View{
-        List{
-            Section{
-                Text("概述：")
-                Text("百度翻译自2022年8月1日起将每月免费的调用额度限制在100万字符，如果您有自己的密钥，您可以在此替换由澪空软件提供的默认密钥")
-            }
-            Section{
-                Toggle("使用自定义密钥",isOn: $customkeyenable)
-            }
-            if customkeyenable{
-                
-                Section{
-                    TextField("APPID",text: $custid)
-                    TextField("密钥",text: $custkey)
-                }
-            }
-        }
-    }
-}
+
 struct SupportView: View{
     @State var contactmethod="emaillinecom"
     var body: some View{
