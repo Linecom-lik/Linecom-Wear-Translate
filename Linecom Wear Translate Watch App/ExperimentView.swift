@@ -18,11 +18,6 @@ struct ExperimentView: View {
             },footer: {
                 Text("为Apple Watch SE和Apple Watch Series6及以前的设备提供英文与拼音的全键盘输入。\nPowered by Cepheus")
             })
-            Section(content:{
-                Toggle("启用离线翻译",isOn: $offlinet)
-            },footer: {
-                Text("离线翻译在有限的词库中为您提供英语单词至简体中文的翻译\n目前离线翻译词库已收集340个单词。\n离线词库内置于App，随App版本更新而更新\n当前版本：1.0.11046")
-            })
         }
     }
 }

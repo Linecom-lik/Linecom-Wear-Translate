@@ -127,11 +127,11 @@ struct SettingsView: View{
     @AppStorage("ExtraBuyed") var buyed=false
     var body: some View{
         List{
-            if !buyed{
-                Section{
-                    NavigationLink(destination: {BuyView()}, label: {Text("购买额外提供商")})
-                }
-            }
+            //if !buyed{
+            //    Section{
+            //        NavigationLink(destination: {BuyView()}, label: {Text("购买额外提供商")})
+            //    }
+            //}
             
             Section{
                 Picker("翻译提供商", selection: $provider){
@@ -144,7 +144,7 @@ struct SettingsView: View{
                     if buyed{
                         Section{
                             Text("Google").tag("google")
-                            Text("Bing").tag("bing")
+                            //Text("Bing").tag("bing")
                         } header: {
                             Text("额外").bold()
                         }
@@ -183,29 +183,7 @@ struct SettingsView: View{
         }
     }
 }
-struct apiconfigView: View{
-    @AppStorage("ApiKeyStatus") var customkeyenable=false
-    @AppStorage("CustomAppid") var custid=""
-    @AppStorage("CustomKey") var custkey=""
-    var body: some View{
-        List{
-            Section{
-                Text("概述：")
-                Text("百度翻译自2022年8月1日起将每月免费的调用额度限制在100万字符，如果您有自己的密钥，您可以在此替换由澪空软件提供的默认密钥")
-            }
-            Section{
-                Toggle("使用自定义密钥",isOn: $customkeyenable)
-            }
-            if customkeyenable{
-                
-                Section{
-                    TextField("APPID",text: $custid)
-                    TextField("密钥",text: $custkey)
-                }
-            }
-        }
-    }
-}
+
 struct SupportView: View{
     @State var contactmethod="emaillinecom"
     var body: some View{

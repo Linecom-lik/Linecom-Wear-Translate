@@ -58,6 +58,7 @@
       }
     },
     "APPID" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -66,9 +67,6 @@
           }
         }
       }
-    },
-    "Bing" : {
-
     },
     "Darock" : {
       "localizations" : {
@@ -352,6 +350,7 @@
 
     },
     "使用自定义密钥" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -415,9 +414,6 @@
     "启用兼容性输入" : {
 
     },
-    "启用离线翻译" : {
-
-    },
     "回复 %lld" : {
 
     },
@@ -451,6 +447,7 @@
 
     },
     "密钥" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -538,6 +535,7 @@
 
     },
     "概述：" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -658,6 +656,7 @@
 
     },
     "百度翻译自2022年8月1日起将每月免费的调用额度限制在100万字符，如果您有自己的密钥，您可以在此替换由澪空软件提供的默认密钥" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -676,9 +675,6 @@
           }
         }
       }
-    },
-    "离线翻译在有限的词库中为您提供英语单词至简体中文的翻译\n目前离线翻译词库已收集340个单词。\n离线词库内置于App，随App版本更新而更新\n当前版本：1.0.11046" : {
-
     },
     "离线翻译现仅支持" : {
 
@@ -874,9 +870,6 @@
     "购买" : {
 
     },
-    "购买额外提供商" : {
-
-    },
     "通用" : {
 
     },
@@ -919,6 +912,9 @@
       }
     },
     "重设购买状态" : {
+
+    },
+    "重试" : {
 
     },
     "错误/异常行为" : {

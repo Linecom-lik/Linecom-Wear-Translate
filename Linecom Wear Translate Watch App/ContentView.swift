@@ -13,24 +13,20 @@ import SwiftyStoreKit
 
 struct ContentView: View {
     @State var slang = ""
-    @AppStorage("RememberLast") var lastenable=true
     @State var translatedText = ""
-    @State var appid="20221006001373645"
-    @State var apikey="7YH2L_U7dSHwqq6OErqB"
-    @AppStorage("CustomAppid") var custid=""
-    @AppStorage("CustomKey") var custkey=""
     @AppStorage("ApiKeyStatus") var custkeyenable=false
     @State var dislang=""
     @State var sdata=""
     @State var requesting=false
+    @AppStorage("Provider") var provider="baidu"
     @AppStorage("LastSource") var sourcelang="auto"
     @AppStorage("LastTarget") var targetlang="en"
-    @State var errcode=0
-    @State var errinfo=""
     @AppStorage("debugmode") var debugenable=false
-    @AppStorage("Offlinetrans") var offlineenable=false
     @AppStorage("CepheusEnable") var cepenable=false
     @State var NetPing=""
+    @State var baidugroup=["zh":"简体中文","cht":"繁体中文","en":"英语","jp":"日语","kor":"韩语","fra":"法语","ru":"俄语","de":"德语","spa":"西班牙语","bl":"波兰语"]
+    @State var tencentgroup=["zh":"简体中文","zh-TW":"繁体中文","en":"英语","ja":"日语","ko":"韩语","fr":"法语","ru":"俄语","de":"德语","es":"西班牙语"]
+    @State var transfl=""
     var body: some View {
         //搁置
         //if !lastenable{
@@ -63,6 +59,20 @@ struct ContentView: View {
                             Image(systemName: "wifi.exclamationmark")
                             Text("尚未连接到互联网")
                         }
+                        Button(action: {
+                            DarockKit.Network.shared.requestJSON("https://api.linecom.net.cn/status/check"){
+                                respond, secceed in
+                                if !secceed{
+                                    NetPing="LossNet"
+                                } else if respond["status"] != 0{
+                                    NetPing="InvaildResp"
+                                } else{
+                                    NetPing="ok"
+                                }
+                            }
+                        }, label: {
+                            Text("重试")
+                        })
                 } header: {
                     Text("网络异常，无法翻译")
                 } footer: {
@@ -74,6 +84,20 @@ struct ContentView: View {
                         Image(systemName: "xmark.icloud.fill")
                         Text("Linecom API离线")
                     }
+                    Button(action: {
+                        DarockKit.Network.shared.requestJSON("https://api.linecom.net.cn/status/check"){
+                            respond, secceed in
+                            if !secceed{
+                                NetPing="LossNet"
+                            } else if respond["status"] != 0{
+                                NetPing="InvaildResp"
+                            } else{
+                                NetPing="ok"
+                            }
+                        }
+                    }, label: {
+                        Text("重试")
+                    })
                 } header: {
                     Text("网络异常，无法翻译")
                 } footer: {
@@ -82,34 +106,60 @@ struct ContentView: View {
                 } else if NetPing=="ok"{
                     Section {
                         Picker("源语言",selection: $sourcelang) {
-                            Text("自动").tag("auto")
-                            Text("简体中文").tag("zh")
-                            Text("繁体中文").tag("cht")
-                            Text("英语").tag("en")
-                            Text("日语").tag("jp")
-                            Text("韩语").tag("kor")
-                            Text("法语").tag("fra")
-                            Text("德语").tag("de")
-                            Text("俄语").tag("ru")
-                            Text("西班牙语").tag("spa")
-                            Text("波兰语").tag("bl")
+                            if provider=="baidu"{
+                                Text("自动").tag("auto")
+                                Text("简体中文").tag("zh")
+                                Text("繁体中文").tag("cht")
+                                Text("英语").tag("en")
+                                Text("日语").tag("jp")
+                                Text("韩语").tag("kor")
+                                Text("法语").tag("fra")
+                                Text("德语").tag("de")
+                                Text("俄语").tag("ru")
+                                Text("西班牙语").tag("spa")
+                                Text("波兰语").tag("bl")
+                            } else if provider=="tencent"{
+                                Text("自动").tag("auto")
+                                Text("简体中文").tag("zh")
+                                Text("繁体中文").tag("zh-TW")
+                                Text("英语").tag("en")
+                                Text("日语").tag("ja")
+                                Text("韩语").tag("ko")
+                                Text("法语").tag("fr")
+                                Text("德语").tag("de")
+                                Text("俄语").tag("ru")
+                                Text("西班牙语").tag("es")
+                            }
                             
                         }
+                        
                         Picker("目标语言",selection: $targetlang) {
                             //debug selection!
                             if debugenable{
                                 Text("自动").tag("auto")
                             }
-                            Text("简体中文").tag("zh")
-                            Text("繁体中文").tag("cht")
-                            Text("英语").tag("en")
-                            Text("日语").tag("jp")
-                            Text("韩语").tag("kor")
-                            Text("法语").tag("fra")
-                            Text("德语").tag("de")
-                            Text("俄语").tag("ru")
-                            Text("西班牙语").tag("spa")
-                            Text("波兰语").tag("bl")
+                            if provider=="baidu"{
+                                Text("简体中文").tag("zh")
+                                Text("繁体中文").tag("cht")
+                                Text("英语").tag("en")
+                                Text("日语").tag("jp")
+                                Text("韩语").tag("kor")
+                                Text("法语").tag("fra")
+                                Text("德语").tag("de")
+                                Text("俄语").tag("ru")
+                                Text("西班牙语").tag("spa")
+                                Text("波兰语").tag("bl")
+                            } else if provider=="tencent"{
+                                Text("简体中文").tag("zh")
+                                Text("繁体中文").tag("zh-TW")
+                                Text("英语").tag("en")
+                                Text("日语").tag("ja")
+                                Text("韩语").tag("ko")
+                                Text("法语").tag("fr")
+                                Text("德语").tag("de")
+                                Text("俄语").tag("ru")
+                                Text("西班牙语").tag("es")
+                            }
                         }
                         if !cepenable{
                             TextField("键入源语言",text: $slang)
@@ -122,6 +172,31 @@ struct ContentView: View {
                             if slang.isEmpty && !debugenable{
                                 translatedText="请输入文本"
                                 requesting=false
+                            } else if provider=="baidu"{
+                                DarockKit.Network.shared.requestJSON("https://api.linecom.net.cn/lwt/translate?provider=\(provider)&text=\(slang)&slang=\(sourcelang)&tlang=\(targetlang)&pass=l1nec0m"){
+                                    resp, succeed in
+                                    if !succeed{
+                                        translatedText="翻译请求发送失败，请联系开发者。"
+                                    }
+                                    translatedText=resp["trans_result"][0]["dst"].string ?? "翻译返回错误，请联系开发者"
+                                    sdata=resp["trans_result"][0]["src"].string ?? "翻译返回错误，请联系开发者"
+                                    transfl=resp["from"].string ?? ""
+                                    dislang=baidugroup[transfl] ?? ""
+                                    requesting=false
+                                }
+                            } else if provider=="tencent"{
+                                    DarockKit.Network.shared.requestJSON("https://api.linecom.net.cn/lwt/translate?provider=\(provider)&text=\(slang)&slang=\(sourcelang)&tlang=\(targetlang)&pass=l1nec0m"){
+                                        resp, succeed in
+                                        if !succeed{
+                                            translatedText="翻译请求发送失败，请联系开发者。"
+                                        }
+                                        let finalsdt=slang
+                                        translatedText=resp["Response"]["TargetText"].string ?? "翻译返回错误，请联系开发者"
+                                        sdata=finalsdt
+                                        transfl=resp["Response"]["Source"].string ?? ""
+                                        dislang=tencentgroup[transfl] ?? ""
+                                        requesting=false
+                                }
                             }
                         }, label: {
                             if requesting {
@@ -144,39 +219,37 @@ struct ContentView: View {
                         })
                         
                     }
-                    if !translatedText.isEmpty {
-                        Section {
-                            if !slang.isEmpty{
-                                HStack{
-                                    Spacer();Text(sdata).frame(alignment: .center);Spacer()
-                                }
-                            }
-                            if !dislang.isEmpty{
-                                HStack{
-                                    Text("从\(dislang)翻译：").bold().frame(alignment: .center)
-                                }
-                            }
+                }
+                if !translatedText.isEmpty {
+                    Section {
+                        if !slang.isEmpty{
                             HStack{
-                                Spacer();Text(translatedText).frame(alignment: .center);Spacer()
+                                Spacer();Text(sdata).frame(alignment: .center);Spacer()
                             }
                         }
-                        .padding()
-                        VStack{
-                            Section{
-                                Button(action:{translatedText=""
-                                    slang=""
-                                    dislang=""
-                                    errcode=0
-                                    errinfo=""
-                                },label:{
-                                    HStack{
-                                        Spacer()
-                                        Image(systemName: "restart")
-                                        Text("重置")
-                                        Spacer()
-                                    }
-                                })
+                        if !dislang.isEmpty{
+                            HStack{
+                                Text("从\(dislang)翻译：").bold().frame(alignment: .center)
                             }
+                        }
+                        HStack{
+                            Spacer();Text(translatedText).frame(alignment: .center);Spacer()
+                        }
+                    }
+                    .padding()
+                    VStack{
+                        Section{
+                            Button(action:{translatedText=""
+                                slang=""
+                                dislang=""
+                            },label:{
+                                HStack{
+                                    Spacer()
+                                    Image(systemName: "restart")
+                                    Text("重置")
+                                    Spacer()
+                                }
+                            })
                         }
                     }
                 }
