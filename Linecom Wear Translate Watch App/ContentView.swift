@@ -182,7 +182,7 @@ struct ContentView: View {
                                 translatedText="请输入文本"
                                 requesting=false
                             } else if provider=="baidu"{
-                                DarockKit.Network.shared.requestJSON("https://api.linecom.net.cn/lwt/translate?provider=\(provider)&text=\(slang)&slang=\(sourcelang)&tlang=\(targetlang)&pass=l1nec0m"){
+                                DarockKit.Network.shared.requestJSON("https://api.linecom.net.cn/lwt/translate?provider=\(provider)&text=\(slang)&slang=\(sourcelang)&tlang=\(targetlang)&pass=l1nec0m".urlEncoded()){
                                     resp, succeed in
                                     if !succeed{
                                         translatedText="翻译请求发送失败，请联系开发者。"
@@ -194,7 +194,7 @@ struct ContentView: View {
                                     requesting=false
                                 }
                             } else if provider=="tencent"{
-                                    DarockKit.Network.shared.requestJSON("https://api.linecom.net.cn/lwt/translate?provider=\(provider)&text=\(slang)&slang=\(sourcelang)&tlang=\(targetlang)&pass=l1nec0m"){
+                                DarockKit.Network.shared.requestJSON("https://api.linecom.net.cn/lwt/translate?provider=\(provider)&text=\(slang)&slang=\(sourcelang)&tlang=\(targetlang)&pass=l1nec0m".urlEncoded()){
                                         resp, succeed in
                                         if !succeed{
                                             translatedText="翻译请求发送失败，请联系开发者。"
