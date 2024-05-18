@@ -61,7 +61,14 @@
       }
     },
     "App" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "App"
+          }
+        }
+      }
     },
     "APPID" : {
       "extractionState" : "stale",
@@ -139,20 +146,40 @@
       }
     },
     "From 天津 天津" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "From Tianjin"
+          }
+        }
+      }
     },
     "From 浙江 宁波" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "From Ningbo Zhejiang"
+            "value" : "From Ningbo"
           }
         }
       }
     },
     "Google" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Google"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Google"
+          }
+        }
+      }
     },
     "ICP备案" : {
       "localizations" : {
@@ -161,20 +188,54 @@
             "state" : "translated",
             "value" : "ICP Filing"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ICP備案"
+          }
         }
       }
     },
     "ICP备案/许可证号" : {
-
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ICP備案/許可證號"
+          }
+        }
+      }
     },
     "ICP备案主体信息" : {
-
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ICP備案主體訊息"
+          }
+        }
+      }
     },
     "ICP备案服务信息" : {
-
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ICP備案服務訊息"
+          }
+        }
+      }
     },
     "ID: %@" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ID: %@"
+          }
+        }
+      }
     },
     "License" : {
       "localizations" : {
@@ -219,10 +280,30 @@
       }
     },
     "Linecom API离线" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Linecom API Offline"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Linecom API離線"
+          }
+        }
+      }
     },
     "Linecom LLC" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Linecom LLC"
+          }
+        }
+      }
     },
     "linecom@linecom.net.cn" : {
       "localizations" : {
@@ -235,10 +316,24 @@
       }
     },
     "LWT %@" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LWT %@"
+          }
+        }
+      }
     },
     "LWT已是最新版本" : {
-
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LWT已是最新版本"
+          }
+        }
+      }
     },
     "LWT翻译" : {
       "localizations" : {
@@ -254,7 +349,14 @@
 
     },
     "mallets02.plums@icloud.com" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "mallets02.plums@icloud.com"
+          }
+        }
+      }
     },
     "memz@darock.top" : {
       "localizations" : {
@@ -273,11 +375,24 @@
             "state" : "translated",
             "value" : "MIIT Website"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "MIIT網站"
+          }
         }
       }
     },
     "Serene Garden" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Serene Garden"
+          }
+        }
+      }
     },
     "SFSymbol\nLicense under MIT" : {
       "extractionState" : "stale",
@@ -332,10 +447,24 @@
       }
     },
     "ThreeManager785" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ThreeManager785"
+          }
+        }
+      }
     },
     "ThreeManager785\nSerene Garden\n框架开发者" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ThreeManager785\nSerene Garden\nFramework Dev"
+          }
+        }
+      }
     },
     "WindowsMEMZ" : {
       "localizations" : {
@@ -352,19 +481,40 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "WindowsMEMZ\nDarock\nPartner"
+            "value" : "WindowsMEMZ\nDarock\nPartner Dev"
           }
         }
       }
     },
     "为Apple Watch SE和Apple Watch Series6及以前的设备提供英文与拼音的全键盘输入。\nPowered by Cepheus" : {
-
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "為Apple Watch SE和Apple Watch Series6及以前的設備提供英文與拼音的全鍵盤輸入。\nPowered by Cepheus"
+          }
+        }
+      }
     },
     "主办单位名称" : {
-
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "主辦單位名稱"
+          }
+        }
+      }
     },
     "主办单位性质" : {
-
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "主辦單位性質"
+          }
+        }
+      }
     },
     "从%@翻译：" : {
       "localizations" : {
@@ -373,6 +523,12 @@
             "state" : "translated",
             "value" : "From %@:"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "從%@翻譯："
+          }
         }
       }
     },
@@ -380,7 +536,14 @@
 
     },
     "企业" : {
-
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "企業"
+          }
+        }
+      }
     },
     "使用自定义密钥" : {
       "extractionState" : "stale",
@@ -434,7 +597,14 @@
       }
     },
     "内容" : {
-
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "內容"
+          }
+        }
+      }
     },
     "单击启动反馈助理" : {
       "localizations" : {
@@ -447,7 +617,14 @@
       }
     },
     "反馈助理" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Feedback Assistian"
+          }
+        }
+      }
     },
     "反馈类型" : {
       "localizations" : {
@@ -465,6 +642,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Send"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "發送"
           }
         }
       }
@@ -490,7 +673,14 @@
       }
     },
     "启用兼容性输入" : {
-
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "啟用兼容性輸入"
+          }
+        }
+      }
     },
     "回复 %lld" : {
 
@@ -535,7 +725,14 @@
 
     },
     "审核通过日期" : {
-
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "審核通過日期"
+          }
+        }
+      }
     },
     "密钥" : {
       "extractionState" : "stale",
@@ -549,10 +746,30 @@
       }
     },
     "尚未连接到互联网" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Not Connected to the Internet"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "尚未連結到互聯網"
+          }
+        }
+      }
     },
     "建议" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Suggestion"
+          }
+        }
+      }
     },
     "开发团队" : {
       "localizations" : {
@@ -601,7 +818,20 @@
       }
     },
     "新建反馈" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "New Feedback"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新建反饋"
+          }
+        }
+      }
     },
     "日语" : {
       "localizations" : {
@@ -610,11 +840,24 @@
             "state" : "translated",
             "value" : "Japanese"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日語"
+          }
         }
       }
     },
     "昵称" : {
-
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "暱稱"
+          }
+        }
+      }
     },
     "服务前置审批项" : {
 
@@ -639,14 +882,34 @@
             "state" : "translated",
             "value" : "Title"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "標題"
+          }
         }
       }
     },
     "框架开发" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Framework Develop"
+          }
+        }
+      }
     },
     "检查更新时出错" : {
-
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "檢查更新時出錯"
+          }
+        }
+      }
     },
     "概述：" : {
       "extractionState" : "stale",
@@ -660,7 +923,20 @@
       }
     },
     "正在检查更新" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Checking for update"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在檢查更新"
+          }
+        }
+      }
     },
     "正在检查网络连接" : {
       "localizations" : {
@@ -668,6 +944,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Checking Network Connection"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在檢查網絡連結"
           }
         }
       }
@@ -677,7 +959,13 @@
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Requesting"
+            "value" : "Loading"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "正在請求"
           }
         }
       }
@@ -692,6 +980,12 @@
             "state" : "translated",
             "value" : "French"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "法語"
+          }
         }
       }
     },
@@ -702,11 +996,30 @@
             "state" : "translated",
             "value" : "Polish"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "波蘭語"
+          }
         }
       }
     },
     "浙ICP备2024071295号" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "浙ICP备2024071295号"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "浙ICP備2024071295號"
+          }
+        }
+      }
     },
     "浙ICP备2024071295号-3A" : {
       "localizations" : {
@@ -714,6 +1027,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "浙ICP备2024071295号-3A"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "浙ICP備2024071295號-3A"
           }
         }
       }
@@ -724,6 +1043,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "From"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "源語言"
           }
         }
       }
@@ -744,6 +1069,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Linecom"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "澪空Linecom"
           }
         }
       }
@@ -780,7 +1111,14 @@
       }
     },
     "澪空软件腕表翻译" : {
-
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "澪空軟件腕錶翻譯"
+          }
+        }
+      }
     },
     "状态" : {
       "localizations" : {
@@ -789,11 +1127,30 @@
             "state" : "translated",
             "value" : "Status"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "狀態"
+          }
         }
       }
     },
     "百度翻译" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Baidu"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "百度翻譯"
+          }
+        }
+      }
     },
     "百度翻译自2022年8月1日起将每月免费的调用额度限制在100万字符，如果您有自己的密钥，您可以在此替换由澪空软件提供的默认密钥" : {
       "extractionState" : "stale",
@@ -813,6 +1170,12 @@
             "state" : "translated",
             "value" : "To"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "目標語言"
+          }
         }
       }
     },
@@ -822,6 +1185,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Programming"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "程序開發"
           }
         }
       }
@@ -833,6 +1202,12 @@
             "state" : "translated",
             "value" : "Simplified Chinese"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "簡體中文"
+          }
         }
       }
     },
@@ -840,7 +1215,14 @@
 
     },
     "类型" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Type"
+          }
+        }
+      }
     },
     "繁体中文" : {
       "localizations" : {
@@ -849,11 +1231,30 @@
             "state" : "translated",
             "value" : "Traditional Chinese"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "繁體中文"
+          }
         }
       }
     },
     "网络异常，无法翻译" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lost Connection"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "網絡異常，無法翻譯"
+          }
+        }
+      }
     },
     "翻译" : {
       "localizations" : {
@@ -871,6 +1272,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Provider"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "翻譯提供商"
           }
         }
       }
@@ -892,11 +1299,30 @@
             "state" : "translated",
             "value" : "Contact us"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "聯繫我們"
+          }
         }
       }
     },
     "联系方式" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Methods"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "聯繫方式"
+          }
+        }
+      }
     },
     "腕表翻译" : {
       "localizations" : {
@@ -905,11 +1331,30 @@
             "state" : "translated",
             "value" : "Wear Translate"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "腕錶翻譯"
+          }
         }
       }
     },
     "腾讯翻译" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Tencent"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "騰訊翻譯"
+          }
+        }
+      }
     },
     "自动" : {
       "localizations" : {
@@ -917,6 +1362,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Auto"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自動"
           }
         }
       }
@@ -941,11 +1392,24 @@
             "state" : "translated",
             "value" : "English"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "英語"
+          }
         }
       }
     },
     "西班牙语" : {
-
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "西班牙語"
+          }
+        }
+      }
     },
     "设置" : {
       "localizations" : {
@@ -954,20 +1418,72 @@
             "state" : "translated",
             "value" : "Settings"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設置"
+          }
         }
       }
     },
     "详情" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Details"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "詳情"
+          }
+        }
+      }
     },
     "请前往App Store更新" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Open App Store"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請前往App Store更新"
+          }
+        }
+      }
     },
     "请等待" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please Stand By"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請等待"
+          }
+        }
+      }
     },
     "请等待一会，马上回来" : {
-
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "請等待一會，馬上回來"
+          }
+        }
+      }
     },
     "请通过邮件联系我们：" : {
       "localizations" : {
@@ -1016,16 +1532,55 @@
 
     },
     "软件更新" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Update"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "軟件更新"
+          }
+        }
+      }
     },
     "通用" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "General"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通用"
+          }
+        }
+      }
     },
     "通过“反馈助理”向Darock提交反馈，您的反馈将于24小时内发送到澪空软件" : {
 
     },
     "邮件" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E-mail"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "郵件"
+          }
+        }
+      }
     },
     "配置API密钥" : {
       "extractionState" : "stale",
@@ -1056,11 +1611,24 @@
             "state" : "translated",
             "value" : "Reset"
           }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重置"
+          }
         }
       }
     },
     "重设购买状态" : {
-
+      "localizations" : {
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重設購買狀態"
+          }
+        }
+      }
     },
     "重试" : {
       "localizations" : {
@@ -1068,6 +1636,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Retry"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "重載"
           }
         }
       }
@@ -1113,6 +1687,12 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Hide Debug Option"
+          }
+        },
+        "zh-Hant" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "隱藏調適選項"
           }
         }
       }
