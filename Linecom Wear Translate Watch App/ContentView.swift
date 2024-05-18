@@ -272,6 +272,7 @@ struct ContentView: View {
 
             }
             .navigationTitle("LWT翻译")
+            .containerBackground(Color(hue: 179/360, saturation: 60/100, brightness: 100/100).gradient, for: .navigation)
             .onAppear(){
                 DarockKit.Network.shared.requestJSON("https://api.linecom.net.cn/status/check"){
                     respond, secceed in
