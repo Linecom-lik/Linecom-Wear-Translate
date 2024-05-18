@@ -265,7 +265,7 @@ struct ContentView: View {
                 Section {
                     NavigationLink(destination:{SettingsView().navigationTitle("设置")},label:{HStack{Spacer();Image(systemName: "gear")
                         Text("设置");Spacer()}})
-                    NavigationLink(destination:{AboutView().navigationTitle("关于LWT")},label:{HStack{Spacer();Image(systemName: "info.circle")
+                    NavigationLink(destination:{AboutView().navigationTitle("关于LWT").containerBackground(Color(hue: 141/360, saturation: 60/100, brightness: 100/100).gradient, for: .navigation)},label:{HStack{Spacer();Image(systemName: "info.circle")
                         Text("关于");Spacer()
                     }})
                 }
