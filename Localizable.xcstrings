@@ -39,6 +39,9 @@
     "2024-03-12 08:44:27" : {
 
     },
+    "A Linecom Product" : {
+
+    },
     "Alamofire\nLicense under MIT" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -59,6 +62,9 @@
           }
         }
       }
+    },
+    "Apache License 2.0." : {
+
     },
     "App" : {
       "localizations" : {
