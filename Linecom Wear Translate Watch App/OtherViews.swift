@@ -39,14 +39,25 @@ struct AppAbout: View{
                     })//.font(.custom("ccccc", size: 10))
                 }.padding()
             }
-            
-            Text("Developed by Linecom").padding()
+            if #available(watchOS 10, *){
+                Text("Developed by Linecom").padding()
+            } else {
+                Text("A Linecom Product")
+            }
 
             VStack{
-                Text("Licensed under Apache License 2.0.").font(.custom("", size: 12)).sheet(isPresented: $LicensePersent, content: {
-                    LicenseView()
-                }).onTapGesture {
-                    LicensePersent=true
+                if #available(watchOS 10, *){
+                    Text("Licensed under Apache License 2.0.").font(.custom("", size: 12)).sheet(isPresented: $LicensePersent, content: {
+                        LicenseView()
+                    }).onTapGesture {
+                        LicensePersent=true
+                    }
+                } else {
+                    Text("Apache License 2.0.").font(.custom("", size: 12)).sheet(isPresented: $LicensePersent, content: {
+                        LicenseView()
+                    }).onTapGesture {
+                        LicensePersent=true
+                    }
                 }
                 Spacer()
                 Text("浙ICP备2024071295号-3A").font(.custom("", size: 13)).sheet(isPresented: $ICPPersent, content: {ICPView()}).onTapGesture {

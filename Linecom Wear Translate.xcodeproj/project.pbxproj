@@ -12,6 +12,7 @@
 		03120FC72BE285DF008D0B76 /* ExperimentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03120FC62BE285DF008D0B76 /* ExperimentView.swift */; };
 		0333FBDD2BE7799A00D7AF33 /* DarockFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0333FBDC2BE7799A00D7AF33 /* DarockFeedbackView.swift */; };
 		0333FBE32BE7C9DF00D7AF33 /* CepheusKeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0333FBE22BE7C9DF00D7AF33 /* CepheusKeyboardKit */; };
+		033740D32C002DF800A7259F /* LinecomBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033740D22C002DF800A7259F /* LinecomBase.swift */; };
 		03428C572B9219580025849C /* 澪空软件腕表翻译.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 03428C562B9219580025849C /* 澪空软件腕表翻译.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		03428C5C2B9219580025849C /* Linecom_Wear_TranslateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03428C5B2B9219580025849C /* Linecom_Wear_TranslateApp.swift */; };
 		03428C5E2B9219580025849C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03428C5D2B9219580025849C /* ContentView.swift */; };
@@ -64,6 +65,7 @@
 		030F238F2BEFA17600E8D4FA /* BuyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyView.swift; sourceTree = "<group>"; };
 		03120FC62BE285DF008D0B76 /* ExperimentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentView.swift; sourceTree = "<group>"; };
 		0333FBDC2BE7799A00D7AF33 /* DarockFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarockFeedbackView.swift; sourceTree = "<group>"; };
+		033740D22C002DF800A7259F /* LinecomBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinecomBase.swift; sourceTree = "<group>"; };
 		03428C502B9219580025849C /* Linecom Wear Translate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Linecom Wear Translate.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03428C562B9219580025849C /* 澪空软件腕表翻译.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "澪空软件腕表翻译.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03428C5B2B9219580025849C /* Linecom_Wear_TranslateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Linecom_Wear_TranslateApp.swift; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 		03428C5A2B9219580025849C /* Linecom Wear Translate Watch App */ = {
 			isa = PBXGroup;
 			children = (
+				033740D22C002DF800A7259F /* LinecomBase.swift */,
 				036F3C8D2B92342B0080194C /* md5c.swift */,
 				03428C5B2B9219580025849C /* Linecom_Wear_TranslateApp.swift */,
 				03428C5D2B9219580025849C /* ContentView.swift */,
@@ -224,7 +227,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1520;
-				LastUpgradeCheck = 1520;
+				LastUpgradeCheck = 1540;
 				TargetAttributes = {
 					03428C4F2B9219580025849C = {
 						CreatedOnToolsVersion = 15.2;
@@ -305,6 +308,7 @@
 				03428C5E2B9219580025849C /* ContentView.swift in Sources */,
 				036F3C8E2B92342B0080194C /* md5c.swift in Sources */,
 				030F23902BEFA17600E8D4FA /* BuyView.swift in Sources */,
+				033740D32C002DF800A7259F /* LinecomBase.swift in Sources */,
 				03428C5C2B9219580025849C /* Linecom_Wear_TranslateApp.swift in Sources */,
 				03120FC72BE285DF008D0B76 /* ExperimentView.swift in Sources */,
 				0333FBDD2BE7799A00D7AF33 /* DarockFeedbackView.swift in Sources */,
@@ -341,6 +345,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -404,6 +409,7 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -473,7 +479,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.21;
+				MARKETING_VERSION = 1.0.22;
 				PRODUCT_BUNDLE_IDENTIFIER = com.linecom.weartranslate.watchkitapp;
 				PRODUCT_NAME = "澪空软件腕表翻译";
 				SDKROOT = watchos;
@@ -481,7 +487,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Debug;
 		};
@@ -503,7 +509,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.21;
+				MARKETING_VERSION = 1.0.22;
 				PRODUCT_BUNDLE_IDENTIFIER = com.linecom.weartranslate.watchkitapp;
 				PRODUCT_NAME = "澪空软件腕表翻译";
 				SDKROOT = watchos;
@@ -512,7 +518,7 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				VALIDATE_PRODUCT = YES;
-				WATCHOS_DEPLOYMENT_TARGET = 10.0;
+				WATCHOS_DEPLOYMENT_TARGET = 9.0;
 			};
 			name = Release;
 		};
@@ -524,7 +530,7 @@
 				CURRENT_PROJECT_VERSION = 46;
 				DEVELOPMENT_TEAM = B38QUJMY47;
 				INFOPLIST_KEY_CFBundleDisplayName = "Linecom Wear Translate";
-				MARKETING_VERSION = 1.0.21;
+				MARKETING_VERSION = 1.0.22;
 				PRODUCT_BUNDLE_IDENTIFIER = com.linecom.weartranslate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -540,7 +546,7 @@
 				CURRENT_PROJECT_VERSION = 46;
 				DEVELOPMENT_TEAM = B38QUJMY47;
 				INFOPLIST_KEY_CFBundleDisplayName = "Linecom Wear Translate";
-				MARKETING_VERSION = 1.0.21;
+				MARKETING_VERSION = 1.0.22;
 				PRODUCT_BUNDLE_IDENTIFIER = com.linecom.weartranslate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
