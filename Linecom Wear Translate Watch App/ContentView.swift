@@ -29,6 +29,7 @@ struct ContentView: View {
     @State var tencentgroup=["zh":"简体中文","zh-TW":"繁体中文","en":"英语","ja":"日语","ko":"韩语","fr":"法语","ru":"俄语","de":"德语","es":"西班牙语"]
     @State var transfl=""
     @State var notice=""
+    @State var notdetails=""
     var body: some View {
         //搁置
         //if !lastenable{
@@ -107,7 +108,11 @@ struct ContentView: View {
                     } else if NetPing=="ok"{
                         if !notice.isEmpty{
                             Section{
-                                Text(notice)
+                                //if detail.isEmpty{
+                                //    Text(notice)
+                                //} else {
+                                    NavigationLink(destination: {NoticeDetailView(DetlText: notdetails)}, label: {Text(notice)})
+                                //}
                             } header: {
                                 Text("公告")
                             }
@@ -553,9 +558,10 @@ struct ContentView: View {
                             NetPing="ok"
                         }
                     }
-                    DarockKit.Network.shared.requestJSON("https://api.linecom.net.cn/lwt/notice?action=get"){
+                    DarockKit.Network.shared.requestJSON("https://api.linecom.net.cn/lwt/notice?action=get&new=yes"){
                         resp, succeed in
                         notice=resp["message"].string ?? ""
+                        notdetails=resp["detail"].string ?? ""
                     }
                     //SwiftyStoreKit.completeTransactions(atomically: true) { purchases in
                     //        for purchase in purchases {
