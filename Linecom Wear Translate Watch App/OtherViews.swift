@@ -40,7 +40,13 @@ struct AppAbout: View{
                 }.padding()
             }
             if #available(watchOS 10, *){
-                Text("Developed by Linecom").padding()
+                Text("Developed by Linecom").padding().onTapGesture {
+                    let session = ASWebAuthenticationSession(url: URL(string: "https://www.linecom.net.cn")!, callbackURLScheme: "mlhd") { _, _ in
+                        return
+                    }
+                    session.prefersEphemeralWebBrowserSession = true
+                    session.start()
+                }
             } else {
                 Text("A Linecom Product")
             }
