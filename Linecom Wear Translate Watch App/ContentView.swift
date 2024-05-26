@@ -47,7 +47,7 @@ struct ContentView: View {
                             }
                         }
                     }
-                    if NetPing==""{
+                    if NetPing=="" && !debugenable{
                         Section{
                             HStack{
                                 Image(systemName: "wave.3.forward")
@@ -82,7 +82,7 @@ struct ContentView: View {
                         } footer: {
                             Text("LWT需要网络连接以进行在线翻译")
                         }
-                    } else if NetPing=="InvaildResp" {
+                    } else if NetPing=="InvaildResp" && !debugenable {
                         Section{
                             HStack{
                                 Image(systemName: "xmark.icloud.fill")
@@ -104,7 +104,7 @@ struct ContentView: View {
                         } footer: {
                             Text("请等待一会，马上回来")
                         }
-                    } else if NetPing=="ok"{
+                    } else if NetPing=="ok" || debugenable{
                         if !notice.isEmpty{
                             Section{
                                 Text(notice)
@@ -543,14 +543,16 @@ struct ContentView: View {
                 }
                 .navigationTitle("LWT翻译")
                 .onAppear(){
-                    DarockKit.Network.shared.requestJSON("https://api.linecom.net.cn/status/check"){
-                        respond, secceed in
-                        if !secceed{
-                            NetPing="LossNet"
-                        } else if respond["status"] != 0{
-                            NetPing="InvaildResp"
-                        } else{
-                            NetPing="ok"
+                    if !debugenable{
+                        DarockKit.Network.shared.requestJSON("https://api.linecom.net.cn/status/check"){
+                            respond, secceed in
+                            if !secceed{
+                                NetPing="LossNet"
+                            } else if respond["status"] != 0{
+                                NetPing="InvaildResp"
+                            } else{
+                                NetPing="ok"
+                            }
                         }
                     }
                     DarockKit.Network.shared.requestJSON("https://api.linecom.net.cn/lwt/notice?action=get"){
