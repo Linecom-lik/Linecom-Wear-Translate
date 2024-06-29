@@ -29,6 +29,7 @@ struct ContentView: View {
     @State var tencentgroup=["zh":"简体中文","zh-TW":"繁体中文","en":"英语","ja":"日语","ko":"韩语","fr":"法语","ru":"俄语","de":"德语","es":"西班牙语"]
     @State var transfl=""
     @State var notice=""
+    @AppStorage("hideos9tip") var hideos9tip=false
     var body: some View {
         //搁置
         //if !lastenable{
@@ -381,11 +382,15 @@ struct ContentView: View {
                             Text("请等待一会，马上回来")
                         }
                     } else if NetPing=="ok"{
-                        if !notice.isEmpty{
+                        if !hideos9tip{
                             Section{
-                                Text(notice)
+                                Button("对于watchOS 9的支持已经结束，您不会再收到新版本，Linecom LLC建议您尽快更新watchOS以得到最新的LWT更新",action:{
+                                    hideos9tip=true
+                                })
                             } header: {
                                 Text("公告")
+                            } footer:{
+                                Text("单击以关闭此消息")
                             }
                         }
                         

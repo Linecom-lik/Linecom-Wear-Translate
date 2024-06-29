@@ -31,12 +31,16 @@ struct AppAbout: View{
                 VStack{
                     Text("澪空软件")
                     Text("腕表翻译")
-                    Text(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String).onTapGesture(count: 10, perform: {
-                        debug=true
-                        debugmodepst=true
-                    }).sheet(isPresented: $debugmodepst, content: {
-                        Text("调试选项已启用")
-                    })//.font(.custom("ccccc", size: 10))
+                    if #available(watchOS 10, *){
+                        Text(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String).onTapGesture(count: 10, perform: {
+                            debug=true
+                            debugmodepst=true
+                        }).sheet(isPresented: $debugmodepst, content: {
+                            Text("调试选项已启用")
+                        })//.font(.custom("ccccc", size: 10))
+                    } else {
+                        Text("1.0.26")
+                    }
                 }.padding()
             }
             if #available(watchOS 10, *){
@@ -172,22 +176,51 @@ struct SettingsView: View{
                 Text("翻译")
             }
             Section(content:{
+                if #available(watchOS 10.0, *){
                     Toggle("启用兼容性输入",isOn: $cepenable)
+                } else {
+                    Toggle("启用兼容性输入",isOn: $cepenable).disabled(true).foregroundColor(.gray)
+                }
+                    
                 },header: {
                     Text("通用")},footer: {
-                    Text("为Apple Watch SE和Apple Watch Series6及以前的设备提供英文与拼音的全键盘输入。\nPowered by Cepheus")
+                        if #available(watchOS 10, *){
+                            Text("为Apple Watch SE和Apple Watch Series6及以前的设备提供英文与拼音的全键盘输入。\nPowered by Cepheus")
+                        } else {
+                            Text("watchOS 9不支持此功能")
+                        }
                 })
+            if #available(watchOS 10, *){
                 NavigationLink(destination:{SupportView().navigationTitle("联系我们")},label:{Image(systemName: "envelope.open.fill");Text("联系与反馈")})
-            Section{
-                NavigationLink(destination: {UpdateView().navigationTitle("软件更新")}, label: {
-                    HStack{
-                        Image(systemName: "clock.arrow.circlepath")
-                        Text("软件更新")
-                    }
-                    
+            } else {
+                Section(content:{NavigationLink(destination:{SupportView().navigationTitle("联系我们")},label:{Image(systemName: "envelope.open.fill");Text("联系与反馈")}).disabled(true).foregroundColor(.gray)},footer: {
+                    Text("对于watchOS 9的支持已经结束")
                 })
-            } header:{
-                Text("App")
+            }
+            if #available(watchOS 10, *){
+                Section{
+                    NavigationLink(destination: {UpdateView().navigationTitle("软件更新")}, label: {
+                        HStack{
+                            Image(systemName: "gear.badge")
+                            Text("软件更新")
+                        }
+                        
+                    })
+                } header:{
+                    Text("App")
+                }
+            } else{
+                Section{
+                    NavigationLink(destination: {UpdateView().navigationTitle("软件更新")}, label: {
+                        HStack{
+                            Image(systemName: "gear.badge")
+                            Text("软件更新")
+                        }
+                        
+                    }).disabled(true).foregroundColor(.gray)
+                } footer:{
+                    Text("对于watchOS 9的支持已经结束")
+                }
             }
             
             //搁置
