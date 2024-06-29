@@ -251,7 +251,10 @@ struct SupportView: View{
                 } else if contactmethod=="transferdarock"{
                     Section{
                         NavigationLink(destination: {DarockFeedbackView()}, label: {
-                            Text("单击启动反馈助理")
+                            HStack{
+                                Image(systemName: "exclamationmark.bubble")
+                                Text("单击启动反馈助理")
+                            }
                         })
                     }
                 }
