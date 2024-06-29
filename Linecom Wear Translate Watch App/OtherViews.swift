@@ -31,12 +31,16 @@ struct AppAbout: View{
                 VStack{
                     Text("澪空软件")
                     Text("腕表翻译")
-                    Text(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String).onTapGesture(count: 10, perform: {
-                        debug=true
-                        debugmodepst=true
-                    }).sheet(isPresented: $debugmodepst, content: {
-                        Text("调试选项已启用")
-                    })//.font(.custom("ccccc", size: 10))
+                    if #available(watchOS 10, *){
+                        Text(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String).onTapGesture(count: 10, perform: {
+                            debug=true
+                            debugmodepst=true
+                        }).sheet(isPresented: $debugmodepst, content: {
+                            Text("调试选项已启用")
+                        })//.font(.custom("ccccc", size: 10))
+                    } else {
+                        Text("1.0.26")
+                    }
                 }.padding()
             }
             if #available(watchOS 10, *){
@@ -172,22 +176,51 @@ struct SettingsView: View{
                 Text("翻译")
             }
             Section(content:{
+                if #available(watchOS 10.0, *){
                     Toggle("启用兼容性输入",isOn: $cepenable)
+                } else {
+                    Toggle("启用兼容性输入",isOn: $cepenable).disabled(true).foregroundColor(.gray)
+                }
+                    
                 },header: {
                     Text("通用")},footer: {
-                    Text("为Apple Watch SE和Apple Watch Series6及以前的设备提供英文与拼音的全键盘输入。\nPowered by Cepheus")
+                        if #available(watchOS 10, *){
+                            Text("为Apple Watch SE和Apple Watch Series6及以前的设备提供英文与拼音的全键盘输入。\nPowered by Cepheus")
+                        } else {
+                            Text("watchOS 9不支持此功能")
+                        }
                 })
+            if #available(watchOS 10, *){
                 NavigationLink(destination:{SupportView().navigationTitle("联系我们")},label:{Image(systemName: "envelope.open.fill");Text("联系与反馈")})
-            Section{
-                NavigationLink(destination: {UpdateView().navigationTitle("软件更新")}, label: {
-                    HStack{
-                        Image(systemName: "clock.arrow.circlepath")
-                        Text("软件更新")
-                    }
-                    
+            } else {
+                Section(content:{NavigationLink(destination:{SupportView().navigationTitle("联系我们")},label:{Image(systemName: "envelope.open.fill");Text("联系与反馈")}).disabled(true).foregroundColor(.gray)},footer: {
+                    Text("对于watchOS 9的支持已经结束")
                 })
-            } header:{
-                Text("App")
+            }
+            if #available(watchOS 10, *){
+                Section{
+                    NavigationLink(destination: {UpdateView().navigationTitle("软件更新")}, label: {
+                        HStack{
+                            Image(systemName: "gear.badge")
+                            Text("软件更新")
+                        }
+                        
+                    })
+                } header:{
+                    Text("App")
+                }
+            } else{
+                Section{
+                    NavigationLink(destination: {UpdateView().navigationTitle("软件更新")}, label: {
+                        HStack{
+                            Image(systemName: "gear.badge")
+                            Text("软件更新")
+                        }
+                        
+                    }).disabled(true).foregroundColor(.gray)
+                } footer:{
+                    Text("对于watchOS 9的支持已经结束")
+                }
             }
             
             //搁置
@@ -220,33 +253,41 @@ struct SettingsView: View{
 }
 
 struct SupportView: View{
-    @State var contactmethod="emaillinecom"
+    @State var contactmethod="linecom"
     var body: some View{
         NavigationStack{
             List{
                 Section(content: {
                     Picker("联系方式",selection: $contactmethod){
-                        Text("邮件").tag("emaillinecom")
+                        Text("邮件").tag("linecom")
                         Text("反馈助理").tag("transferdarock")
                     }
                 }, footer:{
-                    if contactmethod=="emaillinecom"{
-                        Text("发送邮件直接联系澪空软件（推荐）")
+                    if contactmethod=="linecom"{
+                        Text("前往澪空软件支持中心（推荐）")
                     } else if contactmethod=="transferdarock"{
                         Text("通过“反馈助理”向Darock提交反馈，您的反馈将于24小时内发送到澪空软件")
                     }
                 })
-                if contactmethod=="emaillinecom"{
+                if contactmethod=="linecom"{
                     Section{
-                        Text("请通过邮件联系我们：")
-                        Text("linecom@linecom.net.cn").font(.custom("", size: 15))
-                        Text("若您遇到了问题，请发送支持工单：")
-                        Text("support@linecom.net.cn").font(.custom("", size: 15))
+                        Button(action: {
+                            let session = ASWebAuthenticationSession(url: URL(string: "https://lkurl.top/support")!, callbackURLScheme: "mlhd") { _, _ in
+                                return
+                            }
+                            session.prefersEphemeralWebBrowserSession = true
+                            session.start()
+                        }, label: {
+                            Text("前往Linecom支持中心")
+                        })
                     }
                 } else if contactmethod=="transferdarock"{
                     Section{
                         NavigationLink(destination: {DarockFeedbackView()}, label: {
-                            Text("单击启动反馈助理")
+                            HStack{
+                                Image(systemName: "exclamationmark.bubble")
+                                Text("单击启动反馈助理")
+                            }
                         })
                     }
                 }
@@ -718,5 +759,11 @@ http://www.apache.org/licenses/
 }
 
 #Preview {
-    AboutView()
+    NavigationStack{
+        TabView{
+            AboutView()
+            SettingsView()
+            SupportView()
+        }
+    }
 }

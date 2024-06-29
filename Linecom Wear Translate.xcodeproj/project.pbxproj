@@ -25,6 +25,9 @@
 		036F3C8C2B9232060080194C /* DarockKit in Frameworks */ = {isa = PBXBuildFile; productRef = 036F3C8B2B9232060080194C /* DarockKit */; };
 		036F3C8E2B92342B0080194C /* md5c.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036F3C8D2B92342B0080194C /* md5c.swift */; };
 		036F3C902B9243FD0080194C /* OtherViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036F3C8F2B9243FD0080194C /* OtherViews.swift */; };
+		03BB21032C2EA3960048BF18 /* WYWTranslate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB21022C2EA3960048BF18 /* WYWTranslate.swift */; };
+		03C7A9F42C30280E00EFE72C /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 03C7A9F32C30280E00EFE72C /* MarkdownUI */; };
+		03C7A9F72C30287900EFE72C /* SupportsUICore in Frameworks */ = {isa = PBXBuildFile; productRef = 03C7A9F62C30287900EFE72C /* SupportsUICore */; };
 		03D39BA82BAF342D0075EC3D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 03D39BA72BAF342D0075EC3D /* Localizable.xcstrings */; };
 		03D39BA92BAF34410075EC3D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 03D39BA72BAF342D0075EC3D /* Localizable.xcstrings */; };
 		03DD72F62BF08AD1002DFB5D /* UpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DD72F52BF08AD1002DFB5D /* UpdateView.swift */; };
@@ -78,6 +81,7 @@
 		034B96072BB7CCD4005D757D /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		036F3C8D2B92342B0080194C /* md5c.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = md5c.swift; sourceTree = "<group>"; };
 		036F3C8F2B9243FD0080194C /* OtherViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherViews.swift; sourceTree = "<group>"; };
+		03BB21022C2EA3960048BF18 /* WYWTranslate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYWTranslate.swift; sourceTree = "<group>"; };
 		03D39BA72BAF342D0075EC3D /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		03DD72F52BF08AD1002DFB5D /* UpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -90,6 +94,8 @@
 				030F238E2BEF9EA700E8D4FA /* SwiftyStoreKit in Frameworks */,
 				0333FBE32BE7C9DF00D7AF33 /* CepheusKeyboardKit in Frameworks */,
 				036F3C8C2B9232060080194C /* DarockKit in Frameworks */,
+				03C7A9F42C30280E00EFE72C /* MarkdownUI in Frameworks */,
+				03C7A9F72C30287900EFE72C /* SupportsUICore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +137,7 @@
 				036F3C8D2B92342B0080194C /* md5c.swift */,
 				03428C5B2B9219580025849C /* Linecom_Wear_TranslateApp.swift */,
 				03428C5D2B9219580025849C /* ContentView.swift */,
+				03BB21022C2EA3960048BF18 /* WYWTranslate.swift */,
 				03428C5F2B9219590025849C /* Assets.xcassets */,
 				036F3C8F2B9243FD0080194C /* OtherViews.swift */,
 				03120FC62BE285DF008D0B76 /* ExperimentView.swift */,
@@ -196,6 +203,8 @@
 				036F3C8B2B9232060080194C /* DarockKit */,
 				0333FBE22BE7C9DF00D7AF33 /* CepheusKeyboardKit */,
 				030F238D2BEF9EA700E8D4FA /* SwiftyStoreKit */,
+				03C7A9F32C30280E00EFE72C /* MarkdownUI */,
+				03C7A9F62C30287900EFE72C /* SupportsUICore */,
 			);
 			productName = "Linecom Wear Translate Watch App";
 			productReference = 03428C562B9219580025849C /* 澪空软件腕表翻译.app */;
@@ -256,6 +265,8 @@
 				036F3C8A2B9232060080194C /* XCRemoteSwiftPackageReference "DarockKit" */,
 				0333FBE12BE7C9DF00D7AF33 /* XCRemoteSwiftPackageReference "Cepheus" */,
 				030F238C2BEF9EA700E8D4FA /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */,
+				03C7A9F22C30280E00EFE72C /* XCRemoteSwiftPackageReference "swift-markdown-ui" */,
+				03C7A9F52C30287900EFE72C /* XCRemoteSwiftPackageReference "SupportsUICore" */,
 			);
 			productRefGroup = 03428C512B9219580025849C /* Products */;
 			projectDirPath = "";
@@ -305,6 +316,7 @@
 			files = (
 				036F3C902B9243FD0080194C /* OtherViews.swift in Sources */,
 				03DD72F62BF08AD1002DFB5D /* UpdateView.swift in Sources */,
+				03BB21032C2EA3960048BF18 /* WYWTranslate.swift in Sources */,
 				03428C5E2B9219580025849C /* ContentView.swift in Sources */,
 				036F3C8E2B92342B0080194C /* md5c.swift in Sources */,
 				030F23902BEFA17600E8D4FA /* BuyView.swift in Sources */,
@@ -467,7 +479,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 46;
+				CURRENT_PROJECT_VERSION = 100;
 				DEVELOPMENT_ASSET_PATHS = "\"Linecom Wear Translate Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = B38QUJMY47;
 				ENABLE_PREVIEWS = YES;
@@ -479,7 +491,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.24;
+				MARKETING_VERSION = 1.0.26;
 				PRODUCT_BUNDLE_IDENTIFIER = com.linecom.weartranslate.watchkitapp;
 				PRODUCT_NAME = "澪空软件腕表翻译";
 				SDKROOT = watchos;
@@ -497,7 +509,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 46;
+				CURRENT_PROJECT_VERSION = 100;
 				DEVELOPMENT_ASSET_PATHS = "\"Linecom Wear Translate Watch App/Preview Content\"";
 				DEVELOPMENT_TEAM = B38QUJMY47;
 				ENABLE_PREVIEWS = YES;
@@ -509,7 +521,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.24;
+				MARKETING_VERSION = 1.0.26;
 				PRODUCT_BUNDLE_IDENTIFIER = com.linecom.weartranslate.watchkitapp;
 				PRODUCT_NAME = "澪空软件腕表翻译";
 				SDKROOT = watchos;
@@ -527,10 +539,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 46;
+				CURRENT_PROJECT_VERSION = 100;
 				DEVELOPMENT_TEAM = B38QUJMY47;
 				INFOPLIST_KEY_CFBundleDisplayName = "Linecom Wear Translate";
-				MARKETING_VERSION = 1.0.24;
+				MARKETING_VERSION = 1.0.26;
 				PRODUCT_BUNDLE_IDENTIFIER = com.linecom.weartranslate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -543,10 +555,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 46;
+				CURRENT_PROJECT_VERSION = 100;
 				DEVELOPMENT_TEAM = B38QUJMY47;
 				INFOPLIST_KEY_CFBundleDisplayName = "Linecom Wear Translate";
-				MARKETING_VERSION = 1.0.24;
+				MARKETING_VERSION = 1.0.26;
 				PRODUCT_BUNDLE_IDENTIFIER = com.linecom.weartranslate;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
@@ -662,6 +674,22 @@
 				kind = branch;
 			};
 		};
+		03C7A9F22C30280E00EFE72C /* XCRemoteSwiftPackageReference "swift-markdown-ui" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gonzalezreal/swift-markdown-ui";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.1;
+			};
+		};
+		03C7A9F52C30287900EFE72C /* XCRemoteSwiftPackageReference "SupportsUICore" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Darock-Studio/SupportsUICore";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -679,6 +707,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 036F3C8A2B9232060080194C /* XCRemoteSwiftPackageReference "DarockKit" */;
 			productName = DarockKit;
+		};
+		03C7A9F32C30280E00EFE72C /* MarkdownUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 03C7A9F22C30280E00EFE72C /* XCRemoteSwiftPackageReference "swift-markdown-ui" */;
+			productName = MarkdownUI;
+		};
+		03C7A9F62C30287900EFE72C /* SupportsUICore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 03C7A9F52C30287900EFE72C /* XCRemoteSwiftPackageReference "SupportsUICore" */;
+			productName = SupportsUICore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

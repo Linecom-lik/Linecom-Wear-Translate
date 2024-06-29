@@ -29,6 +29,7 @@ struct ContentView: View {
     @State var tencentgroup=["zh":"简体中文","zh-TW":"繁体中文","en":"英语","ja":"日语","ko":"韩语","fr":"法语","ru":"俄语","de":"德语","es":"西班牙语"]
     @State var transfl=""
     @State var notice=""
+    @AppStorage("hideos9tip") var hideos9tip=false
     var body: some View {
         //搁置
         //if !lastenable{
@@ -197,10 +198,10 @@ struct ContentView: View {
                                     DarockKit.Network.shared.requestJSON("https://api.linecom.net.cn/lwt/translate?provider=\(provider)&text=\(slang)&slang=\(sourcelang)&tlang=\(targetlang)&pass=l1nec0m".urlEncoded()){
                                         resp, succeed in
                                         if !succeed{
-                                            translatedText="翻译请求发送失败，请联系开发者。"
+                                            translatedText="翻译请求发送失败"
                                         }
                                         let finalsdt=slang
-                                        translatedText=resp["Response"]["TargetText"].string ?? "翻译返回错误，请联系开发者"
+                                        translatedText=resp["Response"]["TargetText"].string ?? "翻译返回错误"
                                         sdata=finalsdt
                                         transfl=resp["Response"]["Source"].string ?? ""
                                         dislang=tencentgroup[transfl] ?? ""
@@ -227,6 +228,16 @@ struct ContentView: View {
                                 
                             })
                             
+                        }
+                        Section{
+                            NavigationLink(destination: {WYWTranslate().navigationTitle("文言翻译")}, label: {
+                                HStack{
+                                    Spacer()
+                                    Image(systemName: "ellipsis.bubble")
+                                    Text("文言文翻译")
+                                    Spacer()
+                                }
+                            })
                         }
                     }
                     if !translatedText.isEmpty {
@@ -262,6 +273,7 @@ struct ContentView: View {
                             }
                         }
                     }
+                    
                     Section {
                         NavigationLink(destination:{SettingsView().navigationTitle("设置")},label:{HStack{Spacer();Image(systemName: "gear")
                             Text("设置");Spacer()}})
@@ -375,11 +387,15 @@ struct ContentView: View {
                             Text("请等待一会，马上回来")
                         }
                     } else if NetPing=="ok"{
-                        if !notice.isEmpty{
+                        if !hideos9tip{
                             Section{
-                                Text(notice)
+                                Button("对于watchOS 9的支持已经结束，您不会再收到新版本，Linecom LLC建议您尽快更新watchOS以得到最新的LWT更新",action:{
+                                    hideos9tip=true
+                                })
                             } header: {
                                 Text("公告")
+                            } footer:{
+                                Text("单击以关闭此消息")
                             }
                         }
                         
@@ -498,6 +514,16 @@ struct ContentView: View {
                             })
                             
                         }
+                        Section{
+                            NavigationLink(destination: {WYWTranslate().navigationTitle("文言翻译")}, label: {
+                                HStack{
+                                    Spacer()
+                                    Image(systemName: "ellipsis.bubble")
+                                    Text("文言文翻译")
+                                    Spacer()
+                                }
+                            })
+                        }
                     }
                     if !translatedText.isEmpty {
                         Section {
@@ -531,7 +557,9 @@ struct ContentView: View {
                                 })
                             }
                         }
+                        
                     }
+                    
                     Section {
                         NavigationLink(destination:{SettingsView().navigationTitle("设置")},label:{HStack{Spacer();Image(systemName: "gear")
                             Text("设置");Spacer()}})
@@ -555,24 +583,6 @@ struct ContentView: View {
                             }
                         }
                     }
-                    DarockKit.Network.shared.requestJSON("https://api.linecom.net.cn/lwt/notice?action=get"){
-                        resp, succeed in
-                        notice=resp["message"].string ?? ""
-                    }
-                    //SwiftyStoreKit.completeTransactions(atomically: true) { purchases in
-                    //        for purchase in purchases {
-                    //            switch purchase.transaction.transactionState {
-                    //            case .purchased, .restored:
-                    //                if purchase.needsFinishTransaction {
-                    // Deliver content from server, then:
-                    //                    SwiftyStoreKit.finishTransaction(purchase.transaction)
-                    //                }
-                    // Unlock content
-                    //            case .failed, .purchasing, .deferred:
-                    //                break // do nothing
-                    //            }
-                    //        }
-                    //    }
                 }
             }
         }
