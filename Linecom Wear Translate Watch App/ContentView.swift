@@ -272,11 +272,6 @@ struct ContentView: View {
                                 })
                             }
                         }
-                        Section{
-                            NavigationLink(destination: {WYWTranslate().navigationTitle("文言翻译")}, label: {
-                                Text("文言文翻译")
-                            })
-                        }
                     }
                     
                     Section {
