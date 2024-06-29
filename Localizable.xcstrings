@@ -36,6 +36,9 @@
         }
       }
     },
+    "1.0.26" : {
+
+    },
     "2024-03-12 08:44:27" : {
 
     },
@@ -422,6 +425,7 @@
       }
     },
     "support@linecom.net.cn" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -471,6 +475,9 @@
           }
         }
       }
+    },
+    "watchOS 9不支持此功能" : {
+
     },
     "WindowsMEMZ" : {
       "localizations" : {
@@ -612,6 +619,15 @@
         }
       }
     },
+    "前往Linecom支持中心" : {
+
+    },
+    "前往澪空软件支持中心（推荐）" : {
+
+    },
+    "单击以关闭此消息" : {
+
+    },
     "单击启动反馈助理" : {
       "localizations" : {
         "en" : {
@@ -669,6 +685,7 @@
       }
     },
     "发送邮件直接联系澪空软件（推荐）" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -751,6 +768,12 @@
         }
       }
     },
+    "对于watchOS 9的支持已经结束" : {
+
+    },
+    "对于watchOS 9的支持已经结束，您不会再收到新版本，Linecom LLC建议您尽快更新watchOS以得到最新的LWT更新" : {
+
+    },
     "尚未连接到互联网" : {
       "localizations" : {
         "en" : {
@@ -822,6 +845,9 @@
           }
         }
       }
+    },
+    "文言->中文" : {
+
     },
     "文言文翻译" : {
 
@@ -1388,6 +1414,7 @@
 
     },
     "若您遇到了问题，请发送支持工单：" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1498,6 +1525,7 @@
       }
     },
     "请通过邮件联系我们：" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1685,6 +1713,9 @@
           }
         }
       }
+    },
+    "键入文言" : {
+
     },
     "键入源语言" : {
       "localizations" : {
