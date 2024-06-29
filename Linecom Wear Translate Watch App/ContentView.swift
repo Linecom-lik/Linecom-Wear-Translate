@@ -198,10 +198,10 @@ struct ContentView: View {
                                     DarockKit.Network.shared.requestJSON("https://api.linecom.net.cn/lwt/translate?provider=\(provider)&text=\(slang)&slang=\(sourcelang)&tlang=\(targetlang)&pass=l1nec0m".urlEncoded()){
                                         resp, succeed in
                                         if !succeed{
-                                            translatedText="翻译请求发送失败，请联系开发者。"
+                                            translatedText="翻译请求发送失败"
                                         }
                                         let finalsdt=slang
-                                        translatedText=resp["Response"]["TargetText"].string ?? "翻译返回错误，请联系开发者"
+                                        translatedText=resp["Response"]["TargetText"].string ?? "翻译返回错误"
                                         sdata=finalsdt
                                         transfl=resp["Response"]["Source"].string ?? ""
                                         dislang=tencentgroup[transfl] ?? ""
@@ -228,6 +228,16 @@ struct ContentView: View {
                                 
                             })
                             
+                        }
+                        Section{
+                            NavigationLink(destination: {WYWTranslate().navigationTitle("文言翻译")}, label: {
+                                HStack{
+                                    Spacer()
+                                    Image(systemName: "ellipsis.bubble")
+                                    Text("文言文翻译")
+                                    Spacer()
+                                }
+                            })
                         }
                     }
                     if !translatedText.isEmpty {
@@ -509,6 +519,16 @@ struct ContentView: View {
                             })
                             
                         }
+                        Section{
+                            NavigationLink(destination: {WYWTranslate().navigationTitle("文言翻译")}, label: {
+                                HStack{
+                                    Spacer()
+                                    Image(systemName: "ellipsis.bubble")
+                                    Text("文言文翻译")
+                                    Spacer()
+                                }
+                            })
+                        }
                     }
                     if !translatedText.isEmpty {
                         Section {
@@ -542,11 +562,7 @@ struct ContentView: View {
                                 })
                             }
                         }
-                        Section{
-                            NavigationLink(destination: {WYWTranslate().navigationTitle("文言翻译")}, label: {
-                                Text("文言文翻译")
-                            })
-                        }
+                        
                     }
                     
                     Section {
