@@ -34,7 +34,7 @@ struct WYWTranslate: View {
                     if !cepenable{
                         TextField("输入文言", text: $wywin)
                     } else if cepenable{
-                        CepheusKeyboard(input: $wywin,prompt:"键入文言")
+                        CepheusKeyboard(input: $wywin,prompt:"键入文言",defaultLanguage: "zh-hans-pinyin")
                     }
                     Button(action: {
                         req=true
