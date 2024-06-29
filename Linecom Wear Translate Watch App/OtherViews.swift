@@ -718,5 +718,11 @@ http://www.apache.org/licenses/
 }
 
 #Preview {
-    AboutView()
+    NavigationStack{
+        TabView{
+            AboutView()
+            SettingsView()
+            SupportView()
+        }
+    }
 }
