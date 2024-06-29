@@ -26,6 +26,8 @@
 		036F3C8E2B92342B0080194C /* md5c.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036F3C8D2B92342B0080194C /* md5c.swift */; };
 		036F3C902B9243FD0080194C /* OtherViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036F3C8F2B9243FD0080194C /* OtherViews.swift */; };
 		03BB21032C2EA3960048BF18 /* WYWTranslate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB21022C2EA3960048BF18 /* WYWTranslate.swift */; };
+		03C7A9F42C30280E00EFE72C /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 03C7A9F32C30280E00EFE72C /* MarkdownUI */; };
+		03C7A9F72C30287900EFE72C /* SupportsUICore in Frameworks */ = {isa = PBXBuildFile; productRef = 03C7A9F62C30287900EFE72C /* SupportsUICore */; };
 		03D39BA82BAF342D0075EC3D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 03D39BA72BAF342D0075EC3D /* Localizable.xcstrings */; };
 		03D39BA92BAF34410075EC3D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 03D39BA72BAF342D0075EC3D /* Localizable.xcstrings */; };
 		03DD72F62BF08AD1002DFB5D /* UpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DD72F52BF08AD1002DFB5D /* UpdateView.swift */; };
@@ -92,6 +94,8 @@
 				030F238E2BEF9EA700E8D4FA /* SwiftyStoreKit in Frameworks */,
 				0333FBE32BE7C9DF00D7AF33 /* CepheusKeyboardKit in Frameworks */,
 				036F3C8C2B9232060080194C /* DarockKit in Frameworks */,
+				03C7A9F42C30280E00EFE72C /* MarkdownUI in Frameworks */,
+				03C7A9F72C30287900EFE72C /* SupportsUICore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +203,8 @@
 				036F3C8B2B9232060080194C /* DarockKit */,
 				0333FBE22BE7C9DF00D7AF33 /* CepheusKeyboardKit */,
 				030F238D2BEF9EA700E8D4FA /* SwiftyStoreKit */,
+				03C7A9F32C30280E00EFE72C /* MarkdownUI */,
+				03C7A9F62C30287900EFE72C /* SupportsUICore */,
 			);
 			productName = "Linecom Wear Translate Watch App";
 			productReference = 03428C562B9219580025849C /* 澪空软件腕表翻译.app */;
@@ -259,6 +265,8 @@
 				036F3C8A2B9232060080194C /* XCRemoteSwiftPackageReference "DarockKit" */,
 				0333FBE12BE7C9DF00D7AF33 /* XCRemoteSwiftPackageReference "Cepheus" */,
 				030F238C2BEF9EA700E8D4FA /* XCRemoteSwiftPackageReference "SwiftyStoreKit" */,
+				03C7A9F22C30280E00EFE72C /* XCRemoteSwiftPackageReference "swift-markdown-ui" */,
+				03C7A9F52C30287900EFE72C /* XCRemoteSwiftPackageReference "SupportsUICore" */,
 			);
 			productRefGroup = 03428C512B9219580025849C /* Products */;
 			projectDirPath = "";
@@ -666,6 +674,22 @@
 				kind = branch;
 			};
 		};
+		03C7A9F22C30280E00EFE72C /* XCRemoteSwiftPackageReference "swift-markdown-ui" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gonzalezreal/swift-markdown-ui";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.3.1;
+			};
+		};
+		03C7A9F52C30287900EFE72C /* XCRemoteSwiftPackageReference "SupportsUICore" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Darock-Studio/SupportsUICore";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -683,6 +707,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 036F3C8A2B9232060080194C /* XCRemoteSwiftPackageReference "DarockKit" */;
 			productName = DarockKit;
+		};
+		03C7A9F32C30280E00EFE72C /* MarkdownUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 03C7A9F22C30280E00EFE72C /* XCRemoteSwiftPackageReference "swift-markdown-ui" */;
+			productName = MarkdownUI;
+		};
+		03C7A9F62C30287900EFE72C /* SupportsUICore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 03C7A9F52C30287900EFE72C /* XCRemoteSwiftPackageReference "SupportsUICore" */;
+			productName = SupportsUICore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

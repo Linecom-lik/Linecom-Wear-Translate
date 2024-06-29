@@ -1,5 +1,5 @@
 {
-  "originHash" : "1fff650ac4f6657b02a7e6e713d1168e6ca0c765ddebd3243940d7d03214922d",
+  "originHash" : "59d3fd5aa8d198412ce34cb76b00424fb6e411bba5dfb0945ffd608501bc61fa",
   "pins" : [
     {
       "identity" : "alamofire",
@@ -26,6 +26,33 @@
       "state" : {
         "branch" : "main",
         "revision" : "0735d98596b3fe5280a3d287264150d4ae202076"
+      }
+    },
+    {
+      "identity" : "networkimage",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/gonzalezreal/NetworkImage",
+      "state" : {
+        "revision" : "7aff8d1b31148d32c5933d75557d42f6323ee3d1",
+        "version" : "6.0.0"
+      }
+    },
+    {
+      "identity" : "supportsuicore",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Darock-Studio/SupportsUICore",
+      "state" : {
+        "branch" : "main",
+        "revision" : "2460d64cf0419fd2606b08f24558496d8fe8a360"
+      }
+    },
+    {
+      "identity" : "swift-markdown-ui",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/gonzalezreal/swift-markdown-ui",
+      "state" : {
+        "revision" : "9a8119b37e09a770367eeb26e05267c75d854053",
+        "version" : "2.3.1"
       }
     },
     {
