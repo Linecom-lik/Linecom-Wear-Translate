@@ -261,12 +261,13 @@ struct ContentView: View {
                                 })
                             }
                         }
+                        Section{
+                            NavigationLink(destination: {WYWTranslate().navigationTitle("文言翻译")}, label: {
+                                Text("文言文翻译")
+                            })
+                        }
                     }
-                    Section{
-                        NavigationLink(destination: {WYWTranslate().navigationTitle("文言翻译")}, label: {
-                            Text("文言文翻译")
-                        })
-                    }
+                    
                     Section {
                         NavigationLink(destination:{SettingsView().navigationTitle("设置")},label:{HStack{Spacer();Image(systemName: "gear")
                             Text("设置");Spacer()}})
@@ -536,12 +537,13 @@ struct ContentView: View {
                                 })
                             }
                         }
+                        Section{
+                            NavigationLink(destination: {WYWTranslate().navigationTitle("文言翻译")}, label: {
+                                Text("文言文翻译")
+                            })
+                        }
                     }
-                    Section{
-                        NavigationLink(destination: {WYWTranslate().navigationTitle("文言翻译")}, label: {
-                            Text("文言文翻译")
-                        })
-                    }
+                    
                     Section {
                         NavigationLink(destination:{SettingsView().navigationTitle("设置")},label:{HStack{Spacer();Image(systemName: "gear")
                             Text("设置");Spacer()}})
