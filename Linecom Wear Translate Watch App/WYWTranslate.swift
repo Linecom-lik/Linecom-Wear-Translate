@@ -7,6 +7,7 @@
 
 import SwiftUI
 import DarockKit
+import CepheusKeyboardKit
 
 struct WYWTranslate: View {
     var body: some View{
@@ -19,6 +20,7 @@ struct WYWTranslate: View {
         @State var wywin=""
         @State var wywout=""
         @State var req=false
+        @AppStorage("CepheusEnable") var cepenable=false
         var body: some View {
             List{
                 Section{
@@ -29,7 +31,11 @@ struct WYWTranslate: View {
                     }
                 }
                 Section{
-                    TextField("输入文言", text: $wywin)
+                    if !cepenable{
+                        TextField("输入文言", text: $wywin)
+                    } else if cepenable{
+                        CepheusKeyboard(input: $wywin,prompt:"键入文言")
+                    }
                     Button(action: {
                         req=true
                         if !wywin.isEmpty{
@@ -45,6 +51,7 @@ struct WYWTranslate: View {
                         if !req{
                             HStack{
                                 Spacer()
+                                Image(systemName: "text.bubble")
                                 Text("翻译")
                                 Spacer()
                             }
@@ -59,7 +66,12 @@ struct WYWTranslate: View {
                         Button(action: {
                             wywin=""
                         }, label: {
-                            Text("重置")
+                            HStack{
+                                Spacer()
+                                Image(systemName: "")
+                                Text("重置")
+                                Spacer()
+                            }
                         })
                     }
                 }

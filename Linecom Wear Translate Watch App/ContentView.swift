@@ -572,24 +572,6 @@ struct ContentView: View {
                             }
                         }
                     }
-                    DarockKit.Network.shared.requestJSON("https://api.linecom.net.cn/lwt/notice?action=get"){
-                        resp, succeed in
-                        notice=resp["message"].string ?? ""
-                    }
-                    //SwiftyStoreKit.completeTransactions(atomically: true) { purchases in
-                    //        for purchase in purchases {
-                    //            switch purchase.transaction.transactionState {
-                    //            case .purchased, .restored:
-                    //                if purchase.needsFinishTransaction {
-                    // Deliver content from server, then:
-                    //                    SwiftyStoreKit.finishTransaction(purchase.transaction)
-                    //                }
-                    // Unlock content
-                    //            case .failed, .purchasing, .deferred:
-                    //                break // do nothing
-                    //            }
-                    //        }
-                    //    }
                 }
             }
         }
