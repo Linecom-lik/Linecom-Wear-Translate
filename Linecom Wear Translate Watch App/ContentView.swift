@@ -7,9 +7,9 @@
 
 import SwiftUI
 import DarockKit
-import CommonCrypto
+//import CommonCrypto
 import CepheusKeyboardKit
-import SwiftyStoreKit
+//import SwiftyStoreKit
 
 struct ContentView: View {
     @State var slang = ""
@@ -212,7 +212,6 @@ struct ContentView: View {
                                 if requesting {
                                     HStack{
                                         Spacer()
-                                        Text("正在请求")
                                         ProgressView()
                                         Spacer()
                                     }
@@ -229,6 +228,39 @@ struct ContentView: View {
                             })
                             
                         }
+                        if !translatedText.isEmpty {
+                            Section {
+                                if !slang.isEmpty{
+                                    HStack{
+                                        Spacer();Text(sdata).frame(alignment: .center);Spacer()
+                                    }
+                                }
+                                if !dislang.isEmpty{
+                                    HStack{
+                                        Text("从\(dislang)翻译：").bold().frame(alignment: .center)
+                                    }
+                                }
+                                HStack{
+                                    Spacer();Text(translatedText).frame(alignment: .center);Spacer()
+                                }
+                            }
+                            .padding()
+                            VStack{
+                                Section{
+                                    Button(action:{translatedText=""
+                                        slang=""
+                                        dislang=""
+                                    },label:{
+                                        HStack{
+                                            Spacer()
+                                            Image(systemName: "restart")
+                                            Text("重置")
+                                            Spacer()
+                                        }
+                                    })
+                                }
+                            }
+                        }
                         Section{
                             NavigationLink(destination: {WYWTranslate().navigationTitle("文言翻译")}, label: {
                                 HStack{
@@ -238,39 +270,6 @@ struct ContentView: View {
                                     Spacer()
                                 }
                             })
-                        }
-                    }
-                    if !translatedText.isEmpty {
-                        Section {
-                            if !slang.isEmpty{
-                                HStack{
-                                    Spacer();Text(sdata).frame(alignment: .center);Spacer()
-                                }
-                            }
-                            if !dislang.isEmpty{
-                                HStack{
-                                    Text("从\(dislang)翻译：").bold().frame(alignment: .center)
-                                }
-                            }
-                            HStack{
-                                Spacer();Text(translatedText).frame(alignment: .center);Spacer()
-                            }
-                        }
-                        .padding()
-                        VStack{
-                            Section{
-                                Button(action:{translatedText=""
-                                    slang=""
-                                    dislang=""
-                                },label:{
-                                    HStack{
-                                        Spacer()
-                                        Image(systemName: "restart")
-                                        Text("重置")
-                                        Spacer()
-                                    }
-                                })
-                            }
                         }
                     }
                     
@@ -514,6 +513,40 @@ struct ContentView: View {
                             })
                             
                         }
+                        if !translatedText.isEmpty {
+                            Section {
+                                if !slang.isEmpty{
+                                    HStack{
+                                        Spacer();Text(sdata).frame(alignment: .center);Spacer()
+                                    }
+                                }
+                                if !dislang.isEmpty{
+                                    HStack{
+                                        Text("从\(dislang)翻译：").bold().frame(alignment: .center)
+                                    }
+                                }
+                                HStack{
+                                    Spacer();Text(translatedText).frame(alignment: .center);Spacer()
+                                }
+                            }
+                            .padding()
+                            VStack{
+                                Section{
+                                    Button(action:{translatedText=""
+                                        slang=""
+                                        dislang=""
+                                    },label:{
+                                        HStack{
+                                            Spacer()
+                                            Image(systemName: "restart")
+                                            Text("重置")
+                                            Spacer()
+                                        }
+                                    })
+                                }
+                            }
+                            
+                        }
                         Section{
                             NavigationLink(destination: {WYWTranslate().navigationTitle("文言翻译")}, label: {
                                 HStack{
@@ -524,40 +557,6 @@ struct ContentView: View {
                                 }
                             })
                         }
-                    }
-                    if !translatedText.isEmpty {
-                        Section {
-                            if !slang.isEmpty{
-                                HStack{
-                                    Spacer();Text(sdata).frame(alignment: .center);Spacer()
-                                }
-                            }
-                            if !dislang.isEmpty{
-                                HStack{
-                                    Text("从\(dislang)翻译：").bold().frame(alignment: .center)
-                                }
-                            }
-                            HStack{
-                                Spacer();Text(translatedText).frame(alignment: .center);Spacer()
-                            }
-                        }
-                        .padding()
-                        VStack{
-                            Section{
-                                Button(action:{translatedText=""
-                                    slang=""
-                                    dislang=""
-                                },label:{
-                                    HStack{
-                                        Spacer()
-                                        Image(systemName: "restart")
-                                        Text("重置")
-                                        Spacer()
-                                    }
-                                })
-                            }
-                        }
-                        
                     }
                     
                     Section {
