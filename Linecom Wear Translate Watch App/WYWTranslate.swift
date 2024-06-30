@@ -41,6 +41,9 @@ struct WYWTranslate: View {
                         if !wywin.isEmpty{
                             DarockKit.Network.shared.requestJSON("https://api.linecom.net.cn/lwt/translate?provider=baidu&text=\(wywin)&slang=wyw&tlang=zh&pass=l1nec0m".urlEncoded()){
                                 resp, successd in
+                                if !successd{
+                                    wywout="无法发送请求"
+                                }
                                 wywout=resp["trans_result"][0]["dst"].string ?? "返回错误"
                             }
                         } else {
@@ -65,10 +68,11 @@ struct WYWTranslate: View {
                         Text(wywout)
                         Button(action: {
                             wywin=""
+                            wywout=""
                         }, label: {
                             HStack{
                                 Spacer()
-                                Image(systemName: "")
+                                Image(systemName: "restart")
                                 Text("重置")
                                 Spacer()
                             }
