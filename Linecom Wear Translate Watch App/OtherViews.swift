@@ -259,7 +259,7 @@ struct SupportView: View{
             List{
                 Section(content: {
                     Picker("联系方式",selection: $contactmethod){
-                        Text("邮件").tag("linecom")
+                        Text("支持中心").tag("linecom")
                         Text("反馈助理").tag("transferdarock")
                     }
                 }, footer:{
