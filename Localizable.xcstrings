@@ -26,28 +26,6 @@
     "**并非所有网页都能在 Apple Watch 上正常工作**\n\n请**不要**提出〇〇网站*打不开*、*有问题*之类的反馈" : {
 
     },
-    "1.0.6" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "1.0.6"
-          }
-        }
-      }
-    },
-    "1.0.7" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "1.0.7"
-          }
-        }
-      }
-    },
     "1.0.26" : {
       "localizations" : {
         "zh-Hant" : {
@@ -70,17 +48,6 @@
     },
     "A Linecom Product" : {
 
-    },
-    "Alamofire\nLicense under MIT" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Alamofire\nLicense under MIT"
-          }
-        }
-      }
     },
     "Alamofire\nLicensed under MIT" : {
       "localizations" : {
@@ -114,17 +81,6 @@
     "appdiagnose_%@" : {
 
     },
-    "APPID" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "APPID"
-          }
-        }
-      }
-    },
     "AppInfo.lkd" : {
 
     },
@@ -144,17 +100,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "Darock"
-          }
-        }
-      }
-    },
-    "Darockkit\nLicense under none" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Darockkit\nLicense under none"
           }
         }
       }
@@ -190,10 +135,23 @@
       }
     },
     "DevInfo.lkd" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "DevInfo.lkd"
+          }
+        }
+      }
     },
     "FB%@%@" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "FB%1$@%2$@"
+          }
+        },
         "zh-Hans" : {
           "stringUnit" : {
             "state" : "new",
@@ -314,28 +272,6 @@
         }
       }
     },
-    "License under Apache License 2.0." : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Licensed under Apache License 2.0"
-          }
-        }
-      }
-    },
-    "License under MIT." : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "License under MIT."
-          }
-        }
-      }
-    },
     "Licensed under Apache License 2.0." : {
       "localizations" : {
         "en" : {
@@ -383,7 +319,14 @@
       }
     },
     "LinecomWearTranslate Appdiagnose" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "LinecomWearTranslate Appdiagnose"
+          }
+        }
+      }
     },
     "LWT %@" : {
       "localizations" : {
@@ -481,45 +424,12 @@
         }
       }
     },
-    "SFSymbol\nLicense under MIT" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "SFSymbol\nLicense under MIT"
-          }
-        }
-      }
-    },
     "SFSymbol\nLicensed under MIT" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "SFSymbol\nLicensed under MIT"
-          }
-        }
-      }
-    },
-    "support@linecom.net.cn" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "support@linecom.net.cn"
-          }
-        }
-      }
-    },
-    "SwiftyJSON\nLicense under MIT" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "SwiftyJSON\nLicense under MIT"
           }
         }
       }
@@ -656,17 +566,6 @@
     "你要存储当前的草稿吗？" : {
 
     },
-    "使用自定义密钥" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Use Custom Key"
-          }
-        }
-      }
-    },
     "俄语" : {
       "localizations" : {
         "en" : {
@@ -743,25 +642,27 @@
     "关联反馈" : {
 
     },
-    "内容" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "內容"
-          }
-        }
-      }
-    },
     "最近的历史记录" : {
 
     },
     "删除草稿" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Delete Draft"
+          }
+        }
+      }
     },
     "前往Linecom支持中心" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Go to Linecom Support"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
@@ -772,6 +673,12 @@
     },
     "前往澪空软件支持中心（推荐）" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Go to Linecom Support (Suggestted)"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
@@ -847,23 +754,6 @@
         }
       }
     },
-    "发送" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Send"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "發送"
-          }
-        }
-      }
-    },
     "发送的反馈" : {
       "localizations" : {
         "en" : {
@@ -880,22 +770,24 @@
         }
       }
     },
-    "发送邮件直接联系澪空软件（推荐）" : {
-      "extractionState" : "stale",
+    "取消" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Direct contact Linecom via Email (Suggested)"
+            "value" : "Cancel"
           }
         }
       }
     },
-    "取消" : {
-
-    },
     "启用兼容性输入" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enable Compatible Keyboard"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
@@ -905,21 +797,11 @@
       }
     },
     "回复" : {
-
-    },
-    "回复 %lld" : {
-      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Reply %lld"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "回覆 %lld"
+            "value" : "Reply"
           }
         }
       }
@@ -940,23 +822,6 @@
         }
       }
     },
-    "回复内容" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Reply Content"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "回覆內容"
-          }
-        }
-      }
-    },
     "基本" : {
       "localizations" : {
         "en" : {
@@ -973,33 +838,18 @@
         }
       }
     },
-    "如何称呼您" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "如何稱呼您"
-          }
-        }
-      }
-    },
     "如已购买，请再次点击以确认" : {
 
     },
-    "如有疑问，请反馈开发者" : {
-      "extractionState" : "stale",
+    "存储草稿" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "If you have problems, please contact the developer."
+            "value" : "Save Drafts"
           }
         }
       }
-    },
-    "存储草稿" : {
-
     },
     "宁波高新区程信通讯器材经营部" : {
       "localizations" : {
@@ -1033,17 +883,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "審核通過日期"
-          }
-        }
-      }
-    },
-    "密钥" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Secret"
           }
         }
       }
@@ -1091,10 +930,24 @@
       }
     },
     "已修复" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Repaired"
+          }
+        }
+      }
     },
     "已在未来版本修复" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Repaired in coming version"
+          }
+        }
+      }
     },
     "常见问题" : {
 
@@ -1209,7 +1062,14 @@
 
     },
     "换行" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Enter"
+          }
+        }
+      }
     },
     "描述" : {
 
@@ -1218,10 +1078,24 @@
 
     },
     "提交" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Submit"
+          }
+        }
+      }
     },
     "提交反馈" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Submit Feedback"
+          }
+        }
+      }
     },
     "提交反馈前，请先检查常见问题" : {
 
@@ -1250,7 +1124,14 @@
       }
     },
     "文言翻译" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Classical Chinese Translate"
+          }
+        }
+      }
     },
     "新建反馈" : {
       "localizations" : {
@@ -1269,7 +1150,14 @@
       }
     },
     "无法修复" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Cannot Repair"
+          }
+        }
+      }
     },
     "日语" : {
       "localizations" : {
@@ -1289,6 +1177,12 @@
     },
     "昵称" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Nickname"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
@@ -1321,27 +1215,17 @@
 
     },
     "未标记" : {
-
-    },
-    "未能复现" : {
-
-    },
-    "来自" : {
-      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "From"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "來自"
+            "value" : "Not Marked"
           }
         }
       }
+    },
+    "未能复现" : {
+
     },
     "标题" : {
       "localizations" : {
@@ -1385,22 +1269,25 @@
         }
       }
     },
-    "概述：" : {
-      "extractionState" : "stale",
+    "正在修复" : {
       "localizations" : {
         "en" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "Overview:"
+            "value" : "Repairing"
           }
         }
       }
     },
-    "正在修复" : {
-
-    },
     "正在加载" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Loading"
+          }
+        }
+      }
     },
     "正在检查更新" : {
       "localizations" : {
@@ -1451,7 +1338,14 @@
       }
     },
     "此反馈已关闭，若要重新进行反馈，请创建一个新的反馈" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "This feedback has been closed, please submit a new one."
+          }
+        }
+      }
     },
     "此时暂无实验性功能可供测试" : {
       "localizations" : {
@@ -1579,17 +1473,6 @@
         }
       }
     },
-    "澪空软件\n腕表翻译" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Linecom\\nWear\\nTranslate"
-          }
-        }
-      }
-    },
     "澪空软件技术" : {
       "localizations" : {
         "en" : {
@@ -1651,17 +1534,6 @@
         }
       }
     },
-    "百度翻译自2022年8月1日起将每月免费的调用额度限制在100万字符，如果您有自己的密钥，您可以在此替换由澪空软件提供的默认密钥" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "You can replace Baidu Translate API key provided by Linecom with yours."
-          }
-        }
-      }
-    },
     "目标语言" : {
       "localizations" : {
         "en" : {
@@ -1679,10 +1551,24 @@
       }
     },
     "示例：澪空Linecom" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E.g. Linecom233"
+          }
+        }
+      }
     },
     "示例：翻译显示不正常" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "E.g. Incorrect Translate"
+          }
+        }
+      }
     },
     "移除诊断信息" : {
 
@@ -1722,17 +1608,6 @@
         }
       }
     },
-    "简洁地描述问题" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "簡潔的描述問題"
-          }
-        }
-      }
-    },
     "类型" : {
       "localizations" : {
         "en" : {
@@ -1750,7 +1625,14 @@
       }
     },
     "系统版本" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "System Version"
+          }
+        }
+      }
     },
     "繁体中文" : {
       "localizations" : {
@@ -1915,17 +1797,6 @@
     "若您使用调试选项, 则您自愿接受调试功能所带来的风险" : {
 
     },
-    "若您遇到了问题，请发送支持工单：" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "If you have trouble using this app, please open a ticket."
-          }
-        }
-      }
-    },
     "英语" : {
       "localizations" : {
         "en" : {
@@ -1943,7 +1814,14 @@
       }
     },
     "被删除" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Deleted"
+          }
+        }
+      }
     },
     "西班牙语" : {
       "localizations" : {
@@ -1967,23 +1845,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "設置"
-          }
-        }
-      }
-    },
-    "详情" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Details"
-          }
-        },
-        "zh-Hant" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "詳情"
           }
         }
       }
@@ -2034,21 +1895,16 @@
     },
     "请等待一会，马上回来" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Please wait, come back soon…"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
             "value" : "請等待一會，馬上回來"
-          }
-        }
-      }
-    },
-    "请通过邮件联系我们：" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Contact us via E-Mail"
           }
         }
       }
@@ -2191,28 +2047,6 @@
         }
       }
     },
-    "配置API密钥" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Configure API Key"
-          }
-        }
-      }
-    },
-    "配置密钥" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Configure Key"
-          }
-        }
-      }
-    },
     "重置" : {
       "localizations" : {
         "en" : {
@@ -2231,6 +2065,12 @@
     },
     "重设购买状态" : {
       "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reset 内购 Status"
+          }
+        },
         "zh-Hant" : {
           "stringUnit" : {
             "state" : "translated",
@@ -2261,28 +2101,6 @@
           "stringUnit" : {
             "state" : "translated",
             "value" : "錯誤/異常行為"
-          }
-        }
-      }
-    },
-    "错误代码：%lld" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Error Code: %lld"
-          }
-        }
-      }
-    },
-    "错误详细信息：" : {
-      "extractionState" : "stale",
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Error Details:"
           }
         }
       }
@@ -2320,7 +2138,14 @@
 
     },
     "附件" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Attachment"
+          }
+        }
+      }
     },
     "隐藏调试选项" : {
       "localizations" : {
@@ -2339,7 +2164,14 @@
       }
     },
     "需要更多细节" : {
-
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Need More Details"
+          }
+        }
+      }
     },
     "韩语" : {
       "localizations" : {

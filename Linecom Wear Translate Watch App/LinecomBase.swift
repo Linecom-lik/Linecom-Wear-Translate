@@ -8,15 +8,15 @@
 import Foundation
 import DarockKit
 
-func apiping()->String{
-    var rr=""
-    DarockKit.Network.shared.requestJSON("https://api.linecom.net.cn/status/check"){
+func apiping()->String {
+    var rr = ""
+    DarockKit.Network.shared.requestJSON("https://api.linecom.net.cn/status/check") {
         respond, secceed in
-        if !secceed{
+        if !secceed {
              rr = "LossNet"
-        } else if respond["status"] != 0{
+        } else if respond["status"] != 0 {
             rr = "InvaildResp"
-        } else{
+        } else {
             rr = "ok"
         }
     }
