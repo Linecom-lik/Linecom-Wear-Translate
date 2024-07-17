@@ -176,6 +176,54 @@ struct ContentView: View {
                             } else if cepenable{
                                 CepheusKeyboard(input: $slang,prompt:"键入源语言")
                             }
+                            
+                        }
+                        if !translatedText.isEmpty {
+                            Section {
+                                if !slang.isEmpty{
+                                    HStack{
+                                        Spacer();Text(sdata).frame(alignment: .center);Spacer()
+                                    }
+                                }
+                                if !dislang.isEmpty{
+                                    HStack{
+                                        Text("从\(dislang)翻译：").bold().frame(alignment: .center)
+                                    }
+                                }
+                                HStack{
+                                    Spacer();Text(translatedText).frame(alignment: .center);Spacer()
+                                }
+                            }
+                            .padding()
+                        }
+                        Section{
+                            NavigationLink(destination: {WYWTranslate().navigationTitle("文言翻译")}, label: {
+                                HStack{
+                                    Spacer()
+                                    Image(systemName: "ellipsis.bubble")
+                                    Text("文言文翻译")
+                                    Spacer()
+                                }
+                            })
+                        }
+                    }
+                    
+                    Section {
+                        NavigationLink(destination:{SettingsView().navigationTitle("设置")},label:{HStack{Spacer();Image(systemName: "gear")
+                            Text("设置");Spacer()}})
+                        NavigationLink(destination:{AboutView().navigationTitle("关于LWT").containerBackground(Color(hue: 141/360, saturation: 60/100, brightness: 100/100).gradient, for: .navigation)},label:{HStack{Spacer();Image(systemName: "info.circle")
+                            Text("关于");Spacer()
+                        }})
+                    }
+                    
+                }
+                .navigationTitle("LWT翻译")
+                .containerBackground(Color(hue: 179/360, saturation: 60/100, brightness: 100/100).gradient, for: .navigation)
+                .toolbar() {
+                    ToolbarItemGroup(placement: .bottomBar) {
+                        Spacer()
+                        Spacer()
+                        if translatedText.isEmpty{
                             Button(action: {
                                 // ...
                                 requesting = true
@@ -211,79 +259,32 @@ struct ContentView: View {
                             }, label: {
                                 if requesting {
                                     HStack{
-                                        Spacer()
                                         ProgressView()
-                                        Spacer()
                                     }
                                 } else{
                                     HStack{
-                                        Spacer()
                                         Image(systemName: "globe")
                                         Text("翻译")
-                                        Spacer()
                                     }
                                 }
                                 
                                 
                             })
-                            
-                        }
-                        if !translatedText.isEmpty {
-                            Section {
-                                if !slang.isEmpty{
-                                    HStack{
-                                        Spacer();Text(sdata).frame(alignment: .center);Spacer()
-                                    }
-                                }
-                                if !dislang.isEmpty{
-                                    HStack{
-                                        Text("从\(dislang)翻译：").bold().frame(alignment: .center)
-                                    }
-                                }
-                                HStack{
-                                    Spacer();Text(translatedText).frame(alignment: .center);Spacer()
-                                }
-                            }
-                            .padding()
-                            VStack{
-                                Section{
-                                    Button(action:{translatedText=""
-                                        slang=""
-                                        dislang=""
-                                    },label:{
-                                        HStack{
-                                            Spacer()
-                                            Image(systemName: "restart")
-                                            Text("重置")
-                                            Spacer()
-                                        }
-                                    })
-                                }
-                            }
-                        }
-                        Section{
-                            NavigationLink(destination: {WYWTranslate().navigationTitle("文言翻译")}, label: {
+                        } else {
+                            Button(action:{translatedText=""
+                                slang=""
+                                dislang=""
+                            },label:{
                                 HStack{
                                     Spacer()
-                                    Image(systemName: "ellipsis.bubble")
-                                    Text("文言文翻译")
+                                    Image(systemName: "restart")
+                                    Text("重置")
                                     Spacer()
                                 }
                             })
                         }
                     }
-                    
-                    Section {
-                        NavigationLink(destination:{SettingsView().navigationTitle("设置")},label:{HStack{Spacer();Image(systemName: "gear")
-                            Text("设置");Spacer()}})
-                        NavigationLink(destination:{AboutView().navigationTitle("关于LWT").containerBackground(Color(hue: 141/360, saturation: 60/100, brightness: 100/100).gradient, for: .navigation)},label:{HStack{Spacer();Image(systemName: "info.circle")
-                            Text("关于");Spacer()
-                        }})
-                    }
-                    
                 }
-                .navigationTitle("LWT翻译")
-                .containerBackground(Color(hue: 179/360, saturation: 60/100, brightness: 100/100).gradient, for: .navigation)
                 .onAppear(){
                     DarockKit.Network.shared.requestJSON("https://api.linecom.net.cn/status/check"){
                         respond, secceed in
