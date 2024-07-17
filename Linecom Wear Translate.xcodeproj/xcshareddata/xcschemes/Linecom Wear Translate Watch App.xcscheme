@@ -29,7 +29,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "03428C4F2B9219580025849C"
+               BlueprintIdentifier = "0349B2D52C47F9BE00B820B5"
                BuildableName = "Linecom Wear Translate.app"
                BlueprintName = "Linecom Wear Translate"
                ReferencedContainer = "container:Linecom Wear Translate.xcodeproj">

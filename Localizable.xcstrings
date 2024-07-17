@@ -1103,6 +1103,9 @@
     "搁置" : {
 
     },
+    "支持中心" : {
+
+    },
     "文言->中文" : {
       "localizations" : {
         "en" : {
@@ -2032,6 +2035,7 @@
 
     },
     "邮件" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
