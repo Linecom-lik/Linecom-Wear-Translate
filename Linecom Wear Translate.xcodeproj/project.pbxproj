@@ -10,6 +10,7 @@
 		030F238E2BEF9EA700E8D4FA /* SwiftyStoreKit in Frameworks */ = {isa = PBXBuildFile; productRef = 030F238D2BEF9EA700E8D4FA /* SwiftyStoreKit */; };
 		030F23902BEFA17600E8D4FA /* BuyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 030F238F2BEFA17600E8D4FA /* BuyView.swift */; };
 		03120FC72BE285DF008D0B76 /* ExperimentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03120FC62BE285DF008D0B76 /* ExperimentView.swift */; };
+		03175D5A2C4887E9001D267C /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 03175D592C4887E9001D267C /* icon.png */; };
 		0333FBDD2BE7799A00D7AF33 /* DarockFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0333FBDC2BE7799A00D7AF33 /* DarockFeedbackView.swift */; };
 		0333FBE32BE7C9DF00D7AF33 /* CepheusKeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0333FBE22BE7C9DF00D7AF33 /* CepheusKeyboardKit */; };
 		033740D32C002DF800A7259F /* LinecomBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033740D22C002DF800A7259F /* LinecomBase.swift */; };
@@ -79,6 +80,7 @@
 /* Begin PBXFileReference section */
 		030F238F2BEFA17600E8D4FA /* BuyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyView.swift; sourceTree = "<group>"; };
 		03120FC62BE285DF008D0B76 /* ExperimentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExperimentView.swift; sourceTree = "<group>"; };
+		03175D592C4887E9001D267C /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 		0333FBDC2BE7799A00D7AF33 /* DarockFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarockFeedbackView.swift; sourceTree = "<group>"; };
 		033740D22C002DF800A7259F /* LinecomBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinecomBase.swift; sourceTree = "<group>"; };
 		03428C562B9219580025849C /* 澪空软件腕表翻译.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "澪空软件腕表翻译.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -195,6 +197,7 @@
 		0349B2D72C47F9BE00B820B5 /* Linecom Wear Translate */ = {
 			isa = PBXGroup;
 			children = (
+				03175D592C4887E9001D267C /* icon.png */,
 				0349B2E92C47FA3E00B820B5 /* Linecom-Wear-Translate-Info.plist */,
 				0349B2D82C47F9BF00B820B5 /* Linecom_Wear_TranslateApp.swift */,
 				0349B2DA2C47F9BF00B820B5 /* ContentView.swift */,
@@ -360,6 +363,7 @@
 			files = (
 				0349B2E02C47F9BF00B820B5 /* Preview Assets.xcassets in Resources */,
 				0349B2DD2C47F9BF00B820B5 /* Assets.xcassets in Resources */,
+				03175D5A2C4887E9001D267C /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
