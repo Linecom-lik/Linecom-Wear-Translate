@@ -1,11 +1,11 @@
 {
   "images" : [
     {
-      "filename" : "IMG_2194.png",
+      "filename" : "icon.png",
       "idiom" : "universal",
       "platform" : "ios",
       "size" : "1024x1024"
-    },
+    }
   ],
   "info" : {
     "author" : "xcode",
