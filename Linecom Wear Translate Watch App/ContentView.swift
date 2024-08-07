@@ -23,6 +23,7 @@ struct ContentView: View {
     @AppStorage("LastTarget") var targetlang="en"
     @AppStorage("debugmode") var debugenable=false
     @AppStorage("CepheusEnable") var cepenable=false
+    @State var isQQPresent=false
     @State var NetPing=""
     @State var checking=false
     @State var baidugroup=["zh":"简体中文","cht":"繁体中文","en":"英语","jp":"日语","kor":"韩语","fra":"法语","ru":"俄语","de":"德语","spa":"西班牙语","bl":"波兰语"]
@@ -215,6 +216,22 @@ struct ContentView: View {
                             Text("关于");Spacer()
                         }})
                     }
+                    Section {
+                        Button(action: {
+                            isQQPresent = true
+                        }, label: {
+                            Text("加入我们的QQ群组")
+                        })
+                        .sheet(isPresented: $isQQPresent, content: {
+                            VStack {
+                                Text("779379141")
+                                Image("QQQR")
+                                    .resizable()
+                                    .scaledToFit()
+                            }
+                            .navigationTitle("Linecom Community")
+                        })
+                    }
                     
                 }
                 .navigationTitle("LWT翻译")
@@ -223,7 +240,7 @@ struct ContentView: View {
                     ToolbarItemGroup(placement: .bottomBar) {
                         Spacer()
                         Spacer()
-                        if translatedText.isEmpty{
+                        if translatedText.isEmpty && NetPing == "ok"{
                             Button(action: {
                                 // ...
                                 requesting = true
@@ -270,7 +287,7 @@ struct ContentView: View {
                                 
                                 
                             })
-                        } else {
+                        } else if NetPing == "ok" {
                             Button(action:{translatedText=""
                                 slang=""
                                 dislang=""
