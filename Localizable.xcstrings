@@ -1774,7 +1774,11 @@
         }
       }
     },
+    "腾讯云TC-TMT" : {
+
+    },
     "腾讯翻译" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -2148,6 +2152,9 @@
 
     },
     "问题重复" : {
+
+    },
+    "阿里云ACS-MT" : {
 
     },
     "附件" : {
