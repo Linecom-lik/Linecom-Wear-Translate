@@ -28,6 +28,7 @@ struct ContentView: View {
     @State var checking=false
     @State var baidugroup=["zh":"简体中文","cht":"繁体中文","en":"英语","jp":"日语","kor":"韩语","fra":"法语","ru":"俄语","de":"德语","spa":"西班牙语","bl":"波兰语"]
     @State var tencentgroup=["zh":"简体中文","zh-TW":"繁体中文","en":"英语","ja":"日语","ko":"韩语","fr":"法语","ru":"俄语","de":"德语","es":"西班牙语"]
+    @State var aligroup=["zh":"简体中文","zh-tw":"繁体中文","en":"英语","ja":"日语","ko":"韩语","fr":"法语","ru":"俄语","de":"德语","es":"西班牙语"]
     @State var transfl=""
     @State var notice=""
     @AppStorage("hideos9tip") var hideos9tip=false
@@ -140,6 +141,17 @@ struct ContentView: View {
                                     Text("德语").tag("de")
                                     Text("俄语").tag("ru")
                                     Text("西班牙语").tag("es")
+                                } else if provider=="ali"{
+                                    Text("自动").tag("auto")
+                                    Text("简体中文").tag("zh")
+                                    Text("繁体中文").tag("zh-tw")
+                                    Text("英语").tag("en")
+                                    Text("日语").tag("ja")
+                                    Text("韩语").tag("ko")
+                                    Text("法语").tag("fr")
+                                    Text("德语").tag("de")
+                                    Text("俄语").tag("ru")
+                                    Text("西班牙语").tag("es")
                                 }
                                 
                             }
@@ -163,6 +175,16 @@ struct ContentView: View {
                                 } else if provider=="tencent"{
                                     Text("简体中文").tag("zh")
                                     Text("繁体中文").tag("zh-TW")
+                                    Text("英语").tag("en")
+                                    Text("日语").tag("ja")
+                                    Text("韩语").tag("ko")
+                                    Text("法语").tag("fr")
+                                    Text("德语").tag("de")
+                                    Text("俄语").tag("ru")
+                                    Text("西班牙语").tag("es")
+                                } else if provider=="ali"{
+                                    Text("简体中文").tag("zh")
+                                    Text("繁体中文").tag("zh-tw")
                                     Text("英语").tag("en")
                                     Text("日语").tag("ja")
                                     Text("韩语").tag("ko")
@@ -270,6 +292,19 @@ struct ContentView: View {
                                         sdata=finalsdt
                                         transfl=resp["Response"]["Source"].string ?? ""
                                         dislang=tencentgroup[transfl] ?? ""
+                                        requesting=false
+                                    }
+                                } else if provider=="ali"{
+                                    DarockKit.Network.shared.requestJSON("https://api.linecom.net.cn/lwt/translate?provider=\(provider)&text=\(slang)&slang=\(sourcelang)&tlang=\(targetlang)&pass=l1nec0m".urlEncoded()){
+                                        resp, succeed in
+                                        if !succeed{
+                                            translatedText="翻译请求发送失败"
+                                        }
+                                        let finalsdt=slang
+                                        translatedText=resp["Data"]["Translated"].string ?? "翻译返回错误"
+                                        sdata=finalsdt
+                                        transfl=slang
+                                        dislang=aligroup[transfl] ?? ""
                                         requesting=false
                                     }
                                 }

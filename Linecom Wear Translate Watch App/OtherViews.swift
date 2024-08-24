@@ -159,7 +159,10 @@ struct SettingsView: View{
                 Picker("翻译提供商", selection: $provider){
                     Section{
                         Text("百度翻译").tag("baidu")
-                        Text("腾讯翻译").tag("tencent")
+                        Text("腾讯云TC-TMT").tag("tencent")
+                        if #available(watchOS 10, *) {
+                            Text("阿里云ACS-MT").tag("ali")
+                        }
                     } header: {
                         Text("基本").bold()
                     }
@@ -172,6 +175,7 @@ struct SettingsView: View{
                         }
                     }
                 }
+                
             } header:{
                 Text("翻译")
             }
