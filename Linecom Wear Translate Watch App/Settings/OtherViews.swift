@@ -128,6 +128,12 @@ struct SettingsView: View{
     @State var price=""
     @AppStorage("CepheusEnable") var cepenable=false
     @AppStorage("ExtraBuyed") var buyed=false
+    @AppStorage("IDAccessToken") var accesstoken = ""
+    @AppStorage("IDidToken") var idtoken = ""
+    @AppStorage("IDName") var idname = ""
+    @AppStorage("IDEmail") var idemail = ""
+    @AppStorage("recordHistory") var historyenable=true
+    @AppStorage("DisplayHistoryEnrty") var displayhistoryenable=true
     var body: some View{
         List{
             //if !buyed{
@@ -135,6 +141,43 @@ struct SettingsView: View{
             //        NavigationLink(destination: {BuyView()}, label: {Text("购买额外提供商")})
             //    }
             //}
+            if #available(watchOS 10.0, *) {
+                Section {
+                    if accesstoken.isEmpty{
+                        NavigationLink(destination: {LinecomIDLoginView().navigationTitle("登录 Linecom ID")}, label: {
+                            HStack {
+                                Image(systemName: "person.crop.circle")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .foregroundColor(.blue)
+                                    .padding()
+                                    .frame(width: 50)
+                                Text("登录 Linecom ID")
+                                    .font(.caption2)
+                            }
+                        })
+                    } else {
+                        NavigationLink(destination: {LinecomIDMgmtView().navigationTitle("Linecom ID")}, label: {
+                            HStack {
+                                Image(systemName: "person.crop.circle")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .foregroundColor(.blue)
+                                    .padding()
+                                    .frame(width: 50)
+                                VStack {
+                                    Text("\(idname)")
+                                        .font(.caption)
+                                    Text("\(idemail)")
+                                        .font(.custom(" ", size: 12))
+                                        .foregroundColor(.gray)
+                                        .lineLimit(1)
+                                }
+                            }
+                        })
+                    }
+                }
+            }
             
             Section{
                 Picker("翻译提供商", selection: $provider){
@@ -155,6 +198,9 @@ struct SettingsView: View{
                             Text("额外").bold()
                         }
                     }
+                }
+                if #available(watchOS 10.0, *){
+                    Toggle("记录历史", isOn: $historyenable)
                 }
                 
             } header:{
@@ -184,6 +230,12 @@ struct SettingsView: View{
             }
             if #available(watchOS 10, *){
                 Section{
+                    NavigationLink(destination: {WhatsNewView()}, label: {
+                        HStack{
+                            Image(systemName: "sparkles")
+                            Text("更新聚焦")
+                        }
+                    })
                     NavigationLink(destination: {UpdateView().navigationTitle("软件更新")}, label: {
                         HStack{
                             Image(systemName: "gear.badge")
@@ -191,6 +243,9 @@ struct SettingsView: View{
                         }
                         
                     })
+                        NavigationLink(destination:{AboutView().navigationTitle("关于LWT").containerBackground(Color(hue: 141/360, saturation: 60/100, brightness: 100/100).gradient, for: .navigation)},label:{HStack{Image(systemName: "info.circle")
+                            Text("关于")
+                        }})
                 } header:{
                     Text("App")
                 }
@@ -613,10 +668,10 @@ http://www.apache.org/licenses/
 
 #Preview {
     NavigationStack{
-        TabView{
-            AboutView()
+        
+            
             SettingsView()
-            SupportView()
-        }
+            
+        
     }
 }

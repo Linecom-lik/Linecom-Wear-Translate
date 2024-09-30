@@ -8,15 +8,31 @@
 import SwiftUI
 import DarockKit
 import AuthenticationServices
+import Dynamic
+import UIKit
+import WatchKit
 
 struct UpdateView: View {
     @State var reqing=true
     @State var latest=""
     @State var success=true
+    @AppStorage("HomeTipUpdate") var homeTipUpdate = true
     @State var nowv=Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
     var body: some View {
         ScrollView{
             VStack{
+                    NavigationLink(destination: {HomeTipUpdateControlView()}) {
+                        Text("提示更新")
+                        if homeTipUpdate {
+                            Text("开启")
+                                .font(.caption)
+                                .foregroundColor(.gray)
+                        } else {
+                            Text("关闭")
+                                .font(.caption)
+                                .foregroundColor(.gray)
+                        }
+                    }
                 if reqing{
                     HStack{
                         Text("正在检查更新")
@@ -30,15 +46,24 @@ struct UpdateView: View {
                 } else if !success{
                         Text("检查更新时出错")
                     } else if latest != nowv{
-                        Text("LWT \(latest)")
-                        Text("Linecom LLC")
-                            .font(.system(size: 13))
-                            .foregroundColor(.gray)
+                        HStack {
+                            Image("abouticon").resizable().scaledToFit().mask{Circle()}.frame(width: 35)
+                            Spacer()
+                            VStack {
+                                Text("LWT \(latest)")
+                                Text("Linecom LLC")
+                                    .font(.system(size: 13))
+                                    .foregroundColor(.gray)
+                            }
+                        }
+                        .padding(.leading, 30)
+                        .padding(.trailing, 30)
+                        .padding(.bottom, 4)
                         Divider()
                         Text("请前往App Store更新")
                         //List{
                             Button(action: {
-                                let session = ASWebAuthenticationSession(url: URL(string: "https://apps.apple.com/app/id6478855138")!, callbackURLScheme: "mlhd") { _, _ in
+                                let session = ASWebAuthenticationSession(url: URL(string: "https://api.linecom.net.cn/lwt/update?action=go")!, callbackURLScheme: "mlhd") { _, _ in
                                     return
                                 }
                                 session.prefersEphemeralWebBrowserSession = true
@@ -63,6 +88,19 @@ struct UpdateView: View {
                 reqing=false
                 latest=resp["message"].string ?? ""
             }
+        }
+    }
+}
+
+struct HomeTipUpdateControlView: View {
+    @AppStorage("HomeTipUpdate") var homeTipUpdate = true
+    var body: some View {
+        List {
+            Section(content: {
+                Toggle("提示更新", isOn: $homeTipUpdate)
+            }, footer: {
+                Text("关闭后，LWT 在更新就绪时不会在首页或其他位置提示")
+            })
         }
     }
 }
