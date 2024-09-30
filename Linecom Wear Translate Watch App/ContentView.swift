@@ -9,7 +9,10 @@ import SwiftUI
 import DarockKit
 //import CommonCrypto
 import CepheusKeyboardKit
+import AuthenticationServices
 //import SwiftyStoreKit
+import UIKit
+import Dynamic
 
 
 struct ContentView: View {
@@ -36,6 +39,9 @@ struct ContentView: View {
     @State var isLinecomIDSuggestSheetPresent = false
     @State var isWhatsNewSheetPresent = false
     @AppStorage("WhatsNewPresent") var newpresent = false
+    @State var upchecked = false
+    @State var isUpdateTipAlertPresent = false
+    @AppStorage("UpdateTipedTimes") var updateTipTimes = 0
     @AppStorage("NowVersion") var nowv = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
     @State var baidugroup=["zh":"简体中文","cht":"繁体中文","en":"英语","jp":"日语","kor":"韩语","fra":"法语","ru":"俄语","de":"德语","spa":"西班牙语","bl":"波兰语"]
     @State var tencentgroup=["zh":"简体中文","zh-TW":"繁体中文","en":"英语","ja":"日语","ko":"韩语","fr":"法语","ru":"俄语","de":"德语","es":"西班牙语"]
@@ -43,6 +49,8 @@ struct ContentView: View {
     @State var transfl=""
     @State var notice=""
     @AppStorage("recordHistory") var enableHistory = true
+    @State var latest=""
+    @AppStorage("HomeTipUpdate") var homeTipUpdate = true
     @AppStorage("hideos9tip") var hideos9tip=false
     var body: some View {
         //搁置
@@ -120,6 +128,23 @@ struct ContentView: View {
                             Text("请等待一会，马上回来")
                         }
                     } else if NetPing=="ok" || debugenable{
+                        if latest != nowv && upchecked && homeTipUpdate {
+                            Section{
+                                NavigationLink(destination: {UpdateView().navigationTitle("软件更新")}, label: {
+                                    HStack{
+                                        Image(systemName: "arrow.up.circle.badge.clock")
+                                            .padding()
+                                        VStack {
+                                            Text("有软件更新可用")
+                                            Text("v\(latest) 现已就绪")
+                                                .font(.system(size: 12))
+                                                .foregroundColor(.gray)
+                                        }
+                                    }
+                                })
+                                
+                            }
+                        }
                         if !notice.isEmpty{
                             Section{
                                 Text(notice)
@@ -382,6 +407,19 @@ struct ContentView: View {
                     //            }
                     //        }
                     //    }
+                    DarockKit.Network.shared.requestJSON("https://api.linecom.net.cn/lwt/update?action=query"){ resp, succeed in
+                        latest=resp["message"].string ?? ""
+                        upchecked = true
+                    }
+//                    if nowv == latest && upchecked {
+//                        updateTipTimes = 0
+//                    }
+//                    if nowv != latest && upchecked && homeTipUpdate {
+//                        updateTipTimes += 1
+//                    }
+//                    if updateTipTimes == 5 || updateTipTimes == 10 || updateTipTimes == 13 && homeTipUpdate {
+//                        isUpdateTipAlertPresent = true
+//                    }
                     refreshToken() { gotToken in
                         if gotToken == nil {
                             accesstoken.removeAll()
@@ -413,6 +451,15 @@ struct ContentView: View {
                     newpresent=true
                 }, content: {
                     WhatsNewView()
+                })
+                .alert(isPresented: $isUpdateTipAlertPresent, content: {
+                    Alert(title: Text("LWT 有更新可用"), message: Text("LWT 版本 \(latest) 已就绪，请前往 App Store 更新"), primaryButton: .cancel(Text("稍后提醒"), action: {
+                        if updateTipTimes == 13 {
+                            updateTipTimes = 0
+                        }
+                    }), secondaryButton:  .default(Text("现在更新"), action: {
+                        UpdateView()
+                    }))
                 })
             } else {
                 // Fallback on earlier versions
