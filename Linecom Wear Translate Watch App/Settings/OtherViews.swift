@@ -133,6 +133,7 @@ struct SettingsView: View{
     @AppStorage("IDName") var idname = ""
     @AppStorage("IDEmail") var idemail = ""
     @AppStorage("recordHistory") var historyenable=true
+    @AppStorage("DisplayHistoryEnrty") var displayhistoryenable=true
     var body: some View{
         List{
             //if !buyed{
@@ -229,6 +230,12 @@ struct SettingsView: View{
             }
             if #available(watchOS 10, *){
                 Section{
+                    NavigationLink(destination: {WhatsNewView()}, label: {
+                        HStack{
+                            Image(systemName: "sparkles")
+                            Text("更新聚焦")
+                        }
+                    })
                     NavigationLink(destination: {UpdateView().navigationTitle("软件更新")}, label: {
                         HStack{
                             Image(systemName: "gear.badge")
