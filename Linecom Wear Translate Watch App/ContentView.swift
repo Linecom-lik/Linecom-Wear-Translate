@@ -196,6 +196,19 @@ struct ContentView: View {
                             }
                             if !cepenable{
                                 TextField("键入源语言",text: $slang)
+                                    .swipeActions(edge: .trailing) {
+                                        Button(action:{translatedText=""
+                                            slang=""
+                                            dislang=""
+                                        },label:{
+                                            
+                                                
+                                                Image(systemName: "restart")
+                                                
+                                                
+                                            
+                                        })
+                                    }
                             } else if cepenable{
                                 CepheusKeyboard(input: $slang,prompt:"键入源语言")
                             }
@@ -238,31 +251,15 @@ struct ContentView: View {
                             Text("关于");Spacer()
                         }})
                     }
-                    Section {
-                        Button(action: {
-                            isQQPresent = true
-                        }, label: {
-                            Text("加入我们的QQ群组")
-                        })
-                        .sheet(isPresented: $isQQPresent, content: {
-                            VStack {
-                                Text("779379141")
-                                Image("QQQR")
-                                    .resizable()
-                                    .scaledToFit()
-                            }
-                            .navigationTitle("Linecom Community")
-                        })
-                    }
                     
                 }
-                .navigationTitle("LWT翻译")
+                .navigationTitle("翻译")
                 .containerBackground(Color(hue: 179/360, saturation: 60/100, brightness: 100/100).gradient, for: .navigation)
                 .toolbar() {
                     ToolbarItemGroup(placement: .bottomBar) {
                         Spacer()
                         Spacer()
-                        if translatedText.isEmpty && NetPing == "ok"{
+                        if NetPing == "ok"{
                             Button(action: {
                                 // ...
                                 requesting = true
@@ -322,19 +319,8 @@ struct ContentView: View {
                                 
                                 
                             })
-                        } else if NetPing == "ok" {
-                            Button(action:{translatedText=""
-                                slang=""
-                                dislang=""
-                            },label:{
-                                HStack{
-                                    Spacer()
-                                    Image(systemName: "restart")
-                                    Text("重置")
-                                    Spacer()
-                                }
-                            })
                         }
+                        
                     }
                 }
                 .onAppear(){
