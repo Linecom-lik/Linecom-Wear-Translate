@@ -12,7 +12,7 @@ struct BuyView: View {
     @State var pname=""
     @State var price=""
     @State var loading=false
-    @AppStorage("ExtraBuyed") var  buyed=false
+    @AppStorage("ExtraBuyed") var buyed=false
     var body: some View {
         List{
             if buyed{

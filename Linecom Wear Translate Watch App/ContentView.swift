@@ -11,7 +11,9 @@ import DarockKit
 import CepheusKeyboardKit
 //import SwiftyStoreKit
 
+
 struct ContentView: View {
+    @AppStorage("IDrefreshToken") var refresh = ""
     @State var slang = ""
     @State var translatedText = ""
     @AppStorage("ApiKeyStatus") var custkeyenable=false
@@ -26,11 +28,21 @@ struct ContentView: View {
     @State var isQQPresent=false
     @State var NetPing=""
     @State var checking=false
+    @AppStorage("LinecomIDPresented") var firstpresent=false
+    @AppStorage("IDAccessToken") var accesstoken = ""
+    @AppStorage("IDidToken") var idtoken = ""
+    @AppStorage("IDName") var idname = ""
+    @AppStorage("IDEmail") var idemail = ""
+    @State var isLinecomIDSuggestSheetPresent = false
+    @State var isWhatsNewSheetPresent = false
+    @AppStorage("WhatsNewPresent") var newpresent = false
+    @AppStorage("NowVersion") var nowv = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String
     @State var baidugroup=["zh":"简体中文","cht":"繁体中文","en":"英语","jp":"日语","kor":"韩语","fra":"法语","ru":"俄语","de":"德语","spa":"西班牙语","bl":"波兰语"]
     @State var tencentgroup=["zh":"简体中文","zh-TW":"繁体中文","en":"英语","ja":"日语","ko":"韩语","fr":"法语","ru":"俄语","de":"德语","es":"西班牙语"]
     @State var aligroup=["zh":"简体中文","zh-tw":"繁体中文","en":"英语","ja":"日语","ko":"韩语","fr":"法语","ru":"俄语","de":"德语","es":"西班牙语"]
     @State var transfl=""
     @State var notice=""
+    @AppStorage("recordHistory") var enableHistory = true
     @AppStorage("hideos9tip") var hideos9tip=false
     var body: some View {
         //搁置
@@ -111,6 +123,13 @@ struct ContentView: View {
                         if !notice.isEmpty{
                             Section{
                                 Text(notice)
+                                    .swipeActions(content: {
+                                        Button(action: {
+                                            notice.removeAll()
+                                        }, label: {
+                                            Image(systemName: "xmark")
+                                        })
+                                    })
                             } header: {
                                 Text("公告")
                             }
@@ -195,19 +214,21 @@ struct ContentView: View {
                                 }
                             }
                             if !cepenable{
-                                TextField("键入源语言",text: $slang)
-                                    .swipeActions(edge: .trailing) {
-                                        Button(action:{translatedText=""
-                                            slang=""
-                                            dislang=""
-                                        },label:{
-                                            
-                                                
-                                                Image(systemName: "restart")
-                                                
-                                                
-                                            
-                                        })
+                                if slang.isEmpty{
+                                    TextField("键入源语言",text: $slang)
+                                } else {
+                                    TextField("键入源语言",text: $slang, onCommit: {
+                                        dislang.removeAll()
+                                        translatedText=""
+                                    })
+                                        .swipeActions(edge: .trailing) {
+                                            Button(action:{translatedText=""
+                                                slang=""
+                                                dislang=""
+                                            },label:{
+                                                Image(systemName: "xmark.circle.fill")
+                                            })
+                                        }
                                     }
                             } else if cepenable{
                                 CepheusKeyboard(input: $slang,prompt:"键入源语言")
@@ -232,34 +253,33 @@ struct ContentView: View {
                             }
                             .padding()
                         }
-                        Section{
-                            NavigationLink(destination: {WYWTranslate().navigationTitle("文言翻译")}, label: {
-                                HStack{
-                                    Spacer()
-                                    Image(systemName: "ellipsis.bubble")
-                                    Text("文言文翻译")
-                                    Spacer()
-                                }
-                            })
-                        }
-                    }
-                    
-                    Section {
-                        NavigationLink(destination:{SettingsView().navigationTitle("设置")},label:{HStack{Spacer();Image(systemName: "gear")
-                            Text("设置");Spacer()}})
-                        NavigationLink(destination:{AboutView().navigationTitle("关于LWT").containerBackground(Color(hue: 141/360, saturation: 60/100, brightness: 100/100).gradient, for: .navigation)},label:{HStack{Spacer();Image(systemName: "info.circle")
-                            Text("关于");Spacer()
-                        }})
                     }
                     
                 }
                 .navigationTitle("翻译")
                 .containerBackground(Color(hue: 179/360, saturation: 60/100, brightness: 100/100).gradient, for: .navigation)
                 .toolbar() {
+                    ToolbarItem(placement: .topBarTrailing) {
+                        NavigationLink(destination: {WYWTranslate().navigationTitle("文言翻译")}, label: {
+                            HStack{
+                                
+//                                Image(systemName: "ellipsis.bubble")
+                                Text("文言")
+                                
+                            }
+                        })
+                    }
+                    ToolbarItem(placement: .topBarLeading) {
+                        NavigationLink(destination:{SettingsView().navigationTitle("设置")},label:{
+                            Image(systemName: "gear")
+                        })
+                    }
                     ToolbarItemGroup(placement: .bottomBar) {
+                        NavigationLink(destination: {HistoryView()}, label: {
+                            Image(systemName: "clock.arrow.trianglehead.counterclockwise.rotate.90")
+                        })
                         Spacer()
-                        Spacer()
-                        if NetPing == "ok"{
+                        if NetPing == "ok"||debugenable{
                             Button(action: {
                                 // ...
                                 requesting = true
@@ -276,6 +296,11 @@ struct ContentView: View {
                                         sdata=resp["trans_result"][0]["src"].string ?? "翻译返回错误，请联系开发者"
                                         transfl=resp["from"].string ?? ""
                                         dislang=baidugroup[transfl] ?? ""
+                                        if enableHistory{
+                                            let history=History(slang: baidugroup[sourcelang] ?? "", tlang: baidugroup[targetlang] ?? "", stext: slang, ttext: translatedText)
+                                            ExpHistoryCTL().saveHistory(history: history)
+                                            
+                                        }
                                         requesting=false
                                     }
                                 } else if provider=="tencent"{
@@ -289,6 +314,11 @@ struct ContentView: View {
                                         sdata=finalsdt
                                         transfl=resp["Response"]["Source"].string ?? ""
                                         dislang=tencentgroup[transfl] ?? ""
+                                        if enableHistory{
+                                            let history=History(slang: tencentgroup[sourcelang] ?? "", tlang: tencentgroup[targetlang] ?? "", stext: slang, ttext: translatedText)
+                                            ExpHistoryCTL().saveHistory(history: history)
+                                            
+                                        }
                                         requesting=false
                                     }
                                 } else if provider=="ali"{
@@ -302,23 +332,23 @@ struct ContentView: View {
                                         sdata=finalsdt
                                         transfl=slang
                                         dislang=aligroup[transfl] ?? ""
+                                        if enableHistory{
+                                            let history=History(slang: aligroup[sourcelang] ?? "", tlang: aligroup[targetlang] ?? "", stext: slang, ttext: translatedText)
+                                            ExpHistoryCTL().saveHistory(history: history)
+                                            
+                                        }
                                         requesting=false
                                     }
                                 }
                             }, label: {
                                 if requesting {
-                                    HStack{
                                         ProgressView()
-                                    }
                                 } else{
-                                    HStack{
                                         Image(systemName: "globe")
-                                        Text("翻译")
-                                    }
+//                                        Text("翻译")
                                 }
-                                
-                                
                             })
+                            .disabled(slang.isEmpty)
                         }
                         
                     }
@@ -352,7 +382,38 @@ struct ContentView: View {
                     //            }
                     //        }
                     //    }
+                    refreshToken() { gotToken in
+                        if gotToken == nil {
+                            accesstoken.removeAll()
+                            idtoken.removeAll()
+                            refresh.removeAll()
+                            idname.removeAll()
+                            idemail.removeAll()
+                        } else {
+                            accesstoken = gotToken ?? "Expired"
+                        }
+                    }
+                    if !firstpresent&&accesstoken.isEmpty{
+                        isLinecomIDSuggestSheetPresent = true
+                    }
+                    if nowv != Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String {
+                        newpresent=false
+                    }
+                    if !newpresent {
+                        isWhatsNewSheetPresent = true
+                    }
+                    
                 }
+                .sheet(isPresented: $isLinecomIDSuggestSheetPresent, onDismiss: {
+                    firstpresent=true
+                }, content: {
+                    LinecomIDLoginView()
+                })
+                .sheet(isPresented: $isWhatsNewSheetPresent, onDismiss: {
+                    newpresent=true
+                }, content: {
+                    WhatsNewView()
+                })
             } else {
                 // Fallback on earlier versions
                 List {
@@ -625,9 +686,45 @@ struct ContentView: View {
             }
         }
     }
+    func refreshToken(completion: @escaping (String?) -> Void) {
+                
+        var request = URLRequest(url: URL(string: "https://idmsa.cn/realms/idpub/protocol/openid-connect/token")!)
+            request.httpMethod = "POST"
+            request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+            
+        let body = "grant_type=refresh_token&refresh_token=\(refresh)&client_id=linecom-wear-translate&client_secret=KOINKkvdOQm28WXSvGaf9eWAPEkwQ5CJ"
+        request.httpBody = body.data(using: .utf8)
+                
+        let task = URLSession.shared.dataTask(with: request) { data, response, error in
+            guard let data = data, error == nil else {
+                print("Failed to refresh token: \(error?.localizedDescription ?? "Unknown error")")
+                completion(nil)
+                return
+            }
+            
+            if let tokenData = try? JSONDecoder().decode(TokenResponse.self, from: data) {
+            // 更新本地存储的访问令牌
+            self.refresh = tokenData.refreshToken!
+            completion(tokenData.accessToken)
+            } else {
+                completion(nil)
+            }
+        }
+            
+        task.resume()
+    }
 }
 
 
+struct TokenResponse: Codable {
+    let accessToken: String
+    let refreshToken: String?
+        
+    enum CodingKeys: String, CodingKey {
+        case accessToken = "access_token"
+        case refreshToken = "refresh_token"
+    }
+}
 
 #Preview {
     ContentView()
