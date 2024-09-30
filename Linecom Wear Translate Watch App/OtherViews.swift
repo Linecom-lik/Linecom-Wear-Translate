@@ -13,8 +13,7 @@ struct AboutView: View {
     var body: some View {
         TabView{
             AppAbout()
-            CerditView().navigationTitle("开发团队")
-            OSPView().navigationTitle("开源许可")
+            OSPView().navigationTitle("开放源代码许可")
         }
     }
 }
@@ -92,26 +91,8 @@ struct CerditView: View{
                         Text("澪空\n澪空软件技术\n开发者&责任人")
                     }
                 })
-                NavigationLink(destination: {MEMZAboutView()},label:{
-                    HStack{
-                        Image("MEMZAvatar")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width:43,height:43)
-                            .mask{Circle()}
-                        Text("WindowsMEMZ\n暗礁工作室\n合作开发者")
-                    }
-                })
-                NavigationLink(destination: {TM785AboutView()},label:{
-                    HStack{
-                        Image("TM785Avatar")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width:43,height:43)
-                            .mask{Circle()}
-                        Text("ThreeManager785\nSerene Garden\n框架开发者")
-                    }
-                })
+                
+                
                    
             }
         }
@@ -261,18 +242,6 @@ struct SupportView: View{
     var body: some View{
         NavigationStack{
             List{
-                Section(content: {
-                    Picker("联系方式",selection: $contactmethod){
-                        Text("支持中心").tag("linecom")
-                        Text("反馈助理").tag("transferdarock")
-                    }
-                }, footer:{
-                    if contactmethod=="linecom"{
-                        Text("前往澪空软件支持中心（推荐）")
-                    } else if contactmethod=="transferdarock"{
-                        Text("通过“反馈助理”向Darock提交反馈，您的反馈将于24小时内发送到澪空软件")
-                    }
-                })
                 if contactmethod=="linecom"{
                     Section{
                         Button(action: {
@@ -362,128 +331,8 @@ struct LineAboutView: View{
     }
     
 }
-struct MEMZAboutView: View{
-    var body: some View{
-        if #available(watchOS 10.0, *) {
-            TabView{
-                MEMZInfoView()
-                MEMZContactView()
-            }
-            .tabViewStyle(.verticalPage)
-        } else {
-            // Fallback on earlier versions
-            ScrollView{
-                MEMZInfoView()
-                MEMZContactView()
-            }
-        }
-        
-    }
-    struct MEMZInfoView: View{
-        var body: some View{
-            VStack{
-                HStack{
-                    Spacer()
-                    Image("MEMZAvatar")
-                        .resizable()
-                        .scaledToFit()
-                        .mask{Circle()}
-                        .frame(width:100, height:100)
-                    Spacer()
-                }
-                Text("WindowsMEMZ")
-                    .font(.title3)
-                Text("From 四川 德阳")
-                    .font(.caption)
-            }
-        }
-    }
-    struct MEMZContactView: View{
-        var body: some View{
-            List{
-                VStack{
-                    HStack{
-                        Image(systemName: "paperplane")
-                        Text("Darock")
-                    }
-                    HStack{
-                        Image(systemName: "info.circle")
-                        Text("首席执行官")
-                    }
-                    HStack{
-                        Image(systemName: "apple.terminal")
-                        Text("技术支持")
-                    }
-                    HStack{
-                        Image(systemName: "envelope")
-                        Text("memz@darock.top").font(.custom("cust", size: 13))
-                    }
-                }
-            }
-        }
-    }
-}
-struct TM785AboutView: View{
-    var body: some View{
-        if #available(watchOS 10.0, *) {
-            TabView{
-                TM785InfoView()
-                TM785ContactView()
-            }
-            .tabViewStyle(.verticalPage)
-        } else {
-            // Fallback on earlier versions
-            ScrollView{
-                TM785InfoView()
-                TM785ContactView()
-            }
-        }
-        
-    }
-    struct TM785InfoView: View{
-        var body: some View{
-            VStack{
-                HStack{
-                    Spacer()
-                    Image("TM785Avatar")
-                        .resizable()
-                        .scaledToFit()
-                        .mask{Circle()}
-                        .frame(width:100, height:100)
-                    Spacer()
-                }
-                Text("ThreeManager785")
-                    .font(.title3)
-                Text("From 天津 天津")
-                    .font(.caption)
-            }
-        }
-    }
-    struct TM785ContactView: View{
-        var body: some View{
-            List{
-                VStack{
-                    HStack{
-                        Image(systemName: "paperplane")
-                        Text("Serene Garden")
-                    }
-                    HStack{
-                        Image(systemName: "info.circle")
-                        Text("首席执行官")
-                    }
-                    HStack{
-                        Image(systemName: "apple.terminal")
-                        Text("框架开发")
-                    }
-                    HStack{
-                        Image(systemName: "envelope")
-                        Text("mallets02.plums@icloud.com").font(.custom("cust", size: 13))
-                    }
-                }
-            }
-        }
-    }
-}
+
+
 
 struct ICPView: View{
     var body: some View{

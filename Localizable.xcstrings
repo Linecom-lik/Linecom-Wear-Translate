@@ -46,9 +46,6 @@
         }
       }
     },
-    "779379141" : {
-
-    },
     "A Linecom Product" : {
 
     },
@@ -98,6 +95,7 @@
       }
     },
     "Darock" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -164,6 +162,7 @@
       }
     },
     "From 四川 德阳" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -174,6 +173,7 @@
       }
     },
     "From 天津 天津" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -301,9 +301,6 @@
         }
       }
     },
-    "Linecom Community" : {
-
-    },
     "Linecom LLC" : {
       "localizations" : {
         "en" : {
@@ -375,6 +372,7 @@
       }
     },
     "mallets02.plums@icloud.com" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -385,6 +383,7 @@
       }
     },
     "memz@darock.top" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -421,6 +420,7 @@
       }
     },
     "Serene Garden" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -451,6 +451,7 @@
       }
     },
     "ThreeManager785" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -461,6 +462,7 @@
       }
     },
     "ThreeManager785\nSerene Garden\n框架开发者" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -481,6 +483,7 @@
       }
     },
     "WindowsMEMZ" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -491,6 +494,7 @@
       }
     },
     "WindowsMEMZ\n暗礁工作室\n合作开发者" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -678,6 +682,7 @@
       }
     },
     "前往澪空软件支持中心（推荐）" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -692,9 +697,6 @@
           }
         }
       }
-    },
-    "加入我们的QQ群组" : {
-
     },
     "单击以关闭此消息" : {
       "localizations" : {
@@ -978,6 +980,7 @@
       }
     },
     "开发团队" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -993,7 +996,11 @@
         }
       }
     },
+    "开放源代码许可" : {
+
+    },
     "开源许可" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1052,6 +1059,7 @@
       }
     },
     "技术支持" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1110,9 +1118,6 @@
 
     },
     "搁置" : {
-
-    },
-    "支持中心" : {
 
     },
     "文言->中文" : {
@@ -1256,6 +1261,7 @@
       }
     },
     "框架开发" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1743,6 +1749,7 @@
       }
     },
     "联系方式" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -2044,9 +2051,6 @@
     "通知令牌" : {
 
     },
-    "通过“反馈助理”向Darock提交反馈，您的反馈将于24小时内发送到澪空软件" : {
-
-    },
     "邮件" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -2261,6 +2265,7 @@
       }
     },
     "首席执行官" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
