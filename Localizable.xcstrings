@@ -14,18 +14,6 @@
         }
       }
     },
-    "[Hex Data]" : {
-
-    },
-    "[Privacy Hidden]" : {
-
-    },
-    "**并非所有网页内的视频均能被解析**\n\n请**不要**提出〇〇网站视频无法播放之类的反馈" : {
-
-    },
-    "**并非所有网页都能在 Apple Watch 上正常工作**\n\n请**不要**提出〇〇网站*打不开*、*有问题*之类的反馈" : {
-
-    },
     "%@" : {
 
     },
@@ -85,28 +73,6 @@
         }
       }
     },
-    "App 版本" : {
-
-    },
-    "appdiagnose Logs" : {
-
-    },
-    "appdiagnose_%@" : {
-
-    },
-    "AppInfo.lkd" : {
-
-    },
-    "AppVersion: v%@ Build %@" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "AppVersion: v%1$@ Build %2$@"
-          }
-        }
-      }
-    },
     "Darock" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -152,6 +118,7 @@
       }
     },
     "DevInfo.lkd" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -162,6 +129,7 @@
       }
     },
     "FB%@%@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -272,6 +240,7 @@
       }
     },
     "ID: %@" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -344,6 +313,7 @@
       }
     },
     "LinecomWearTranslate Appdiagnose" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -437,16 +407,6 @@
         }
       }
     },
-    "OSVersion: %@\nUDID: %@" : {
-      "localizations" : {
-        "zh-Hans" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "OSVersion: %1$@\nUDID: %2$@"
-          }
-        }
-      }
-    },
     "Serene Garden" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -534,9 +494,6 @@
           }
         }
       }
-    },
-    "与此反馈重复" : {
-
     },
     "为Apple Watch SE和Apple Watch Series6及以前的设备提供英文与拼音的全键盘输入。\nPowered by Cepheus" : {
       "localizations" : {
@@ -626,9 +583,6 @@
     "优化的用户界面" : {
 
     },
-    "你要存储当前的草稿吗？" : {
-
-    },
     "使用 Linecom ID" : {
 
     },
@@ -696,28 +650,14 @@
         }
       }
     },
-    "关于特定网页优化..." : {
-
-    },
-    "关于视频..." : {
-
-    },
-    "关于网页适配..." : {
-
-    },
-    "关联反馈" : {
-
-    },
     "关闭" : {
 
     },
     "关闭后，LWT 在更新就绪时不会在首页或其他位置提示" : {
 
     },
-    "最近的历史记录" : {
-
-    },
     "删除草稿" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -777,6 +717,7 @@
       }
     },
     "单击启动反馈助理" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -792,13 +733,11 @@
         }
       }
     },
-    "单独为特定的网页优化根本**不可行**。\n\n想想今天让为网站A进行优化，明天另一个用户反馈想为网站B进行优化。不仅工作量大大提升，还会使代码及其难维护，这就是个无底洞。\n\n请**不要**提出为**特定网站**进行优化之类的反馈。" : {
-
-    },
     "历史记录" : {
 
     },
     "反馈助理" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -815,6 +754,7 @@
       }
     },
     "反馈类型" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -831,6 +771,7 @@
       }
     },
     "发送的反馈" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -847,6 +788,7 @@
       }
     },
     "取消" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -876,6 +818,7 @@
       }
     },
     "回复" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -886,6 +829,7 @@
       }
     },
     "回复信息" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -921,6 +865,7 @@
 
     },
     "存储草稿" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1009,6 +954,7 @@
       }
     },
     "已修复" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1019,6 +965,7 @@
       }
     },
     "已在未来版本修复" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1028,10 +975,8 @@
         }
       }
     },
-    "常见问题" : {
-
-    },
     "建议" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1149,10 +1094,8 @@
         }
       }
     },
-    "按预期工作" : {
-
-    },
     "换行" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1162,13 +1105,8 @@
         }
       }
     },
-    "描述" : {
-
-    },
-    "描述行%lld" : {
-
-    },
     "提交" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1179,6 +1117,7 @@
       }
     },
     "提交反馈" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1188,13 +1127,7 @@
         }
       }
     },
-    "提交反馈前，请先检查常见问题" : {
-
-    },
     "提示更新" : {
-
-    },
-    "搁置" : {
 
     },
     "文言" : {
@@ -1231,6 +1164,7 @@
       }
     },
     "新建反馈" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1250,6 +1184,7 @@
 
     },
     "无法修复" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1279,6 +1214,7 @@
       }
     },
     "昵称" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1323,10 +1259,8 @@
         }
       }
     },
-    "未完成的编辑" : {
-
-    },
     "未标记" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1336,13 +1270,11 @@
         }
       }
     },
-    "未能复现" : {
-
-    },
     "本次更新内容聚焦" : {
 
     },
     "标题" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1389,6 +1321,7 @@
 
     },
     "正在修复" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1399,6 +1332,7 @@
       }
     },
     "正在加载" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1457,6 +1391,7 @@
       }
     },
     "此反馈已关闭，若要重新进行反馈，请创建一个新的反馈" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1619,6 +1554,7 @@
       }
     },
     "状态" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1641,9 +1577,6 @@
 
     },
     "由 Linecom Cloud Access 强力驱动" : {
-
-    },
-    "由“反馈助理”收集的诊断数据可能包含个人信息。你可以在提交前轻点查看附加数据，或向左轻扫删除。" : {
 
     },
     "登录" : {
@@ -1691,6 +1624,7 @@
 
     },
     "示例：澪空Linecom" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1701,6 +1635,7 @@
       }
     },
     "示例：翻译显示不正常" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1709,12 +1644,6 @@
           }
         }
       }
-    },
-    "移除诊断信息" : {
-
-    },
-    "移除诊断信息会限制 Linecom LLC 理解并解决问题的能力。" : {
-
     },
     "程序开发" : {
       "localizations" : {
@@ -1755,6 +1684,7 @@
 
     },
     "类型" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1771,6 +1701,7 @@
       }
     },
     "系统版本" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1968,6 +1899,7 @@
       }
     },
     "被删除" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -2006,9 +1938,6 @@
         }
       }
     },
-    "请为你的反馈提供描述性的标题：" : {
-
-    },
     "请前往App Store更新" : {
       "localizations" : {
         "en" : {
@@ -2024,15 +1953,6 @@
           }
         }
       }
-    },
-    "请包括：\n- 问题的清晰描述\n- 逐步说明重现问题的详细步骤（如果可能）\n- 期望的结果\n- 当前所示结果" : {
-
-    },
-    "请告诉我们如何称呼您：" : {
-
-    },
-    "请描述该问题以及重现问题的步骤：" : {
-
     },
     "请稍后回来，好戏不怕晚。" : {
 
@@ -2191,9 +2111,6 @@
         }
       }
     },
-    "通知令牌" : {
-
-    },
     "邮件" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -2260,6 +2177,7 @@
       }
     },
     "错误/异常行为" : {
+      "extractionState" : "stale",
       "localizations" : {
         "zh-Hant" : {
           "stringUnit" : {
@@ -2295,12 +2213,6 @@
         }
       }
     },
-    "问题并不与App相关" : {
-
-    },
-    "问题重复" : {
-
-    },
     "防止你的数据丢失" : {
 
     },
@@ -2308,6 +2220,7 @@
 
     },
     "附件" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -2334,6 +2247,7 @@
       }
     },
     "需要更多细节" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -2374,9 +2288,6 @@
           }
         }
       }
-    },
-    "额外历史记录" : {
-
     },
     "额外提供商现已可用" : {
       "localizations" : {
