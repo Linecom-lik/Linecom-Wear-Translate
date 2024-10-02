@@ -421,15 +421,7 @@ struct ContentView: View {
 //                        isUpdateTipAlertPresent = true
 //                    }
                     refreshToken() { gotToken in
-                        if gotToken == nil {
-                            accesstoken.removeAll()
-                            idtoken.removeAll()
-                            refresh.removeAll()
-                            idname.removeAll()
-                            idemail.removeAll()
-                        } else {
-                            accesstoken = gotToken ?? "Expired"
-                        }
+                        
                     }
                     if !firstpresent&&accesstoken.isEmpty{
                         isLinecomIDSuggestSheetPresent = true
@@ -739,22 +731,24 @@ struct ContentView: View {
             request.httpMethod = "POST"
             request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
             
-        let body = "grant_type=refresh_token&refresh_token=\(refresh)&client_id=linecom-wear-translate&client_secret=KOINKkvdOQm28WXSvGaf9eWAPEkwQ5CJ"
+        let body = "grant_type=refresh_token&refresh_token=\(refresh)&client_id=linecom-wear-translate&client_secret=393TfPsvEcgphAxJlVVo8N8nE6nk9uqf"
         request.httpBody = body.data(using: .utf8)
                 
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
             guard let data = data, error == nil else {
                 print("Failed to refresh token: \(error?.localizedDescription ?? "Unknown error")")
-                completion(nil)
+                self.accesstoken.removeAll()
+                self.refresh.removeAll()
+                self.idname.removeAll()
+                self.idtoken.removeAll()
+                self.idemail.removeAll()
                 return
             }
             
             if let tokenData = try? JSONDecoder().decode(TokenResponse.self, from: data) {
             // 更新本地存储的访问令牌
             self.refresh = tokenData.refreshToken!
-            completion(tokenData.accessToken)
-            } else {
-                completion(nil)
+                self.accesstoken = tokenData.accessToken
             }
         }
             
