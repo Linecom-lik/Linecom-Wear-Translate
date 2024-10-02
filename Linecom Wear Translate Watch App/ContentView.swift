@@ -731,7 +731,7 @@ struct ContentView: View {
             request.httpMethod = "POST"
             request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
             
-        let body = "grant_type=refresh_token&refresh_token=\(refresh)&client_id=linecom-wear-translate&client_secret=KOINKkvdOQm28WXSvGaf9eWAPEkwQ5CJ"
+        let body = "grant_type=refresh_token&refresh_token=\(refresh)&client_id=linecom-wear-translate&client_secret=393TfPsvEcgphAxJlVVo8N8nE6nk9uqf"
         request.httpBody = body.data(using: .utf8)
                 
         let task = URLSession.shared.dataTask(with: request) { data, response, error in
