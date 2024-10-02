@@ -7,9 +7,6 @@
 
 import SwiftUI
 
-var pShowTipText = ""
-var pShowTipSymbol = ""
-var pIsShowingTip = false
 @main
 struct Linecom_Wear_Translate_Watch_AppApp: App {
     
