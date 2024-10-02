@@ -37,10 +37,10 @@ class AppDelegate: NSObject, WKExtensionDelegate, PKPushRegistryDelegate {
     }
 
     // 当收到推送时调用此方法
-    func pushRegistry(_ registry: PKPushRegistry, didReceiveIncomingPushWith payload: PKPushPayload, for type: PKPushType) {
-        // 处理收到的推送通知
-        print("Received Push: \(payload.dictionaryPayload)")
-    }
+//    func pushRegistry(_ registry: PKPushRegistry, didReceiveIncomingPushWith payload: PKPushPayload, for type: PKPushType) {
+//        // 处理收到的推送通知
+//        print("Received Push: \(payload.dictionaryPayload)")
+//    }
 
     // 处理推送注册失败
     func pushRegistry(_ registry: PKPushRegistry, didInvalidatePushTokenFor type: PKPushType) {

@@ -18,7 +18,6 @@
 		0328984B2CAAD1BA0000B06D /* LinecomIDLCloudSettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0328984A2CAAD1BA0000B06D /* LinecomIDLCloudSettingsView.swift */; };
 		0328986C2CAAE3CD0000B06D /* WhatsNewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0328986B2CAAE3CD0000B06D /* WhatsNewView.swift */; };
 		032898712CAAF96E0000B06D /* Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 032898702CAAF96E0000B06D /* Dynamic */; };
-		0333FBDD2BE7799A00D7AF33 /* DarockFeedbackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0333FBDC2BE7799A00D7AF33 /* DarockFeedbackView.swift */; };
 		0333FBE32BE7C9DF00D7AF33 /* CepheusKeyboardKit in Frameworks */ = {isa = PBXBuildFile; productRef = 0333FBE22BE7C9DF00D7AF33 /* CepheusKeyboardKit */; };
 		033740D32C002DF800A7259F /* LinecomBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033740D22C002DF800A7259F /* LinecomBase.swift */; };
 		03428C5C2B9219580025849C /* Linecom_Wear_TranslateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03428C5B2B9219580025849C /* Linecom_Wear_TranslateApp.swift */; };
@@ -97,7 +96,6 @@
 		0328984A2CAAD1BA0000B06D /* LinecomIDLCloudSettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinecomIDLCloudSettingsView.swift; sourceTree = "<group>"; };
 		0328986B2CAAE3CD0000B06D /* WhatsNewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsNewView.swift; sourceTree = "<group>"; };
 		032898722CAB005E0000B06D /* Linecom Wear Translate Watch App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Linecom Wear Translate Watch App.entitlements"; sourceTree = "<group>"; };
-		0333FBDC2BE7799A00D7AF33 /* DarockFeedbackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DarockFeedbackView.swift; sourceTree = "<group>"; };
 		033740D22C002DF800A7259F /* LinecomBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinecomBase.swift; sourceTree = "<group>"; };
 		03428C562B9219580025849C /* 澪空软件腕表翻译.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "澪空软件腕表翻译.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		03428C5B2B9219580025849C /* Linecom_Wear_TranslateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Linecom_Wear_TranslateApp.swift; sourceTree = "<group>"; };
@@ -177,7 +175,6 @@
 		032898692CAAE3670000B06D /* Settings */ = {
 			isa = PBXGroup;
 			children = (
-				0333FBDC2BE7799A00D7AF33 /* DarockFeedbackView.swift */,
 				03DD72F52BF08AD1002DFB5D /* UpdateView.swift */,
 				03120FC62BE285DF008D0B76 /* ExperimentView.swift */,
 				036F3C8F2B9243FD0080194C /* OtherViews.swift */,
@@ -453,7 +450,6 @@
 				032898452CAABE380000B06D /* ExpHistoryCTL.swift in Sources */,
 				0328984B2CAAD1BA0000B06D /* LinecomIDLCloudSettingsView.swift in Sources */,
 				032898352CAAB5740000B06D /* LinecomIDMgmtView.swift in Sources */,
-				0333FBDD2BE7799A00D7AF33 /* DarockFeedbackView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
