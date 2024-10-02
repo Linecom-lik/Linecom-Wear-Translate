@@ -12,6 +12,8 @@ var pShowTipSymbol = ""
 var pIsShowingTip = false
 @main
 struct Linecom_Wear_Translate_Watch_AppApp: App {
+    
+    @WKExtensionDelegateAdaptor(AppDelegate.self) var delegate
     var body: some Scene {
         WindowGroup {
             ContentView()

@@ -36,6 +36,7 @@
 		036F3C8C2B9232060080194C /* DarockKit in Frameworks */ = {isa = PBXBuildFile; productRef = 036F3C8B2B9232060080194C /* DarockKit */; };
 		036F3C8E2B92342B0080194C /* md5c.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036F3C8D2B92342B0080194C /* md5c.swift */; };
 		036F3C902B9243FD0080194C /* OtherViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036F3C8F2B9243FD0080194C /* OtherViews.swift */; };
+		03A1615E2CAD8B6600E9FC90 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03A1615D2CAD8B6600E9FC90 /* AppDelegate.swift */; };
 		03BB21032C2EA3960048BF18 /* WYWTranslate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03BB21022C2EA3960048BF18 /* WYWTranslate.swift */; };
 		03C7A9F42C30280E00EFE72C /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = 03C7A9F32C30280E00EFE72C /* MarkdownUI */; };
 		03C7A9F72C30287900EFE72C /* SupportsUICore in Frameworks */ = {isa = PBXBuildFile; productRef = 03C7A9F62C30287900EFE72C /* SupportsUICore */; };
@@ -115,6 +116,7 @@
 		034B96072BB7CCD4005D757D /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		036F3C8D2B92342B0080194C /* md5c.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = md5c.swift; sourceTree = "<group>"; };
 		036F3C8F2B9243FD0080194C /* OtherViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherViews.swift; sourceTree = "<group>"; };
+		03A1615D2CAD8B6600E9FC90 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		03BB21022C2EA3960048BF18 /* WYWTranslate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYWTranslate.swift; sourceTree = "<group>"; };
 		03D39BA72BAF342D0075EC3D /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		03DD72F52BF08AD1002DFB5D /* UpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateView.swift; sourceTree = "<group>"; };
@@ -222,6 +224,7 @@
 				032898722CAB005E0000B06D /* Linecom Wear Translate Watch App.entitlements */,
 				03428C5B2B9219580025849C /* Linecom_Wear_TranslateApp.swift */,
 				03428C5D2B9219580025849C /* ContentView.swift */,
+				03A1615D2CAD8B6600E9FC90 /* AppDelegate.swift */,
 				0328986B2CAAE3CD0000B06D /* WhatsNewView.swift */,
 				03BB21022C2EA3960048BF18 /* WYWTranslate.swift */,
 				030F238F2BEFA17600E8D4FA /* BuyView.swift */,
@@ -445,6 +448,7 @@
 				032898472CAAC5060000B06D /* HistoryView.swift in Sources */,
 				03428C5C2B9219580025849C /* Linecom_Wear_TranslateApp.swift in Sources */,
 				032898242CAAAEC30000B06D /* LinecomIDLoginView.swift in Sources */,
+				03A1615E2CAD8B6600E9FC90 /* AppDelegate.swift in Sources */,
 				03120FC72BE285DF008D0B76 /* ExperimentView.swift in Sources */,
 				032898452CAABE380000B06D /* ExpHistoryCTL.swift in Sources */,
 				0328984B2CAAD1BA0000B06D /* LinecomIDLCloudSettingsView.swift in Sources */,
