@@ -24,7 +24,7 @@ struct GreetingProvider: TimelineProvider {
     
     // 快速预览时显示的数据
     func getSnapshot(in context: Context, completion: @escaping (GreetingEntry) -> Void) {
-        let entry = GreetingEntry(date: Date(), greeting: getGreeting(for: Date()))
+        let entry = GreetingEntry(date: .now, greeting: "你好")
         completion(entry)
     }
     
