@@ -44,7 +44,6 @@
 		03C7A9F72C30287900EFE72C /* SupportsUICore in Frameworks */ = {isa = PBXBuildFile; productRef = 03C7A9F62C30287900EFE72C /* SupportsUICore */; };
 		03D39BA92BAF34410075EC3D /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 03D39BA72BAF342D0075EC3D /* Localizable.xcstrings */; };
 		03DD72F62BF08AD1002DFB5D /* UpdateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03DD72F52BF08AD1002DFB5D /* UpdateView.swift */; };
-		03ED88E52C5086E10065C896 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 03ED88E42C5086E10065C896 /* icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -156,7 +155,6 @@
 		03BB21022C2EA3960048BF18 /* WYWTranslate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WYWTranslate.swift; sourceTree = "<group>"; };
 		03D39BA72BAF342D0075EC3D /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		03DD72F52BF08AD1002DFB5D /* UpdateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateView.swift; sourceTree = "<group>"; };
-		03ED88E42C5086E10065C896 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -257,7 +255,6 @@
 			children = (
 				034B96072BB7CCD4005D757D /* PrivacyInfo.xcprivacy */,
 				03D39BA72BAF342D0075EC3D /* Localizable.xcstrings */,
-				03ED88E42C5086E10065C896 /* icon.png */,
 				03428C5A2B9219580025849C /* Linecom Wear Translate Watch App */,
 				03428C752B9219590025849C /* Linecom Wear Translate Watch AppUITests */,
 				0349B2D72C47F9BE00B820B5 /* Linecom Wear Translate */,
@@ -524,7 +521,6 @@
 			files = (
 				0349B2E02C47F9BF00B820B5 /* Preview Assets.xcassets in Resources */,
 				0349B2DD2C47F9BF00B820B5 /* Assets.xcassets in Resources */,
-				03ED88E52C5086E10065C896 /* icon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -810,7 +806,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Linecom-Wear-Translate-Watch-App-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "澪空软件腕表翻译";
+				INFOPLIST_KEY_CFBundleDisplayName = "澪软腕翻";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.linecom.weartranslate;
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
@@ -844,7 +840,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Linecom-Wear-Translate-Watch-App-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "澪空软件腕表翻译";
+				INFOPLIST_KEY_CFBundleDisplayName = "澪软腕翻";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.linecom.weartranslate;
 				INFOPLIST_KEY_WKRunsIndependentlyOfCompanionApp = YES;
@@ -918,7 +914,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Linecom-Wear-Translate-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "澪空软件腕表翻译";
+				INFOPLIST_KEY_CFBundleDisplayName = "澪软腕翻";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -954,7 +950,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Linecom-Wear-Translate-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "澪空软件腕表翻译";
+				INFOPLIST_KEY_CFBundleDisplayName = "澪软腕翻";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
