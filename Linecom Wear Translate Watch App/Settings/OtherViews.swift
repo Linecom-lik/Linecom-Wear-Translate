@@ -116,7 +116,6 @@ struct OSPView: View{
                 session.start()
             }, label:{Text("Alamofire\nLicensed under MIT")})
             Text("SFSymbol\nLicensed under MIT")
-            Text("Darockkit\nLicensed under none")
         }
     }
 }
