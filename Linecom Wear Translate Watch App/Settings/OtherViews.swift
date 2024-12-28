@@ -22,6 +22,7 @@ struct AppAbout: View{
     @State var ICPPersent=false
     @State var LicensePersent=false
     @State var debugmodepst=false
+    @State var isDebugAlertPersent = false
     var body: some View{
         VStack{
             HStack{
@@ -32,11 +33,9 @@ struct AppAbout: View{
                     Text("腕表翻译")
                     if #available(watchOS 10, *){
                         Text(Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String).onTapGesture(count: 10, perform: {
-                            debug=true
-                            debugmodepst=true
-                        }).sheet(isPresented: $debugmodepst, content: {
-                            Text("调试选项已启用")
-                        })//.font(.custom("ccccc", size: 10))
+                                debug = true
+                                isDebugAlertPersent = true
+                        })
                     } else {
                         Text("1.0.26")
                     }
@@ -74,6 +73,9 @@ struct AppAbout: View{
                 }
                 //Text("*备案审核进行中，暂时作为PlaceHolder").font(.custom("", size: 6))
             }
+        }
+        .alert(isPresented: $isDebugAlertPersent) {
+            Alert(title: Text(""), message: Text("调试选项已启用"), dismissButton: .default(Text("好")))
         }
     }
 }
