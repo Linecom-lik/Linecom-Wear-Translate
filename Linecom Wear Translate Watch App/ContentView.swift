@@ -429,9 +429,9 @@ struct ContentView: View {
                     if nowv != Bundle.main.infoDictionary?["CFBundleShortVersionString"] as! String {
                         newpresent=false
                     }
-                    if !newpresent {
-                        isWhatsNewSheetPresent = true
-                    }
+//                    if !newpresent {
+//                        isWhatsNewSheetPresent = true
+//                    }
                     
                 }
                 .sheet(isPresented: $isLinecomIDSuggestSheetPresent, onDismiss: {

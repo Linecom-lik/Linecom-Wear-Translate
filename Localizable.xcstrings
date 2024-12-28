@@ -85,6 +85,7 @@
       }
     },
     "Darockkit\nLicensed under none" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -495,6 +496,9 @@
         }
       }
     },
+    "不需要，调试选项已启用" : {
+
+    },
     "为Apple Watch SE和Apple Watch Series6及以前的设备提供英文与拼音的全键盘输入。\nPowered by Cepheus" : {
       "localizations" : {
         "zh-Hant" : {
@@ -860,6 +864,9 @@
           }
         }
       }
+    },
+    "好" : {
+
     },
     "如已购买，请再次点击以确认" : {
 
@@ -1231,9 +1238,6 @@
       }
     },
     "更为 watchOS 打造的焕然一新的用户界面。" : {
-
-    },
-    "更新聚焦" : {
 
     },
     "有软件更新可用" : {
